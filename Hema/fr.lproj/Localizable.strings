@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  Hema
+
+  Created by geyang on 15/10/22.
+  Copyright © 2015年 Hemaapp. All rights reserved.
+*/
+
+//--------------------------------测试demo
+"zh-Hans" = "Chinois simplifié";
+"en" = "Anglais";
+"fr" = "Français";
+"多语言切换" = "changé";
