@@ -826,6 +826,7 @@
 		3AFA147A1BFEFFAD0054E16E /* Oval 1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AFA14751BFEFFAD0054E16E /* Oval 1@2x.png */; };
 		3AFA147B1BFEFFAD0054E16E /* Pause@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AFA14761BFEFFAD0054E16E /* Pause@2x.png */; };
 		3AFA147C1BFEFFAD0054E16E /* Play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AFA14771BFEFFAD0054E16E /* Play@2x.png */; };
+		554463471C2A4FDC0010D627 /* NewPublishVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 554463461C2A4FDC0010D627 /* NewPublishVC.m */; };
 		9487832A1C2A4F1D00E52B11 /* HomePageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 948783291C2A4F1D00E52B11 /* HomePageVC.m */; };
 		B728C13E1BDBAD150004B4A9 /* ChatLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = B728C13B1BDBAD150004B4A9 /* ChatLineView.m */; };
 		B728C13F1BDBAD150004B4A9 /* PointBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = B728C13D1BDBAD150004B4A9 /* PointBtn.m */; };
@@ -2935,6 +2936,8 @@
 		3AFA14751BFEFFAD0054E16E /* Oval 1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Oval 1@2x.png"; sourceTree = "<group>"; };
 		3AFA14761BFEFFAD0054E16E /* Pause@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pause@2x.png"; sourceTree = "<group>"; };
 		3AFA14771BFEFFAD0054E16E /* Play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Play@2x.png"; sourceTree = "<group>"; };
+		554463451C2A4FDC0010D627 /* NewPublishVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewPublishVC.h; sourceTree = "<group>"; };
+		554463461C2A4FDC0010D627 /* NewPublishVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewPublishVC.m; sourceTree = "<group>"; };
 		948783281C2A4F1D00E52B11 /* HomePageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageVC.h; sourceTree = "<group>"; };
 		948783291C2A4F1D00E52B11 /* HomePageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageVC.m; sourceTree = "<group>"; };
 		B728C13A1BDBAD150004B4A9 /* ChatLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatLineView.h; sourceTree = "<group>"; };
@@ -7035,6 +7038,8 @@
 		9487832C1C2A4F7900E52B11 /* NewPublish */ = {
 			isa = PBXGroup;
 			children = (
+				554463451C2A4FDC0010D627 /* NewPublishVC.h */,
+				554463461C2A4FDC0010D627 /* NewPublishVC.m */,
 			);
 			name = NewPublish;
 			sourceTree = "<group>";
@@ -11454,6 +11459,7 @@
 				3A69A1E71C04284B0002F776 /* TSBlurView.m in Sources */,
 				3A17B06F1BFD9891005C0D6C /* GDataXMLNode.m in Sources */,
 				B728C1761BDC9BCA0004B4A9 /* TEABarChart.m in Sources */,
+				554463471C2A4FDC0010D627 /* NewPublishVC.m in Sources */,
 				3A17B0661BFD9891005C0D6C /* EPUBPageSearchTextViewController.m in Sources */,
 				3AF02A511BE720EB00AF0597 /* E_Mark.m in Sources */,
 				B7777DB01BC3A93800452D6E /* RFImageToDataTransformer.m in Sources */,
