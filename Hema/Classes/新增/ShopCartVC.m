@@ -8,7 +8,10 @@
 
 #import "ShopCartVC.h"
 
-@interface ShopCartVC ()
+@interface ShopCartVC (){
+    UILabel *_label;
+    NSInteger time;
+}
 
 @end
 
@@ -21,7 +24,6 @@
 - (void)loadData {
     
 }
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

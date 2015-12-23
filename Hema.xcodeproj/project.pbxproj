@@ -10382,6 +10382,7 @@
 				TargetAttributes = {
 					B77E18D41BC25A7D00DB3199 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = ZVSJ7X42V6;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -12122,7 +12123,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Pengcheng Zhou (KR68TATPT9)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -12161,7 +12163,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hemaapp.duobao;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "f49a2ad3-71c5-4188-bbcc-010426a19fc2";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos9.0;
 			};
 			name = Debug;
@@ -12171,7 +12173,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Pengcheng Zhou (KR68TATPT9)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -12210,7 +12213,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hemaapp.duobao;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "f49a2ad3-71c5-4188-bbcc-010426a19fc2";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos9.0;
 			};
 			name = Release;

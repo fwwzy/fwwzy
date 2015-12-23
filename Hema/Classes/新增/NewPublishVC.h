@@ -9,5 +9,5 @@
 #import "PullRefreshGroupVC.h"
 
 @interface NewPublishVC : PullRefreshGroupVC
-
+@property(nonatomic,strong)UICollectionView *collectionView;
 @end
