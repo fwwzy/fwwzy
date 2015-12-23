@@ -828,7 +828,6 @@
 		3AFA147C1BFEFFAD0054E16E /* Play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AFA14771BFEFFAD0054E16E /* Play@2x.png */; };
 		554463471C2A4FDC0010D627 /* NewPublishVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 554463461C2A4FDC0010D627 /* NewPublishVC.m */; };
 		5544634D1C2A6A2E0010D627 /* NewPublishCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5544634C1C2A6A2E0010D627 /* NewPublishCell.m */; };
-		5544634F1C2A75D80010D627 /* newpulish.png in Resources */ = {isa = PBXBuildFile; fileRef = 5544634E1C2A75D80010D627 /* newpulish.png */; };
 		948783321C2A62DD00E52B11 /* ShopCartVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 948783311C2A62DD00E52B11 /* ShopCartVC.m */; };
 		948783351C2A62F300E52B11 /* MineVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 948783341C2A62F300E52B11 /* MineVC.m */; };
 		948783381C2A630D00E52B11 /* HomePageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 948783371C2A630D00E52B11 /* HomePageVC.m */; };
@@ -2945,7 +2944,6 @@
 		554463461C2A4FDC0010D627 /* NewPublishVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewPublishVC.m; sourceTree = "<group>"; };
 		5544634B1C2A6A2E0010D627 /* NewPublishCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewPublishCell.h; sourceTree = "<group>"; };
 		5544634C1C2A6A2E0010D627 /* NewPublishCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewPublishCell.m; sourceTree = "<group>"; };
-		5544634E1C2A75D80010D627 /* newpulish.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = newpulish.png; path = "../../../Desktop/一元欢乐夺宝/newpulish.png"; sourceTree = "<group>"; };
 		948783301C2A62DD00E52B11 /* ShopCartVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopCartVC.h; sourceTree = "<group>"; };
 		948783311C2A62DD00E52B11 /* ShopCartVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopCartVC.m; sourceTree = "<group>"; };
 		948783331C2A62F300E52B11 /* MineVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineVC.h; sourceTree = "<group>"; };
@@ -8922,7 +8920,6 @@
 		B77E19491BC25EFA00DB3199 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				5544634E1C2A75D80010D627 /* newpulish.png */,
 				9487833C1C2A676B00E52B11 /* 新增 */,
 				B77E194E1BC25F6400DB3199 /* 基础 */,
 			);
@@ -10461,7 +10458,6 @@
 				3AEDB2761BFC426600AD7E95 /* sticker_5.png in Resources */,
 				3AECA7CC1C0703D7006036E2 /* 发现_黑.png in Resources */,
 				B76EC2241BEF0DD0001DDFA8 /* btn_share_weixin@2x.png in Resources */,
-				5544634F1C2A75D80010D627 /* newpulish.png in Resources */,
 				3AECA7E31C0703D7006036E2 /* VIP_on@3x.png in Resources */,
 				B77C3AAC1BC4EF4800B7E028 /* R资料相框.png in Resources */,
 				3AEDB2791BFC426600AD7E95 /* sticker_8.png in Resources */,
