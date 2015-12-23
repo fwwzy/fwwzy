@@ -1,21 +1,21 @@
 //
-//  NewPublishVC.m
+//  MineVC.m
 //  Hema
 //
-//  Created by Lsy on 15/12/23.
+//  Created by MsTail on 15/12/23.
 //  Copyright © 2015年 Hemaapp. All rights reserved.
 //
 
-#import "NewPublishVC.h"
+#import "MineVC.h"
 
-@interface NewPublishVC ()
+@interface MineVC ()
 
 @end
 
-@implementation NewPublishVC
+@implementation MineVC
 
 - (void)loadSet {
-    [self.navigationItem setNewTitle:@"最新揭晓"];
+    [self.navigationItem setNewTitle:@"我的"];
 }
 
 - (void)loadData {

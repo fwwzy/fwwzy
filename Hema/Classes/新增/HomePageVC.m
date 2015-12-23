@@ -14,9 +14,12 @@
 
 @implementation HomePageVC
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
+- (void)loadSet {
+    [self.navigationItem setNewTitle:@"首页"];
+}
+
+- (void)loadData {
+    
 }
 
 - (void)didReceiveMemoryWarning {
