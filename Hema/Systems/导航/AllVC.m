@@ -24,7 +24,7 @@
     
     if (self.navigationController.viewControllers.count == 1)
     {
-        [self.navigationController.navigationBar setBarTintColor:Nav_Color];
+        [self.navigationController.navigationBar setBarTintColor:BB_Red_Color];
         [self.navigationController.navigationBar setTranslucent:NO];
     }
     [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationNone];

@@ -832,6 +832,15 @@
 		948783351C2A62F300E52B11 /* MineVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 948783341C2A62F300E52B11 /* MineVC.m */; };
 		948783381C2A630D00E52B11 /* HomePageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 948783371C2A630D00E52B11 /* HomePageVC.m */; };
 		9487833B1C2A635A00E52B11 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9487833A1C2A635A00E52B11 /* TabBarController.m */; };
+		9487833F1C2A6CE700E52B11 /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9487833E1C2A6CE700E52B11 /* LoginVC.m */; };
+		948783491C2A9AD600E52B11 /* lg_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 948783411C2A9AD600E52B11 /* lg_back.png */; };
+		9487834A1C2A9AD600E52B11 /* lg_forget.png in Resources */ = {isa = PBXBuildFile; fileRef = 948783421C2A9AD600E52B11 /* lg_forget.png */; };
+		9487834B1C2A9AD600E52B11 /* lg_lock.png in Resources */ = {isa = PBXBuildFile; fileRef = 948783431C2A9AD600E52B11 /* lg_lock.png */; };
+		9487834C1C2A9AD600E52B11 /* lg_phone.png in Resources */ = {isa = PBXBuildFile; fileRef = 948783441C2A9AD600E52B11 /* lg_phone.png */; };
+		9487834D1C2A9AD600E52B11 /* lg_qq.png in Resources */ = {isa = PBXBuildFile; fileRef = 948783451C2A9AD600E52B11 /* lg_qq.png */; };
+		9487834E1C2A9AD600E52B11 /* lg_sina.png in Resources */ = {isa = PBXBuildFile; fileRef = 948783461C2A9AD600E52B11 /* lg_sina.png */; };
+		9487834F1C2A9AD600E52B11 /* lg_title.png in Resources */ = {isa = PBXBuildFile; fileRef = 948783471C2A9AD600E52B11 /* lg_title.png */; };
+		948783501C2A9AD600E52B11 /* lg_wx.png in Resources */ = {isa = PBXBuildFile; fileRef = 948783481C2A9AD600E52B11 /* lg_wx.png */; };
 		B728C13E1BDBAD150004B4A9 /* ChatLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = B728C13B1BDBAD150004B4A9 /* ChatLineView.m */; };
 		B728C13F1BDBAD150004B4A9 /* PointBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = B728C13D1BDBAD150004B4A9 /* PointBtn.m */; };
 		B728C1431BDBB0310004B4A9 /* RChartListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B728C1421BDBB0310004B4A9 /* RChartListVC.m */; };
@@ -2952,6 +2961,16 @@
 		948783371C2A630D00E52B11 /* HomePageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageVC.m; sourceTree = "<group>"; };
 		948783391C2A635A00E52B11 /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
 		9487833A1C2A635A00E52B11 /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
+		9487833D1C2A6CE700E52B11 /* LoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
+		9487833E1C2A6CE700E52B11 /* LoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
+		948783411C2A9AD600E52B11 /* lg_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lg_back.png; sourceTree = "<group>"; };
+		948783421C2A9AD600E52B11 /* lg_forget.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lg_forget.png; sourceTree = "<group>"; };
+		948783431C2A9AD600E52B11 /* lg_lock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lg_lock.png; sourceTree = "<group>"; };
+		948783441C2A9AD600E52B11 /* lg_phone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lg_phone.png; sourceTree = "<group>"; };
+		948783451C2A9AD600E52B11 /* lg_qq.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lg_qq.png; sourceTree = "<group>"; };
+		948783461C2A9AD600E52B11 /* lg_sina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lg_sina.png; sourceTree = "<group>"; };
+		948783471C2A9AD600E52B11 /* lg_title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lg_title.png; sourceTree = "<group>"; };
+		948783481C2A9AD600E52B11 /* lg_wx.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lg_wx.png; sourceTree = "<group>"; };
 		B728C13A1BDBAD150004B4A9 /* ChatLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatLineView.h; sourceTree = "<group>"; };
 		B728C13B1BDBAD150004B4A9 /* ChatLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatLineView.m; sourceTree = "<group>"; };
 		B728C13C1BDBAD150004B4A9 /* PointBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointBtn.h; sourceTree = "<group>"; };
@@ -7072,6 +7091,8 @@
 		9487832E1C2A4F8C00E52B11 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				9487833D1C2A6CE700E52B11 /* LoginVC.h */,
+				9487833E1C2A6CE700E52B11 /* LoginVC.m */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -7085,9 +7106,17 @@
 			name = Menu;
 			sourceTree = "<group>";
 		};
-		9487833C1C2A676B00E52B11 /* 新增 */ = {
+		948783401C2A9A9400E52B11 /* 新增 */ = {
 			isa = PBXGroup;
 			children = (
+				948783411C2A9AD600E52B11 /* lg_back.png */,
+				948783421C2A9AD600E52B11 /* lg_forget.png */,
+				948783431C2A9AD600E52B11 /* lg_lock.png */,
+				948783441C2A9AD600E52B11 /* lg_phone.png */,
+				948783451C2A9AD600E52B11 /* lg_qq.png */,
+				948783461C2A9AD600E52B11 /* lg_sina.png */,
+				948783471C2A9AD600E52B11 /* lg_title.png */,
+				948783481C2A9AD600E52B11 /* lg_wx.png */,
 			);
 			path = "新增";
 			sourceTree = "<group>";
@@ -8920,7 +8949,7 @@
 		B77E19491BC25EFA00DB3199 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				9487833C1C2A676B00E52B11 /* 新增 */,
+				948783401C2A9A9400E52B11 /* 新增 */,
 				B77E194E1BC25F6400DB3199 /* 基础 */,
 			);
 			path = Images;
@@ -10529,6 +10558,7 @@
 				3A69A1A61C0407800002F776 /* UIBarButtonItemArrowRight@3x.png in Resources */,
 				3AEDB2591BFC426600AD7E95 /* filter_12.JPG in Resources */,
 				3AECA7DA1C0703D7006036E2 /* 我的_黑@3x.png in Resources */,
+				948783501C2A9AD600E52B11 /* lg_wx.png in Resources */,
 				3A69A1D61C04284B0002F776 /* NotificationBackgroundError.png in Resources */,
 				3AEDB2A81BFC426600AD7E95 /* makecards_puzzle_storyboard5_icon@2x.png in Resources */,
 				3AEDB2A41BFC426600AD7E95 /* makecards_puzzle_storyboard3_icon@2x.png in Resources */,
@@ -10573,9 +10603,11 @@
 				B77E1B041BC2A50C00DB3199 /* R聊天底部添加.png in Resources */,
 				B77C3AB91BC4FBF800B7E028 /* R设置之0.png in Resources */,
 				B77E1AE51BC2A50C00DB3199 /* myfaceDelete@2x.png in Resources */,
+				948783491C2A9AD600E52B11 /* lg_back.png in Resources */,
 				3AEDB1601BFC3DFB00AD7E95 /* number_two_style_1.plist in Resources */,
 				B7C6984D1BC9239C00DB2E05 /* R取消语音.png in Resources */,
 				3AF845B91BE9B71600FEF930 /* R扫描中间框.png in Resources */,
+				9487834A1C2A9AD600E52B11 /* lg_forget.png in Resources */,
 				3AEDB2661BFC426600AD7E95 /* sticker_13.png in Resources */,
 				3AEDB1511BFC3DFB00AD7E95 /* number_five_style_4.plist in Resources */,
 				3AEDB2831BFC426600AD7E95 /* makecards_puzzle5_storyboard5_icon.png in Resources */,
@@ -10584,6 +10616,7 @@
 				3A69A1E51C04284B0002F776 /* NotificationButtonBackground@2x.png in Resources */,
 				3AF845641BE9A6B800FEF930 /* com.skin.1108.zip in Resources */,
 				3A2F0DCE1BFC8456000EE3B9 /* R白色方形效果.png in Resources */,
+				9487834D1C2A9AD600E52B11 /* lg_qq.png in Resources */,
 				B77E1ADD1BC2A50C00DB3199 /* VoiceSearchFeedback017@2x.png in Resources */,
 				B77E1ACD1BC2A50C00DB3199 /* VoiceSearchFeedback009@2x.png in Resources */,
 				B784552B1BCAAFBB00D64002 /* R聊天之录像.png in Resources */,
@@ -10826,6 +10859,7 @@
 				B76EC21F1BEF0DD0001DDFA8 /* btn_share_del@2x.png in Resources */,
 				B77E1AD11BC2A50C00DB3199 /* VoiceSearchFeedback011@2x.png in Resources */,
 				3AF845AE1BE9B61500FEF930 /* zbar-samples.png in Resources */,
+				9487834F1C2A9AD600E52B11 /* lg_title.png in Resources */,
 				3AF02A5E1BE720EB00AF0597 /* menuClose.png in Resources */,
 				3A3677CB1BE1EC0D00DF844F /* R小视频返回高亮.png in Resources */,
 				3AEDB25E1BFC426600AD7E95 /* filter_6.JPG in Resources */,
@@ -10956,6 +10990,7 @@
 				B77E1A9E1BC2A50C00DB3199 /* R警告.png in Resources */,
 				3AEDB1611BFC3DFB00AD7E95 /* number_two_style_2.plist in Resources */,
 				3AEDB2801BFC426600AD7E95 /* makecards_puzzle5_storyboard3_icon@2x.png in Resources */,
+				9487834E1C2A9AD600E52B11 /* lg_sina.png in Resources */,
 				3AEDB1541BFC3DFB00AD7E95 /* number_four_style_1.plist in Resources */,
 				3A69A1D71C04284B0002F776 /* NotificationBackgroundError@2x.png in Resources */,
 				B77E1AF61BC2A50C00DB3199 /* R聊天中间视频.png in Resources */,
@@ -10974,6 +11009,7 @@
 				3AF8455F1BE9A6B800FEF930 /* theme_icon_penguin@2x.png in Resources */,
 				3AECA7DC1C0703D7006036E2 /* 我的_on@2x.png in Resources */,
 				B77E1ACA1BC2A50C00DB3199 /* VoiceSearchFeedback008.png in Resources */,
+				9487834B1C2A9AD600E52B11 /* lg_lock.png in Resources */,
 				B77E1A851BC2A50C00DB3199 /* R图片默认背景.png in Resources */,
 				3A3677C21BE1EBFF00DF844F /* kr-video-player-shrinkscreen@2x.png in Resources */,
 				3AEDB2991BFC426600AD7E95 /* makecards_puzzle3_storyboard4_icon.png in Resources */,
@@ -10988,6 +11024,7 @@
 				3AECA7E21C0703D7006036E2 /* VIP_on@2x.png in Resources */,
 				3A17B06D1BFD9891005C0D6C /* SearchWebView.js in Resources */,
 				B76F095F1BD39C580095F655 /* icon1.png in Resources */,
+				9487834C1C2A9AD600E52B11 /* lg_phone.png in Resources */,
 				3AFA147A1BFEFFAD0054E16E /* Oval 1@2x.png in Resources */,
 				B77E1AC41BC2A50C00DB3199 /* VoiceSearchFeedback005.png in Resources */,
 				3A69A19B1C0407800002F776 /* PlayButtonOverlayLarge.png in Resources */,
@@ -11359,6 +11396,7 @@
 				B7D3D9FD1BD4F382000A0962 /* CameraShutterButton.m in Sources */,
 				B728C1991BDCB6520004B4A9 /* SHPlot.m in Sources */,
 				B76EC22B1BEF0DD0001DDFA8 /* TYAlertView.m in Sources */,
+				9487833F1C2A6CE700E52B11 /* LoginVC.m in Sources */,
 				3AF845A61BE9B61500FEF930 /* qrspec.c in Sources */,
 				3A52F0401BEB2A0300D081FE /* AVCaptureManager.m in Sources */,
 				B728C1641BDBDF120004B4A9 /* PieChartView.m in Sources */,
