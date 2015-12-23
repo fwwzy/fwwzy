@@ -827,6 +827,7 @@
 		3AFA147B1BFEFFAD0054E16E /* Pause@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AFA14761BFEFFAD0054E16E /* Pause@2x.png */; };
 		3AFA147C1BFEFFAD0054E16E /* Play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AFA14771BFEFFAD0054E16E /* Play@2x.png */; };
 		554463471C2A4FDC0010D627 /* NewPublishVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 554463461C2A4FDC0010D627 /* NewPublishVC.m */; };
+		5544634A1C2A63EA0010D627 /* NewPublishCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 554463491C2A63EA0010D627 /* NewPublishCell.m */; };
 		9487832A1C2A4F1D00E52B11 /* HomePageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 948783291C2A4F1D00E52B11 /* HomePageVC.m */; };
 		B728C13E1BDBAD150004B4A9 /* ChatLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = B728C13B1BDBAD150004B4A9 /* ChatLineView.m */; };
 		B728C13F1BDBAD150004B4A9 /* PointBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = B728C13D1BDBAD150004B4A9 /* PointBtn.m */; };
@@ -2938,6 +2939,8 @@
 		3AFA14771BFEFFAD0054E16E /* Play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Play@2x.png"; sourceTree = "<group>"; };
 		554463451C2A4FDC0010D627 /* NewPublishVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewPublishVC.h; sourceTree = "<group>"; };
 		554463461C2A4FDC0010D627 /* NewPublishVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewPublishVC.m; sourceTree = "<group>"; };
+		554463481C2A63EA0010D627 /* NewPublishCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewPublishCell.h; sourceTree = "<group>"; };
+		554463491C2A63EA0010D627 /* NewPublishCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewPublishCell.m; sourceTree = "<group>"; };
 		948783281C2A4F1D00E52B11 /* HomePageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageVC.h; sourceTree = "<group>"; };
 		948783291C2A4F1D00E52B11 /* HomePageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageVC.m; sourceTree = "<group>"; };
 		B728C13A1BDBAD150004B4A9 /* ChatLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatLineView.h; sourceTree = "<group>"; };
@@ -7040,6 +7043,8 @@
 			children = (
 				554463451C2A4FDC0010D627 /* NewPublishVC.h */,
 				554463461C2A4FDC0010D627 /* NewPublishVC.m */,
+				554463481C2A63EA0010D627 /* NewPublishCell.h */,
+				554463491C2A63EA0010D627 /* NewPublishCell.m */,
 			);
 			name = NewPublish;
 			sourceTree = "<group>";
@@ -11847,6 +11852,7 @@
 				3AEE94A41BF588CE007F6BD5 /* NSDictionary+JSONString.m in Sources */,
 				B76EC22F1BEF0DD0001DDFA8 /* UIView+TYAutoLayout.m in Sources */,
 				3A0A08531BF1847A00653173 /* TOCroppedImageAttributes.m in Sources */,
+				5544634A1C2A63EA0010D627 /* NewPublishCell.m in Sources */,
 				3AF51B6E1C05A83E0091BBD8 /* UIWebView+Blocks.m in Sources */,
 				3AEE94CE1BF588CE007F6BD5 /* NSString+Size.m in Sources */,
 				3AF02AD01BE7282A00AF0597 /* YMButton.m in Sources */,
