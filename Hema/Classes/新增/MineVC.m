@@ -1,21 +1,21 @@
 //
-//  HomePageVC.m
+//  MineVC.m
 //  Hema
 //
 //  Created by MsTail on 15/12/23.
 //  Copyright © 2015年 Hemaapp. All rights reserved.
 //
 
-#import "HomePageVC.h"
+#import "MineVC.h"
 
-@interface HomePageVC ()
+@interface MineVC ()
 
 @end
 
-@implementation HomePageVC
+@implementation MineVC
 
 - (void)loadSet {
-    [self.navigationItem setNewTitle:@"首页"];
+    [self.navigationItem setNewTitle:@"我的"];
 }
 
 - (void)loadData {

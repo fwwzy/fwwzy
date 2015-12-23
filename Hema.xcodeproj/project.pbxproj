@@ -1217,12 +1217,12 @@
 		B77E1A641BC2A50C00DB3199 /* R底部栏发布按钮.png in Resources */ = {isa = PBXBuildFile; fileRef = B77E19B11BC2A50C00DB3199 /* R底部栏发布按钮.png */; };
 		B77E1A651BC2A50C00DB3199 /* R底部栏未选中0.png in Resources */ = {isa = PBXBuildFile; fileRef = B77E19B21BC2A50C00DB3199 /* R底部栏未选中0.png */; };
 		B77E1A661BC2A50C00DB3199 /* R底部栏未选中1.png in Resources */ = {isa = PBXBuildFile; fileRef = B77E19B31BC2A50C00DB3199 /* R底部栏未选中1.png */; };
-		B77E1A671BC2A50C00DB3199 /* R底部栏未选中3.png in Resources */ = {isa = PBXBuildFile; fileRef = B77E19B41BC2A50C00DB3199 /* R底部栏未选中3.png */; };
-		B77E1A681BC2A50C00DB3199 /* R底部栏未选中4.png in Resources */ = {isa = PBXBuildFile; fileRef = B77E19B51BC2A50C00DB3199 /* R底部栏未选中4.png */; };
+		B77E1A671BC2A50C00DB3199 /* R底部栏未选中2.png in Resources */ = {isa = PBXBuildFile; fileRef = B77E19B41BC2A50C00DB3199 /* R底部栏未选中2.png */; };
+		B77E1A681BC2A50C00DB3199 /* R底部栏未选中3.png in Resources */ = {isa = PBXBuildFile; fileRef = B77E19B51BC2A50C00DB3199 /* R底部栏未选中3.png */; };
 		B77E1A691BC2A50C00DB3199 /* R底部栏选中0.png in Resources */ = {isa = PBXBuildFile; fileRef = B77E19B61BC2A50C00DB3199 /* R底部栏选中0.png */; };
 		B77E1A6A1BC2A50C00DB3199 /* R底部栏选中1.png in Resources */ = {isa = PBXBuildFile; fileRef = B77E19B71BC2A50C00DB3199 /* R底部栏选中1.png */; };
-		B77E1A6B1BC2A50C00DB3199 /* R底部栏选中3.png in Resources */ = {isa = PBXBuildFile; fileRef = B77E19B81BC2A50C00DB3199 /* R底部栏选中3.png */; };
-		B77E1A6C1BC2A50C00DB3199 /* R底部栏选中4.png in Resources */ = {isa = PBXBuildFile; fileRef = B77E19B91BC2A50C00DB3199 /* R底部栏选中4.png */; };
+		B77E1A6B1BC2A50C00DB3199 /* R底部栏选中2.png in Resources */ = {isa = PBXBuildFile; fileRef = B77E19B81BC2A50C00DB3199 /* R底部栏选中2.png */; };
+		B77E1A6C1BC2A50C00DB3199 /* R底部栏选中3.png in Resources */ = {isa = PBXBuildFile; fileRef = B77E19B91BC2A50C00DB3199 /* R底部栏选中3.png */; };
 		B77E1A6D1BC2A50C00DB3199 /* Rend@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B77E19BB1BC2A50C00DB3199 /* Rend@2x.png */; };
 		B77E1A6E1BC2A50C00DB3199 /* Rstart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B77E19BC1BC2A50C00DB3199 /* Rstart@2x.png */; };
 		B77E1A6F1BC2A50C00DB3199 /* R下拉框.png in Resources */ = {isa = PBXBuildFile; fileRef = B77E19BD1BC2A50C00DB3199 /* R下拉框.png */; };
@@ -3643,12 +3643,12 @@
 		B77E19B11BC2A50C00DB3199 /* R底部栏发布按钮.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "R底部栏发布按钮.png"; sourceTree = "<group>"; };
 		B77E19B21BC2A50C00DB3199 /* R底部栏未选中0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "R底部栏未选中0.png"; sourceTree = "<group>"; };
 		B77E19B31BC2A50C00DB3199 /* R底部栏未选中1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "R底部栏未选中1.png"; sourceTree = "<group>"; };
-		B77E19B41BC2A50C00DB3199 /* R底部栏未选中3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "R底部栏未选中3.png"; sourceTree = "<group>"; };
-		B77E19B51BC2A50C00DB3199 /* R底部栏未选中4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "R底部栏未选中4.png"; sourceTree = "<group>"; };
+		B77E19B41BC2A50C00DB3199 /* R底部栏未选中2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "R底部栏未选中2.png"; sourceTree = "<group>"; };
+		B77E19B51BC2A50C00DB3199 /* R底部栏未选中3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "R底部栏未选中3.png"; sourceTree = "<group>"; };
 		B77E19B61BC2A50C00DB3199 /* R底部栏选中0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "R底部栏选中0.png"; sourceTree = "<group>"; };
 		B77E19B71BC2A50C00DB3199 /* R底部栏选中1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "R底部栏选中1.png"; sourceTree = "<group>"; };
-		B77E19B81BC2A50C00DB3199 /* R底部栏选中3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "R底部栏选中3.png"; sourceTree = "<group>"; };
-		B77E19B91BC2A50C00DB3199 /* R底部栏选中4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "R底部栏选中4.png"; sourceTree = "<group>"; };
+		B77E19B81BC2A50C00DB3199 /* R底部栏选中2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "R底部栏选中2.png"; sourceTree = "<group>"; };
+		B77E19B91BC2A50C00DB3199 /* R底部栏选中3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "R底部栏选中3.png"; sourceTree = "<group>"; };
 		B77E19BB1BC2A50C00DB3199 /* Rend@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Rend@2x.png"; sourceTree = "<group>"; };
 		B77E19BC1BC2A50C00DB3199 /* Rstart@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Rstart@2x.png"; sourceTree = "<group>"; };
 		B77E19BD1BC2A50C00DB3199 /* R下拉框.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "R下拉框.png"; sourceTree = "<group>"; };
@@ -7025,8 +7025,8 @@
 		948783271C2A4F0800E52B11 /* HomePage */ = {
 			isa = PBXGroup;
 			children = (
-				948783281C2A4F1D00E52B11 /* HomePageVC.h */,
-				948783291C2A4F1D00E52B11 /* HomePageVC.m */,
+				948783361C2A630D00E52B11 /* HomePageVC.h */,
+				948783371C2A630D00E52B11 /* HomePageVC.m */,
 			);
 			name = HomePage;
 			sourceTree = "<group>";
@@ -7034,6 +7034,8 @@
 		9487832B1C2A4F7300E52B11 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				948783331C2A62F300E52B11 /* MineVC.h */,
+				948783341C2A62F300E52B11 /* MineVC.m */,
 			);
 			name = Mine;
 			sourceTree = "<group>";
@@ -7052,6 +7054,8 @@
 		9487832D1C2A4F8000E52B11 /* ShopCart */ = {
 			isa = PBXGroup;
 			children = (
+				948783301C2A62DD00E52B11 /* ShopCartVC.h */,
+				948783311C2A62DD00E52B11 /* ShopCartVC.m */,
 			);
 			name = ShopCart;
 			sourceTree = "<group>";
@@ -7066,8 +7070,17 @@
 		9487832F1C2A4F9600E52B11 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
+				948783391C2A635A00E52B11 /* TabBarController.h */,
+				9487833A1C2A635A00E52B11 /* TabBarController.m */,
 			);
 			name = Menu;
+			sourceTree = "<group>";
+		};
+		9487833C1C2A676B00E52B11 /* 新增 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "新增";
 			sourceTree = "<group>";
 		};
 		B728C1381BDBAD150004B4A9 /* 统计图表 */ = {
@@ -8898,7 +8911,7 @@
 		B77E19491BC25EFA00DB3199 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				B77E194D1BC25F6400DB3199 /* 新增 */,
+				9487833C1C2A676B00E52B11 /* 新增 */,
 				B77E194E1BC25F6400DB3199 /* 基础 */,
 			);
 			path = Images;
@@ -8935,13 +8948,6 @@
 				B76F09681BD3A16C0095F655 /* 发布 */,
 			);
 			path = "基础";
-			sourceTree = "<group>";
-		};
-		B77E194D1BC25F6400DB3199 /* 新增 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "新增";
 			sourceTree = "<group>";
 		};
 		B77E194E1BC25F6400DB3199 /* 基础 */ = {
@@ -9074,12 +9080,12 @@
 				B77E19B11BC2A50C00DB3199 /* R底部栏发布按钮.png */,
 				B77E19B21BC2A50C00DB3199 /* R底部栏未选中0.png */,
 				B77E19B31BC2A50C00DB3199 /* R底部栏未选中1.png */,
-				B77E19B41BC2A50C00DB3199 /* R底部栏未选中3.png */,
-				B77E19B51BC2A50C00DB3199 /* R底部栏未选中4.png */,
+				B77E19B41BC2A50C00DB3199 /* R底部栏未选中2.png */,
+				B77E19B51BC2A50C00DB3199 /* R底部栏未选中3.png */,
 				B77E19B61BC2A50C00DB3199 /* R底部栏选中0.png */,
 				B77E19B71BC2A50C00DB3199 /* R底部栏选中1.png */,
-				B77E19B81BC2A50C00DB3199 /* R底部栏选中3.png */,
-				B77E19B91BC2A50C00DB3199 /* R底部栏选中4.png */,
+				B77E19B81BC2A50C00DB3199 /* R底部栏选中2.png */,
+				B77E19B91BC2A50C00DB3199 /* R底部栏选中3.png */,
 				3AECA7AF1C0703D7006036E2 /* 发现_黑.png */,
 				3AECA7B01C0703D7006036E2 /* 发现_黑@2x.png */,
 				3AECA7B11C0703D7006036E2 /* 发现_黑@3x.png */,
@@ -10602,7 +10608,7 @@
 				3AEDB1501BFC3DFB00AD7E95 /* number_five_style_3.plist in Resources */,
 				B7D5DD0F1BD5F243005A1FE6 /* R播放@2x.png in Resources */,
 				3AEDB2A01BFC426600AD7E95 /* makecards_puzzle_storyboard1_icon@2x.png in Resources */,
-				B77E1A6B1BC2A50C00DB3199 /* R底部栏选中3.png in Resources */,
+				B77E1A6B1BC2A50C00DB3199 /* R底部栏选中2.png in Resources */,
 				3A2F0DC81BFC8354000EE3B9 /* R白色聚光灯效果.png in Resources */,
 				3A3677BF1BE1EBFF00DF844F /* kr-video-player-play@3x.png in Resources */,
 				B77E1AB01BC2A50C00DB3199 /* 引导页-5-03.png in Resources */,
@@ -10638,7 +10644,7 @@
 				3AEDB2481BFC426600AD7E95 /* face_18.png in Resources */,
 				B77E1A951BC2A50C00DB3199 /* R选取图片按钮.png in Resources */,
 				3A4A6A3F1BEC8EA300AE6639 /* SVProgressHUD.bundle in Resources */,
-				B77E1A681BC2A50C00DB3199 /* R底部栏未选中4.png in Resources */,
+				B77E1A681BC2A50C00DB3199 /* R底部栏未选中3.png in Resources */,
 				3AEDB2861BFC426600AD7E95 /* makecards_puzzle5_storyboard6_icon@2x.png in Resources */,
 				B77E1AD31BC2A50C00DB3199 /* VoiceSearchFeedback012@2x.png in Resources */,
 				3AEDB2A71BFC426600AD7E95 /* makecards_puzzle_storyboard5_icon.png in Resources */,
@@ -10651,7 +10657,7 @@
 				3AEDB2681BFC426600AD7E95 /* sticker_15.png in Resources */,
 				3AEDB1641BFC3DFB00AD7E95 /* number_two_style_5.plist in Resources */,
 				3A69A1DB1C04284B0002F776 /* NotificationBackgroundMessage@2x.png in Resources */,
-				B77E1A6C1BC2A50C00DB3199 /* R底部栏选中4.png in Resources */,
+				B77E1A6C1BC2A50C00DB3199 /* R底部栏选中3.png in Resources */,
 				3AEDB2671BFC426600AD7E95 /* sticker_14.png in Resources */,
 				B77E7C471BD28B2A0058DD07 /* italy.svg in Resources */,
 				B77E1AAB1BC2A50C00DB3199 /* 引导页-4-02.png in Resources */,
@@ -10796,7 +10802,7 @@
 				B77E1A8A1BC2A50C00DB3199 /* R新消息提醒.png in Resources */,
 				3A69A1A21C0407800002F776 /* UIBarButtonItemArrowLeft@2x.png in Resources */,
 				3A69A1941C0407800002F776 /* ImageSelectedOn@3x.png in Resources */,
-				B77E1A671BC2A50C00DB3199 /* R底部栏未选中3.png in Resources */,
+				B77E1A671BC2A50C00DB3199 /* R底部栏未选中2.png in Resources */,
 				3AEDB2511BFC426600AD7E95 /* face_5.png in Resources */,
 				3AEDB24C1BFC426600AD7E95 /* face_21.png in Resources */,
 				B7D5DD0C1BD5EF5F005A1FE6 /* R视频全屏按钮.png in Resources */,
@@ -11020,7 +11026,6 @@
 				B7777D641BC3A93800452D6E /* XMPPRoom.xcdatamodeld in Sources */,
 				B728C18D1BDCA5DD0004B4A9 /* RDrawBoardVC.m in Sources */,
 				3AEE95021BF588CE007F6BD5 /* UIImage+BetterFace.m in Sources */,
-				9487832A1C2A4F1D00E52B11 /* HomePageVC.m in Sources */,
 				3AEE954C1BF588CF007F6BD5 /* UIViewController+DDPopUpViewController.m in Sources */,
 				B7F165571BF86F0700EE5EF2 /* BFLog.m in Sources */,
 				B728C1751BDC9BCA0004B4A9 /* NSDate+TEAExtensions.m in Sources */,
@@ -11092,6 +11097,7 @@
 				B7777D9A1BC3A93800452D6E /* XMPPMessageDeliveryReceipts.m in Sources */,
 				3AEE94A61BF588CE007F6BD5 /* NSDictionary+SafeAccess.m in Sources */,
 				3AF02A721BE720EB00AF0597 /* E_MagnifiterView.m in Sources */,
+				9487833B1C2A635A00E52B11 /* TabBarController.m in Sources */,
 				3AEDB1711BFC3DFB00AD7E95 /* MarqueeLabel.m in Sources */,
 				3A3677C51BE1EBFF00DF844F /* KrVideoPlayerControlView.m in Sources */,
 				B78455291BCAA9D600D64002 /* RGroupAddVC.m in Sources */,
@@ -11505,6 +11511,7 @@
 				3AF02AC01BE7282A00AF0597 /* YMTextData.m in Sources */,
 				3AEE948D1BF588CE007F6BD5 /* NSPersistentStoreCoordinator+Custom.m in Sources */,
 				3AF845691BE9A6B800FEF930 /* unzip.c in Sources */,
+				948783321C2A62DD00E52B11 /* ShopCartVC.m in Sources */,
 				3AEE950E1BF588CE007F6BD5 /* UIImage+RoundedCorner.m in Sources */,
 				B7777D491BC3A93800452D6E /* XMPPJID.m in Sources */,
 				3AF845D81BE9F20C00FEF930 /* UIImage+PECrop.m in Sources */,
@@ -11653,6 +11660,7 @@
 				3AEE94971BF588CE007F6BD5 /* NSData+Hash.m in Sources */,
 				3AEE95181BF588CE007F6BD5 /* UILabel+ESAdjustableLabel.m in Sources */,
 				3AEE95381BF588CF007F6BD5 /* UIView+Animation.m in Sources */,
+				948783381C2A630D00E52B11 /* HomePageVC.m in Sources */,
 				3AF02AD51BE7282A00AF0597 /* WXViewController.m in Sources */,
 				B7F1654D1BF86E7F00EE5EF2 /* BFApp.m in Sources */,
 				B7777D601BC3A93800452D6E /* XMPPJabberRPCModule.m in Sources */,
@@ -11663,6 +11671,7 @@
 				B7777DB91BC3A93800452D6E /* DDLog.m in Sources */,
 				3AEE948A1BF588CE007F6BD5 /* NSManagedObjectContext+Fetching.m in Sources */,
 				3AEE95321BF588CF007F6BD5 /* UITextField+History.m in Sources */,
+				948783351C2A62F300E52B11 /* MineVC.m in Sources */,
 				3AEE94E81BF588CE007F6BD5 /* UIApplication+Permissions.m in Sources */,
 				B76EC22E1BEF0DD0001DDFA8 /* UIView+TYAlertView.m in Sources */,
 				3AED0B2D1BFB112E00EDEEAB /* FXLabel.m in Sources */,
@@ -12103,7 +12112,7 @@
 					"$(PROJECT_DIR)/Hema/Systems/导航",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.hemaapp.demo1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hemaapp.duobao;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "f49a2ad3-71c5-4188-bbcc-010426a19fc2";
 				SDKROOT = iphoneos9.0;
@@ -12152,7 +12161,7 @@
 					"$(PROJECT_DIR)/Hema/Systems/导航",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.hemaapp.demo1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hemaapp.duobao;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "f49a2ad3-71c5-4188-bbcc-010426a19fc2";
 				SDKROOT = iphoneos9.0;
