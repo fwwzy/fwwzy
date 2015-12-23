@@ -7080,6 +7080,13 @@
 			name = Menu;
 			sourceTree = "<group>";
 		};
+		9487833C1C2A676B00E52B11 /* 新增 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "新增";
+			sourceTree = "<group>";
+		};
 		B728C1381BDBAD150004B4A9 /* 统计图表 */ = {
 			isa = PBXGroup;
 			children = (
@@ -8908,7 +8915,7 @@
 		B77E19491BC25EFA00DB3199 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				B77E194D1BC25F6400DB3199 /* 新增 */,
+				9487833C1C2A676B00E52B11 /* 新增 */,
 				B77E194E1BC25F6400DB3199 /* 基础 */,
 			);
 			path = Images;
@@ -8945,13 +8952,6 @@
 				B76F09681BD3A16C0095F655 /* 发布 */,
 			);
 			path = "基础";
-			sourceTree = "<group>";
-		};
-		B77E194D1BC25F6400DB3199 /* 新增 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "新增";
 			sourceTree = "<group>";
 		};
 		B77E194E1BC25F6400DB3199 /* 基础 */ = {
