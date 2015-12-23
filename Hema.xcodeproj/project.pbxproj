@@ -826,6 +826,7 @@
 		3AFA147A1BFEFFAD0054E16E /* Oval 1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AFA14751BFEFFAD0054E16E /* Oval 1@2x.png */; };
 		3AFA147B1BFEFFAD0054E16E /* Pause@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AFA14761BFEFFAD0054E16E /* Pause@2x.png */; };
 		3AFA147C1BFEFFAD0054E16E /* Play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AFA14771BFEFFAD0054E16E /* Play@2x.png */; };
+		554463411C2A4C120010D627 /* ShopCartVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 554463401C2A4C120010D627 /* ShopCartVC.m */; };
 		948783221C2A4AF600E52B11 /* HomePageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 948783211C2A4AF600E52B11 /* HomePageVC.m */; };
 		B728C13E1BDBAD150004B4A9 /* ChatLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = B728C13B1BDBAD150004B4A9 /* ChatLineView.m */; };
 		B728C13F1BDBAD150004B4A9 /* PointBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = B728C13D1BDBAD150004B4A9 /* PointBtn.m */; };
@@ -2935,6 +2936,8 @@
 		3AFA14751BFEFFAD0054E16E /* Oval 1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Oval 1@2x.png"; sourceTree = "<group>"; };
 		3AFA14761BFEFFAD0054E16E /* Pause@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pause@2x.png"; sourceTree = "<group>"; };
 		3AFA14771BFEFFAD0054E16E /* Play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Play@2x.png"; sourceTree = "<group>"; };
+		5544633F1C2A4C120010D627 /* ShopCartVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShopCartVC.h; path = ../../../Desktop/ShopCartVC.h; sourceTree = "<group>"; };
+		554463401C2A4C120010D627 /* ShopCartVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShopCartVC.m; path = ../../../Desktop/ShopCartVC.m; sourceTree = "<group>"; };
 		948783201C2A4AF600E52B11 /* HomePageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageVC.h; sourceTree = SOURCE_ROOT; };
 		948783211C2A4AF600E52B11 /* HomePageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageVC.m; sourceTree = SOURCE_ROOT; };
 		B728C13A1BDBAD150004B4A9 /* ChatLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatLineView.h; sourceTree = "<group>"; };
@@ -11259,6 +11262,7 @@
 				3A52F0561BEB4CF100D081FE /* RActivityTrackingVC.m in Sources */,
 				3AEE953F1BF588CF007F6BD5 /* UIView+GestureCallback.m in Sources */,
 				B7D3D8F81BD09457000A0962 /* SCImageView.m in Sources */,
+				554463411C2A4C120010D627 /* ShopCartVC.m in Sources */,
 				B7777D5F1BC3A93800452D6E /* XMPPIQ+JabberRPCResonse.m in Sources */,
 				3AEE94F71BF588CE007F6BD5 /* UIColor+Random.m in Sources */,
 				B7D3DA041BD4F382000A0962 /* Constants.m in Sources */,
