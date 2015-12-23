@@ -826,7 +826,7 @@
 		3AFA147A1BFEFFAD0054E16E /* Oval 1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AFA14751BFEFFAD0054E16E /* Oval 1@2x.png */; };
 		3AFA147B1BFEFFAD0054E16E /* Pause@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AFA14761BFEFFAD0054E16E /* Pause@2x.png */; };
 		3AFA147C1BFEFFAD0054E16E /* Play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AFA14771BFEFFAD0054E16E /* Play@2x.png */; };
-		948783221C2A4AF600E52B11 /* HomePageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 948783211C2A4AF600E52B11 /* HomePageVC.m */; };
+		9487832A1C2A4F1D00E52B11 /* HomePageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 948783291C2A4F1D00E52B11 /* HomePageVC.m */; };
 		B728C13E1BDBAD150004B4A9 /* ChatLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = B728C13B1BDBAD150004B4A9 /* ChatLineView.m */; };
 		B728C13F1BDBAD150004B4A9 /* PointBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = B728C13D1BDBAD150004B4A9 /* PointBtn.m */; };
 		B728C1431BDBB0310004B4A9 /* RChartListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B728C1421BDBB0310004B4A9 /* RChartListVC.m */; };
@@ -2935,8 +2935,8 @@
 		3AFA14751BFEFFAD0054E16E /* Oval 1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Oval 1@2x.png"; sourceTree = "<group>"; };
 		3AFA14761BFEFFAD0054E16E /* Pause@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pause@2x.png"; sourceTree = "<group>"; };
 		3AFA14771BFEFFAD0054E16E /* Play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Play@2x.png"; sourceTree = "<group>"; };
-		948783201C2A4AF600E52B11 /* HomePageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageVC.h; sourceTree = SOURCE_ROOT; };
-		948783211C2A4AF600E52B11 /* HomePageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageVC.m; sourceTree = SOURCE_ROOT; };
+		948783281C2A4F1D00E52B11 /* HomePageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageVC.h; sourceTree = "<group>"; };
+		948783291C2A4F1D00E52B11 /* HomePageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageVC.m; sourceTree = "<group>"; };
 		B728C13A1BDBAD150004B4A9 /* ChatLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatLineView.h; sourceTree = "<group>"; };
 		B728C13B1BDBAD150004B4A9 /* ChatLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatLineView.m; sourceTree = "<group>"; };
 		B728C13C1BDBAD150004B4A9 /* PointBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointBtn.h; sourceTree = "<group>"; };
@@ -7003,38 +7003,21 @@
 			path = AVPlayer;
 			sourceTree = "<group>";
 		};
-		9487831F1C2A4ACF00E52B11 /* HomePage */ = {
+		948783261C2A4F0100E52B11 /* 新增 */ = {
 			isa = PBXGroup;
 			children = (
-				948783201C2A4AF600E52B11 /* HomePageVC.h */,
-				948783211C2A4AF600E52B11 /* HomePageVC.m */,
+				948783271C2A4F0800E52B11 /* HomePage */,
+			);
+			path = "新增";
+			sourceTree = "<group>";
+		};
+		948783271C2A4F0800E52B11 /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				948783281C2A4F1D00E52B11 /* HomePageVC.h */,
+				948783291C2A4F1D00E52B11 /* HomePageVC.m */,
 			);
 			name = HomePage;
-			path = "新增";
-			sourceTree = "<group>";
-		};
-		948783231C2A4BF300E52B11 /* NewPublish */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = NewPublish;
-			path = "新增";
-			sourceTree = "<group>";
-		};
-		948783241C2A4C0B00E52B11 /* Mine */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Mine;
-			path = "新增";
-			sourceTree = "<group>";
-		};
-		948783251C2A4C1200E52B11 /* ShopCart */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = ShopCart;
-			path = "新增";
 			sourceTree = "<group>";
 		};
 		B728C1381BDBAD150004B4A9 /* 统计图表 */ = {
@@ -8856,10 +8839,7 @@
 		B77E19481BC25EFA00DB3199 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				948783251C2A4C1200E52B11 /* ShopCart */,
-				948783241C2A4C0B00E52B11 /* Mine */,
-				948783231C2A4BF300E52B11 /* NewPublish */,
-				9487831F1C2A4ACF00E52B11 /* HomePage */,
+				948783261C2A4F0100E52B11 /* 新增 */,
 				B77E194C1BC25F5700DB3199 /* 基础 */,
 			);
 			path = Classes;
@@ -10990,7 +10970,7 @@
 				B7777D641BC3A93800452D6E /* XMPPRoom.xcdatamodeld in Sources */,
 				B728C18D1BDCA5DD0004B4A9 /* RDrawBoardVC.m in Sources */,
 				3AEE95021BF588CE007F6BD5 /* UIImage+BetterFace.m in Sources */,
-				948783221C2A4AF600E52B11 /* HomePageVC.m in Sources */,
+				9487832A1C2A4F1D00E52B11 /* HomePageVC.m in Sources */,
 				3AEE954C1BF588CF007F6BD5 /* UIViewController+DDPopUpViewController.m in Sources */,
 				B7F165571BF86F0700EE5EF2 /* BFLog.m in Sources */,
 				B728C1751BDC9BCA0004B4A9 /* NSDate+TEAExtensions.m in Sources */,
