@@ -7010,6 +7010,31 @@
 				948783211C2A4AF600E52B11 /* HomePageVC.m */,
 			);
 			name = HomePage;
+			path = "新增";
+			sourceTree = "<group>";
+		};
+		948783231C2A4BF300E52B11 /* NewPublish */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = NewPublish;
+			path = "新增";
+			sourceTree = "<group>";
+		};
+		948783241C2A4C0B00E52B11 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Mine;
+			path = "新增";
+			sourceTree = "<group>";
+		};
+		948783251C2A4C1200E52B11 /* ShopCart */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ShopCart;
+			path = "新增";
 			sourceTree = "<group>";
 		};
 		B728C1381BDBAD150004B4A9 /* 统计图表 */ = {
@@ -8831,7 +8856,10 @@
 		B77E19481BC25EFA00DB3199 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				B77E194B1BC25F5700DB3199 /* 新增 */,
+				948783251C2A4C1200E52B11 /* ShopCart */,
+				948783241C2A4C0B00E52B11 /* Mine */,
+				948783231C2A4BF300E52B11 /* NewPublish */,
+				9487831F1C2A4ACF00E52B11 /* HomePage */,
 				B77E194C1BC25F5700DB3199 /* 基础 */,
 			);
 			path = Classes;
@@ -8855,14 +8883,6 @@
 				B77E19831BC26A3F00DB3199 /* 控件 */,
 			);
 			path = Systems;
-			sourceTree = "<group>";
-		};
-		B77E194B1BC25F5700DB3199 /* 新增 */ = {
-			isa = PBXGroup;
-			children = (
-				9487831F1C2A4ACF00E52B11 /* HomePage */,
-			);
-			path = "新增";
 			sourceTree = "<group>";
 		};
 		B77E194C1BC25F5700DB3199 /* 基础 */ = {
