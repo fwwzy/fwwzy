@@ -7006,6 +7006,11 @@
 		948783261C2A4F0100E52B11 /* 新增 */ = {
 			isa = PBXGroup;
 			children = (
+				9487832F1C2A4F9600E52B11 /* Menu */,
+				9487832E1C2A4F8C00E52B11 /* Login */,
+				9487832D1C2A4F8000E52B11 /* ShopCart */,
+				9487832C1C2A4F7900E52B11 /* NewPublish */,
+				9487832B1C2A4F7300E52B11 /* Mine */,
 				948783271C2A4F0800E52B11 /* HomePage */,
 			);
 			path = "新增";
@@ -7018,6 +7023,41 @@
 				948783291C2A4F1D00E52B11 /* HomePageVC.m */,
 			);
 			name = HomePage;
+			sourceTree = "<group>";
+		};
+		9487832B1C2A4F7300E52B11 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Mine;
+			sourceTree = "<group>";
+		};
+		9487832C1C2A4F7900E52B11 /* NewPublish */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = NewPublish;
+			sourceTree = "<group>";
+		};
+		9487832D1C2A4F8000E52B11 /* ShopCart */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ShopCart;
+			sourceTree = "<group>";
+		};
+		9487832E1C2A4F8C00E52B11 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		9487832F1C2A4F9600E52B11 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Menu;
 			sourceTree = "<group>";
 		};
 		B728C1381BDBAD150004B4A9 /* 统计图表 */ = {
