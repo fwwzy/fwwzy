@@ -7,8 +7,12 @@
 //
 
 #import "NewPublishVC.h"
+#import "NewPublishCell.h"
 
-@interface NewPublishVC ()
+@interface NewPublishVC ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>{
+    
+    NSInteger time;
+}
 
 @end
 
@@ -16,9 +20,80 @@
 
 - (void)loadSet {
     [self.navigationItem setNewTitle:@"最新揭晓"];
+    //列表
+    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc]init];
+    [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
+    self.collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, UI_View_Width, UI_View_Height )collectionViewLayout:flowLayout];
+    _collectionView.delegate = self;
+    _collectionView.dataSource = self;
+    [self.view addSubview:_collectionView];
+    [self.collectionView registerClass:[NewPublishCell class] forCellWithReuseIdentifier:@"cell"];
+    //背景色
+    _collectionView.backgroundColor = [UIColor clearColor];
+    
+    time = 100;
+    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(timerFireMethod:) userInfo:nil repeats:YES];
 }
 
 - (void)loadData {
+    
+}
+#pragma mark - 代理
+//展示个数
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    return 4;
+}
+//每一个cell大小
+-(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
+    return CGSizeMake(UI_View_Width/2-5, (UI_View_Height-60)/2);
+}
+//每个cell间距
+-(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
+    return UIEdgeInsetsMake(0, 0, 0, 0);
+}
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString *identify = @"cell";
+    NewPublishCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identify forIndexPath:indexPath];
+    //    [cell sizeToFit];
+    if (!cell) {
+        NSLog(@"error");
+    }
+    cell.iconView.image = [UIImage imageNamed:@"newpulish"];
+    cell.nameLabel.text = @"Apple ipad mini4 64G (颜色随机唯一)";
+    cell.priceLabel.text = @"价格：";
+    cell.numLabel.text = @"￥1234";
+    
+    UILabel *timeLabel = [[UILabel alloc]init];
+    timeLabel.frame = CGRectMake(10, CGRectGetMaxY(cell.numLabel.frame), 100, 20);
+    timeLabel.tag = 500+indexPath.row;
+    [cell addSubview:timeLabel];
+    return cell;
+}
+
+- (void)timerFireMethod:(NSTimer *)timer
+{
+    if (time == 0) {
+        time = 100;
+    }
+    time-=1.2;
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *components = [[NSDateComponents alloc] init];
+    [components setYear:2016];
+    [components setMonth:12];
+    [components setDay:23];
+    [components setHour:16];
+    [components setMinute:0];
+    [components setSecond:0];
+    NSDate *fireDate = [calendar dateFromComponents:components];//目标时间
+    NSDate *today = [NSDate date];//当前时间
+    unsigned int unitFlags = NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit;
+    NSDateComponents *d = [calendar components:unitFlags fromDate:today toDate:fireDate options:0];//计算时间差
+    for (int i = 0; i<4; i++) {
+        UILabel *timeLabel = (id)[self.view viewWithTag:500+i];
+        timeLabel.text = [NSString stringWithFormat:@"%ld分%ld秒%zd", (long)[d minute], (long)[d second],time];//倒计时显示
+    }
+    
+    
     
 }
 
