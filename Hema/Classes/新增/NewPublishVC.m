@@ -63,10 +63,37 @@
     cell.priceLabel.text = @"价格：";
     cell.numLabel.text = @"￥1234";
     
-    UILabel *timeLabel = [[UILabel alloc]init];
-    timeLabel.frame = CGRectMake(10, CGRectGetMaxY(cell.numLabel.frame), 100, 20);
-    timeLabel.tag = 500+indexPath.row;
-    [cell addSubview:timeLabel];
+    UIView *timeView= [[UIView alloc]init];
+    timeView.frame = CGRectMake(10, CGRectGetMaxY(cell.numLabel.frame)+20, 150, 20);
+    [cell addSubview:timeView];
+    
+    UILabel *timeLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 12, 150, 20)];
+    timeLabel.text = @"           分             秒";
+    timeLabel.font = [UIFont systemFontOfSize:13];
+    timeLabel.textColor = BB_Gray_Color;
+    [timeView addSubview:timeLabel];
+    
+    for (int i =0 ; i<3; i++) {
+        UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(5 + i*60, 0, 30, 30)];
+        label.backgroundColor = [UIColor blackColor];
+        label.textColor = BB_White_Color;
+        label.tag = 600 * (i+1) + indexPath.row;
+        label.textAlignment = NSTextAlignmentCenter;
+        [timeView addSubview:label];
+    }
+    
+    if (indexPath.row == 2) {
+        timeView.hidden = YES;
+        UIImageView *lineView = [[UIImageView alloc]initWithFrame:CGRectMake(10, CGRectGetMaxY(cell.priceLabel.frame) + 10, cell.frame.size.width - 20, 1)];
+        [lineView setImage:[UIImage imageNamed:@"np_xuxian"]];
+        [cell addSubview:lineView];
+        cell.winerLabel.text = @"中奖者:";
+        cell.winView.image = [UIImage imageNamed:@"np_winner"];
+        cell.phoneLabel.text = @"18223822237";
+        cell.curLabel.text = @"本期夺宝：2人次";
+        cell.timeLabel.text = @"揭晓时间：1分钟前";
+    }
+    
     return cell;
 }
 
@@ -88,10 +115,19 @@
     NSDate *today = [NSDate date];//当前时间
     unsigned int unitFlags = NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit;
     NSDateComponents *d = [calendar components:unitFlags fromDate:today toDate:fireDate options:0];//计算时间差
+    
     for (int i = 0; i<4; i++) {
-        UILabel *timeLabel = (id)[self.view viewWithTag:500+i];
-        timeLabel.text = [NSString stringWithFormat:@"%ld分%ld秒%zd", (long)[d minute], (long)[d second],time];//倒计时显示
+        UILabel *label = (id)[self.view viewWithTag:600 + i];
+        label.text = [NSString stringWithFormat:@"%zd",[d minute]];
+        
+        UILabel *label1 = (id)[self.view viewWithTag:1200 + i];
+        label1.text = [NSString stringWithFormat:@"%zd",[d second]];
+        
+        UILabel *label2 = (id)[self.view viewWithTag:1800 + i];
+        label2.text = [NSString stringWithFormat:@"%zd",time];
+//        timeLabel.text = [NSString stringWithFormat:@"%ld分%ld秒%zd", (long)[d minute], (long)[d second],time];//倒计时显示
     }
+    
     
     
     

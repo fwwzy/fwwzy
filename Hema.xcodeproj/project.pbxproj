@@ -826,6 +826,7 @@
 		3AFA147A1BFEFFAD0054E16E /* Oval 1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AFA14751BFEFFAD0054E16E /* Oval 1@2x.png */; };
 		3AFA147B1BFEFFAD0054E16E /* Pause@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AFA14761BFEFFAD0054E16E /* Pause@2x.png */; };
 		3AFA147C1BFEFFAD0054E16E /* Play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AFA14771BFEFFAD0054E16E /* Play@2x.png */; };
+		553A24D01C2BDA1900C6BD8A /* MyLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 553A24CF1C2BDA1900C6BD8A /* MyLabel.m */; };
 		554463471C2A4FDC0010D627 /* NewPublishVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 554463461C2A4FDC0010D627 /* NewPublishVC.m */; };
 		5544634D1C2A6A2E0010D627 /* NewPublishCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5544634C1C2A6A2E0010D627 /* NewPublishCell.m */; };
 		941684531C2B828D00A88A46 /* newpulish.png in Resources */ = {isa = PBXBuildFile; fileRef = 941684521C2B828D00A88A46 /* newpulish.png */; };
@@ -2960,6 +2961,8 @@
 		3AFA14751BFEFFAD0054E16E /* Oval 1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Oval 1@2x.png"; sourceTree = "<group>"; };
 		3AFA14761BFEFFAD0054E16E /* Pause@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pause@2x.png"; sourceTree = "<group>"; };
 		3AFA14771BFEFFAD0054E16E /* Play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Play@2x.png"; sourceTree = "<group>"; };
+		553A24CE1C2BDA1900C6BD8A /* MyLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLabel.h; sourceTree = "<group>"; };
+		553A24CF1C2BDA1900C6BD8A /* MyLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLabel.m; sourceTree = "<group>"; };
 		554463451C2A4FDC0010D627 /* NewPublishVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewPublishVC.h; sourceTree = "<group>"; };
 		554463461C2A4FDC0010D627 /* NewPublishVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewPublishVC.m; sourceTree = "<group>"; };
 		5544634B1C2A6A2E0010D627 /* NewPublishCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewPublishCell.h; sourceTree = "<group>"; };
@@ -7106,6 +7109,8 @@
 			children = (
 				948783301C2A62DD00E52B11 /* ShopCartVC.h */,
 				948783311C2A62DD00E52B11 /* ShopCartVC.m */,
+				553A24CE1C2BDA1900C6BD8A /* MyLabel.h */,
+				553A24CF1C2BDA1900C6BD8A /* MyLabel.m */,
 			);
 			name = ShopCart;
 			sourceTree = "<group>";
@@ -12004,6 +12009,7 @@
 				3AF02A841BE720EB00AF0597 /* MJRefreshHeaderView.m in Sources */,
 				B76EC22A1BEF0DD0001DDFA8 /* TYAlertScaleFadeAnimation.m in Sources */,
 				B7F1656F1BF8778100EE5EF2 /* NSProcessInfo+BFKit.m in Sources */,
+				553A24D01C2BDA1900C6BD8A /* MyLabel.m in Sources */,
 				B77E18DB1BC25A7D00DB3199 /* main.m in Sources */,
 				3AEE95361BF588CF007F6BD5 /* UITextView+PlaceHolder.m in Sources */,
 				3AF02A731BE720EB00AF0597 /* E_MarkTableViewCell.m in Sources */,
