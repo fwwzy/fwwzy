@@ -839,6 +839,10 @@
 		941684651C2B832C00A88A46 /* hp_search.png in Resources */ = {isa = PBXBuildFile; fileRef = 9416845B1C2B832C00A88A46 /* hp_search.png */; };
 		941684661C2B832C00A88A46 /* hp_share.png in Resources */ = {isa = PBXBuildFile; fileRef = 9416845C1C2B832C00A88A46 /* hp_share.png */; };
 		941684671C2B832C00A88A46 /* hp_type.png in Resources */ = {isa = PBXBuildFile; fileRef = 9416845D1C2B832C00A88A46 /* hp_type.png */; };
+		9416846A1C2BB4FB00A88A46 /* hp_down.png in Resources */ = {isa = PBXBuildFile; fileRef = 941684681C2BB4FB00A88A46 /* hp_down.png */; };
+		9416846B1C2BB4FB00A88A46 /* hp_up.png in Resources */ = {isa = PBXBuildFile; fileRef = 941684691C2BB4FB00A88A46 /* hp_up.png */; };
+		9416846E1C2BE20500A88A46 /* MessageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9416846D1C2BE20500A88A46 /* MessageVC.m */; };
+		941684711C2BE96300A88A46 /* PrizeMsgVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 941684701C2BE96300A88A46 /* PrizeMsgVC.m */; };
 		948783321C2A62DD00E52B11 /* ShopCartVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 948783311C2A62DD00E52B11 /* ShopCartVC.m */; };
 		948783351C2A62F300E52B11 /* MineVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 948783341C2A62F300E52B11 /* MineVC.m */; };
 		948783381C2A630D00E52B11 /* HomePageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 948783371C2A630D00E52B11 /* HomePageVC.m */; };
@@ -2975,6 +2979,12 @@
 		9416845B1C2B832C00A88A46 /* hp_search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hp_search.png; sourceTree = "<group>"; };
 		9416845C1C2B832C00A88A46 /* hp_share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hp_share.png; sourceTree = "<group>"; };
 		9416845D1C2B832C00A88A46 /* hp_type.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hp_type.png; sourceTree = "<group>"; };
+		941684681C2BB4FB00A88A46 /* hp_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hp_down.png; sourceTree = "<group>"; };
+		941684691C2BB4FB00A88A46 /* hp_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hp_up.png; sourceTree = "<group>"; };
+		9416846C1C2BE20500A88A46 /* MessageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageVC.h; sourceTree = "<group>"; };
+		9416846D1C2BE20500A88A46 /* MessageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageVC.m; sourceTree = "<group>"; };
+		9416846F1C2BE96300A88A46 /* PrizeMsgVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrizeMsgVC.h; sourceTree = "<group>"; };
+		941684701C2BE96300A88A46 /* PrizeMsgVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrizeMsgVC.m; sourceTree = "<group>"; };
 		948783301C2A62DD00E52B11 /* ShopCartVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopCartVC.h; sourceTree = "<group>"; };
 		948783311C2A62DD00E52B11 /* ShopCartVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopCartVC.m; sourceTree = "<group>"; };
 		948783331C2A62F300E52B11 /* MineVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineVC.h; sourceTree = "<group>"; };
@@ -7077,6 +7087,8 @@
 			children = (
 				948783361C2A630D00E52B11 /* HomePageVC.h */,
 				948783371C2A630D00E52B11 /* HomePageVC.m */,
+				9416846F1C2BE96300A88A46 /* PrizeMsgVC.h */,
+				941684701C2BE96300A88A46 /* PrizeMsgVC.m */,
 			);
 			name = HomePage;
 			sourceTree = "<group>";
@@ -7124,6 +7136,8 @@
 			children = (
 				948783391C2A635A00E52B11 /* TabBarController.h */,
 				9487833A1C2A635A00E52B11 /* TabBarController.m */,
+				9416846C1C2BE20500A88A46 /* MessageVC.h */,
+				9416846D1C2BE20500A88A46 /* MessageVC.m */,
 			);
 			name = Menu;
 			sourceTree = "<group>";
@@ -7131,6 +7145,8 @@
 		948783401C2A9A9400E52B11 /* 新增 */ = {
 			isa = PBXGroup;
 			children = (
+				941684681C2BB4FB00A88A46 /* hp_down.png */,
+				941684691C2BB4FB00A88A46 /* hp_up.png */,
 				941684541C2B832C00A88A46 /* hp_cart.png */,
 				941684551C2B832C00A88A46 /* hp_msg.png */,
 				941684561C2B832C00A88A46 /* hp_navigationbar.png */,
@@ -10462,6 +10478,7 @@
 				B77E1A921BC2A50C00DB3199 /* R绿色对勾选中.png in Resources */,
 				3AF845B71BE9B71600FEF930 /* R扫描上下长条.png in Resources */,
 				3AEDB2711BFC426600AD7E95 /* sticker_23.png in Resources */,
+				9416846B1C2BB4FB00A88A46 /* hp_up.png in Resources */,
 				B77E1A7B1BC2A50C00DB3199 /* R步行2.png in Resources */,
 				B77E1A911BC2A50C00DB3199 /* R红色对勾选中.png in Resources */,
 				B77E1AB61BC2A50C00DB3199 /* chatFire_audioPlaying1@2x.png in Resources */,
@@ -10470,6 +10487,7 @@
 				B7777B451BC399EE00452D6E /* ShareSDKiPhoneDefaultShareViewUI.bundle in Resources */,
 				B7777B941BC39FBA00452D6E /* AlipaySDK.bundle in Resources */,
 				3A69A1921C0407800002F776 /* ImageSelectedOn.png in Resources */,
+				9416846A1C2BB4FB00A88A46 /* hp_down.png in Resources */,
 				B77E1A9B1BC2A50C00DB3199 /* R单选框未选中.png in Resources */,
 				3AEDB2941BFC426600AD7E95 /* makecards_puzzle3_storyboard1_icon@2x.png in Resources */,
 				3AF845D91BE9F20C00FEF930 /* PEPhotoCropEditor.bundle in Resources */,
@@ -11725,6 +11743,7 @@
 				B728C13E1BDBAD150004B4A9 /* ChatLineView.m in Sources */,
 				B77E1B761BC2BE0B00DB3199 /* JSONKit.m in Sources */,
 				B77E1B6C1BC2AD8500DB3199 /* UIImage+WebP.m in Sources */,
+				941684711C2BE96300A88A46 /* PrizeMsgVC.m in Sources */,
 				B7D3D8FB1BD09457000A0962 /* SCPhotoConfiguration.m in Sources */,
 				3AF02ACE1BE7282A00AF0597 /* WFPopView.m in Sources */,
 				B7777D681BC3A93800452D6E /* XMPPRoomHybrid.xcdatamodeld in Sources */,
@@ -11808,6 +11827,7 @@
 				B76C9B111C01A5F200AB8C5F /* QBPopupMenuPagenatorView.m in Sources */,
 				3A69A2001C044AA70002F776 /* LDProgressView.m in Sources */,
 				3AEE94C21BF588CE007F6BD5 /* NSString+Contains.m in Sources */,
+				9416846E1C2BE20500A88A46 /* MessageVC.m in Sources */,
 				3A4A6A3E1BEC8EA300AE6639 /* SVIndefiniteAnimatedView.m in Sources */,
 				B7F165291BF86B2A00EE5EF2 /* UIImageView+BFKit.m in Sources */,
 				3A52F0491BEB39FD00D081FE /* RNormalFunctionVC.m in Sources */,

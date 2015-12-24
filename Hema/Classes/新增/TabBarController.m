@@ -27,12 +27,12 @@
 
 -(void)loadSet {
     
-//    HomePageVC *homePageVC = [[HomePageVC alloc] init];
-//    LCPanNavigationController *homePageNav = [[LCPanNavigationController alloc] initWithRootViewController:homePageVC];
-//    homePageNav.tabBarItem.tag = 0;
-    LoginVC *loginVC = [[LoginVC alloc] init];
-    LCPanNavigationController *loginNav = [[LCPanNavigationController alloc] initWithRootViewController:loginVC];
-    loginNav.tabBarItem.tag = 0;
+    HomePageVC *homePageVC = [[HomePageVC alloc] init];
+    LCPanNavigationController *homePageNav = [[LCPanNavigationController alloc] initWithRootViewController:homePageVC];
+    homePageNav.tabBarItem.tag = 0;
+//    LoginVC *loginVC = [[LoginVC alloc] init];
+//    LCPanNavigationController *loginNav = [[LCPanNavigationController alloc] initWithRootViewController:loginVC];
+//    loginNav.tabBarItem.tag = 0;
     
     NewPublishVC *newPublishVC = [[NewPublishVC alloc] init];
     LCPanNavigationController *newPublishNav = [[LCPanNavigationController alloc] initWithRootViewController:newPublishVC];
@@ -46,7 +46,7 @@
     LCPanNavigationController *mineNav = [[LCPanNavigationController alloc] initWithRootViewController:mineVC];
     mineNav.tabBarItem.tag = 3;
     
-    NSMutableArray *list = [[NSMutableArray alloc] initWithObjects:loginNav,newPublishNav,shopCartNav,mineNav, nil];
+    NSMutableArray *list = [[NSMutableArray alloc] initWithObjects:homePageNav,newPublishNav,shopCartNav,mineNav, nil];
     self.viewControllers = list;
     
     float width = UI_View_Width/4;
