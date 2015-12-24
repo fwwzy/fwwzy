@@ -32,7 +32,29 @@
         _numLabel.textColor = BB_Red_Color;
         _numLabel.font = [UIFont systemFontOfSize:18];
         [self addSubview:_numLabel];
-        
+        //中奖
+        _winerLabel = [[UILabel alloc]initWithFrame:CGRectMake(10, CGRectGetMaxY(_priceLabel.frame) + 20, 40, 15)];
+        _winerLabel.textColor = BB_Gray_Color;
+        _winerLabel.font = [UIFont systemFontOfSize:11];
+        [self addSubview:_winerLabel];
+        //小头像
+        _winView = [[UIImageView alloc]initWithFrame:CGRectMake(50, CGRectGetMinY(_winerLabel.frame), 15, 15)];
+        [self addSubview:_winView];
+        //号码
+        _phoneLabel = [[UILabel alloc]initWithFrame:CGRectMake(70, CGRectGetMinY(_winerLabel.frame), 100, 15)];
+        _phoneLabel.textColor = BB_Orange_Color;
+        _phoneLabel.font = [UIFont systemFontOfSize:11];
+        [self addSubview:_phoneLabel];
+        //本期夺宝
+        _curLabel = [[UILabel alloc]initWithFrame:CGRectMake(10, CGRectGetMaxY(_winerLabel.frame), 150, 15)];
+        _curLabel.font = [UIFont systemFontOfSize:11];
+        _curLabel.textColor = BB_Gray_Color;
+        [self addSubview:_curLabel];
+        //揭晓时间
+        _timeLabel = [[UILabel alloc]initWithFrame:CGRectMake(10, CGRectGetMaxY(_curLabel.frame), 150, 15)];
+        _timeLabel.font = [UIFont systemFontOfSize:11];
+        _timeLabel.textColor = BB_Gray_Color;
+        [self addSubview:_timeLabel];
     }
     return self;
 }
