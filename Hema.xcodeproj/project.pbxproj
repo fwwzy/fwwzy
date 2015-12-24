@@ -844,6 +844,11 @@
 		9416846B1C2BB4FB00A88A46 /* hp_up.png in Resources */ = {isa = PBXBuildFile; fileRef = 941684691C2BB4FB00A88A46 /* hp_up.png */; };
 		9416846E1C2BE20500A88A46 /* MessageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9416846D1C2BE20500A88A46 /* MessageVC.m */; };
 		941684711C2BE96300A88A46 /* PrizeMsgVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 941684701C2BE96300A88A46 /* PrizeMsgVC.m */; };
+		941684771C2BF7B200A88A46 /* np_winner.png in Resources */ = {isa = PBXBuildFile; fileRef = 941684721C2BF7B200A88A46 /* np_winner.png */; };
+		941684781C2BF7B200A88A46 /* np_xuxian.png in Resources */ = {isa = PBXBuildFile; fileRef = 941684731C2BF7B200A88A46 /* np_xuxian.png */; };
+		941684791C2BF7B200A88A46 /* sc_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 941684741C2BF7B200A88A46 /* sc_icon.png */; };
+		9416847A1C2BF7B200A88A46 /* sc_minus.png in Resources */ = {isa = PBXBuildFile; fileRef = 941684751C2BF7B200A88A46 /* sc_minus.png */; };
+		9416847B1C2BF7B200A88A46 /* sc_plus.png in Resources */ = {isa = PBXBuildFile; fileRef = 941684761C2BF7B200A88A46 /* sc_plus.png */; };
 		948783321C2A62DD00E52B11 /* ShopCartVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 948783311C2A62DD00E52B11 /* ShopCartVC.m */; };
 		948783351C2A62F300E52B11 /* MineVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 948783341C2A62F300E52B11 /* MineVC.m */; };
 		948783381C2A630D00E52B11 /* HomePageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 948783371C2A630D00E52B11 /* HomePageVC.m */; };
@@ -2988,6 +2993,11 @@
 		9416846D1C2BE20500A88A46 /* MessageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageVC.m; sourceTree = "<group>"; };
 		9416846F1C2BE96300A88A46 /* PrizeMsgVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrizeMsgVC.h; sourceTree = "<group>"; };
 		941684701C2BE96300A88A46 /* PrizeMsgVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrizeMsgVC.m; sourceTree = "<group>"; };
+		941684721C2BF7B200A88A46 /* np_winner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = np_winner.png; path = "新增/np_winner.png"; sourceTree = "<group>"; };
+		941684731C2BF7B200A88A46 /* np_xuxian.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = np_xuxian.png; path = "新增/np_xuxian.png"; sourceTree = "<group>"; };
+		941684741C2BF7B200A88A46 /* sc_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sc_icon.png; path = "新增/sc_icon.png"; sourceTree = "<group>"; };
+		941684751C2BF7B200A88A46 /* sc_minus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sc_minus.png; path = "新增/sc_minus.png"; sourceTree = "<group>"; };
+		941684761C2BF7B200A88A46 /* sc_plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sc_plus.png; path = "新增/sc_plus.png"; sourceTree = "<group>"; };
 		948783301C2A62DD00E52B11 /* ShopCartVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopCartVC.h; sourceTree = "<group>"; };
 		948783311C2A62DD00E52B11 /* ShopCartVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopCartVC.m; sourceTree = "<group>"; };
 		948783331C2A62F300E52B11 /* MineVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineVC.h; sourceTree = "<group>"; };
@@ -9003,6 +9013,11 @@
 		B77E19491BC25EFA00DB3199 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				941684721C2BF7B200A88A46 /* np_winner.png */,
+				941684731C2BF7B200A88A46 /* np_xuxian.png */,
+				941684741C2BF7B200A88A46 /* sc_icon.png */,
+				941684751C2BF7B200A88A46 /* sc_minus.png */,
+				941684761C2BF7B200A88A46 /* sc_plus.png */,
 				948783401C2A9A9400E52B11 /* 新增 */,
 				B77E194E1BC25F6400DB3199 /* 基础 */,
 			);
@@ -10518,6 +10533,7 @@
 				B77E1A801BC2A50C00DB3199 /* R滑动到底部.png in Resources */,
 				3AEDB2971BFC426600AD7E95 /* makecards_puzzle3_storyboard3_icon.png in Resources */,
 				B7777B3F1BC399EE00452D6E /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
+				941684781C2BF7B200A88A46 /* np_xuxian.png in Resources */,
 				3AEDB1531BFC3DFB00AD7E95 /* number_five_style_6.plist in Resources */,
 				3AEDB2891BFC426600AD7E95 /* makecards_puzzle4_storyboard2_icon.png in Resources */,
 				3AEDB24F1BFC426600AD7E95 /* face_3.png in Resources */,
@@ -10568,6 +10584,7 @@
 				B77E1AFD1BC2A50C00DB3199 /* R聊天之按住.png in Resources */,
 				B77E1A901BC2A50C00DB3199 /* R红白对勾选中.png in Resources */,
 				3AF02A551BE720EB00AF0597 /* Chapter1.txt in Resources */,
+				941684771C2BF7B200A88A46 /* np_winner.png in Resources */,
 				B77E1A9D1BC2A50C00DB3199 /* R登录左导航关闭.png in Resources */,
 				B77E1AA11BC2A50C00DB3199 /* 120*120.png in Resources */,
 				3A3677C11BE1EBFF00DF844F /* kr-video-player-point@3x.png in Resources */,
@@ -10609,6 +10626,7 @@
 				3AF02A5B1BE720EB00AF0597 /* Chapter7.txt in Resources */,
 				B77E1AF51BC2A50C00DB3199 /* R群组logo.png in Resources */,
 				3AEDB23B1BFC426600AD7E95 /* border_7.png in Resources */,
+				9416847B1C2BF7B200A88A46 /* sc_plus.png in Resources */,
 				3A69A1E61C04284B0002F776 /* TSMessagesDefaultDesign.json in Resources */,
 				3AEDB1581BFC3DFB00AD7E95 /* number_four_style_5.plist in Resources */,
 				3AF02A691BE720EB00AF0597 /* reader_font_decrease@2x.png in Resources */,
@@ -10794,6 +10812,7 @@
 				B76F09611BD39C580095F655 /* icon3.png in Resources */,
 				B77E1A641BC2A50C00DB3199 /* R底部栏发布按钮.png in Resources */,
 				3AF02AC31BE7282A00AF0597 /* 03@2x.png in Resources */,
+				941684791C2BF7B200A88A46 /* sc_icon.png in Resources */,
 				B7D3D8EB1BD09457000A0962 /* WechatShortVideo_scan_focus@2x.png in Resources */,
 				3A69A19F1C0407800002F776 /* PlayButtonOverlayLargeTap@2x.png in Resources */,
 				B77E1AC31BC2A50C00DB3199 /* VoiceSearchFeedback004@2x.png in Resources */,
@@ -11015,6 +11034,7 @@
 				3AECA7DB1C0703D7006036E2 /* 我的_on.png in Resources */,
 				B77E1A741BC2A50C00DB3199 /* R地图导航定位按钮.png in Resources */,
 				9416845F1C2B832C00A88A46 /* hp_msg.png in Resources */,
+				9416847A1C2BF7B200A88A46 /* sc_minus.png in Resources */,
 				B77E1AFB1BC2A50C00DB3199 /* R聊天之图片.png in Resources */,
 				B77E1A7A1BC2A50C00DB3199 /* R步行.png in Resources */,
 				3AEDB95F1BF9B55300E70488 /* zoomout2.png in Resources */,
