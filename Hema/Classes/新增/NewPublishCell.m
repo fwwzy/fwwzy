@@ -33,7 +33,7 @@
         _numLabel.font = [UIFont systemFontOfSize:18];
         [self addSubview:_numLabel];
         //中奖
-        _winerLabel = [[UILabel alloc]initWithFrame:CGRectMake(10, CGRectGetMaxY(_priceLabel.frame) + 20, 40, 15)];
+        _winerLabel = [[UILabel alloc]initWithFrame:CGRectMake(10, CGRectGetMaxY(_priceLabel.frame) + 10, 40, 15)];
         _winerLabel.textColor = BB_Gray_Color;
         _winerLabel.font = [UIFont systemFontOfSize:11];
         [self addSubview:_winerLabel];

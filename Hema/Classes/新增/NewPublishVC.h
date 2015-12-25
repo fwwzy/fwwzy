@@ -6,8 +6,9 @@
 //  Copyright © 2015年 Hemaapp. All rights reserved.
 //
 
-#import "PullRefreshGroupVC.h"
 
-@interface NewPublishVC : PullRefreshGroupVC
+#import "PullRefreshCollectionVC.h"
+
+@interface NewPublishVC : UIViewController
 @property(nonatomic,strong)UICollectionView *collectionView;
 @end

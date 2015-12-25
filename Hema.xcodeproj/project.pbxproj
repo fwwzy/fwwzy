@@ -827,6 +827,7 @@
 		3AFA147B1BFEFFAD0054E16E /* Pause@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AFA14761BFEFFAD0054E16E /* Pause@2x.png */; };
 		3AFA147C1BFEFFAD0054E16E /* Play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AFA14771BFEFFAD0054E16E /* Play@2x.png */; };
 		553A24D01C2BDA1900C6BD8A /* MyLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 553A24CF1C2BDA1900C6BD8A /* MyLabel.m */; };
+		5543E7861C2D14180006225D /* DetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5543E7851C2D14180006225D /* DetailVC.m */; };
 		554463471C2A4FDC0010D627 /* NewPublishVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 554463461C2A4FDC0010D627 /* NewPublishVC.m */; };
 		5544634D1C2A6A2E0010D627 /* NewPublishCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5544634C1C2A6A2E0010D627 /* NewPublishCell.m */; };
 		941684531C2B828D00A88A46 /* newpulish.png in Resources */ = {isa = PBXBuildFile; fileRef = 941684521C2B828D00A88A46 /* newpulish.png */; };
@@ -2972,6 +2973,8 @@
 		3AFA14771BFEFFAD0054E16E /* Play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Play@2x.png"; sourceTree = "<group>"; };
 		553A24CE1C2BDA1900C6BD8A /* MyLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLabel.h; sourceTree = "<group>"; };
 		553A24CF1C2BDA1900C6BD8A /* MyLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLabel.m; sourceTree = "<group>"; };
+		5543E7841C2D14180006225D /* DetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailVC.h; sourceTree = "<group>"; };
+		5543E7851C2D14180006225D /* DetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailVC.m; sourceTree = "<group>"; };
 		554463451C2A4FDC0010D627 /* NewPublishVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewPublishVC.h; sourceTree = "<group>"; };
 		554463461C2A4FDC0010D627 /* NewPublishVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewPublishVC.m; sourceTree = "<group>"; };
 		5544634B1C2A6A2E0010D627 /* NewPublishCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewPublishCell.h; sourceTree = "<group>"; };
@@ -7122,6 +7125,8 @@
 				5544634C1C2A6A2E0010D627 /* NewPublishCell.m */,
 				554463451C2A4FDC0010D627 /* NewPublishVC.h */,
 				554463461C2A4FDC0010D627 /* NewPublishVC.m */,
+				5543E7841C2D14180006225D /* DetailVC.h */,
+				5543E7851C2D14180006225D /* DetailVC.m */,
 			);
 			name = NewPublish;
 			sourceTree = "<group>";
@@ -11848,6 +11853,7 @@
 				B77E1B661BC2AD8500DB3199 /* SDWebImageManager+MJ.m in Sources */,
 				3A69A1471C03178B0002F776 /* AMPopTip+Animation.m in Sources */,
 				B7F1655C1BF86F7A00EE5EF2 /* BFTouchID.m in Sources */,
+				5543E7861C2D14180006225D /* DetailVC.m in Sources */,
 				3AF02A521BE720EB00AF0597 /* E_Paging.mm in Sources */,
 				B76C9B111C01A5F200AB8C5F /* QBPopupMenuPagenatorView.m in Sources */,
 				3A69A2001C044AA70002F776 /* LDProgressView.m in Sources */,

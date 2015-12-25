@@ -84,12 +84,13 @@
         }
     }
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.tag = 1000+indexPath.row;
     //图片
     UIImageView *iconView = [[UIImageView alloc]initWithFrame:CGRectMake(10, 10, 85, 85)];
     [iconView setImage:[UIImage imageNamed:@"sc_icon"]];
     [cell addSubview:iconView];
     //名称
-    UILabel *nameLabel = [[UILabel alloc]initWithFrame:CGRectMake(105, 5, 230, 50)];
+    UILabel *nameLabel = [[UILabel alloc]initWithFrame:CGRectMake(105, 5, 200, 50)];
     nameLabel.numberOfLines = 2;
     nameLabel.font = [UIFont systemFontOfSize:18];
     nameLabel.text = @"Apple ipad mini 64G（颜色随机唯一的不同……）";
@@ -129,11 +130,17 @@
     midLabel.tag = 700 +indexPath.row;
     [numView addSubview:midLabel];
     
-    UIButton *minBtn = [[UIButton alloc]initWithFrame:CGRectMake(5, 10, 20, 5)];
-    [minBtn setBackgroundImage:[UIImage imageNamed:@"sc_minus"] forState:UIControlStateNormal];
+    UIButton *minBtn = [[UIButton alloc]initWithFrame:CGRectMake(5, 5, 20, 20)];
+    [minBtn setBackgroundImage:[UIImage imageNamed:@"sc_minus1"] forState:UIControlStateNormal];
     [minBtn addTarget:self action:@selector(numBtnClick:) forControlEvents:UIControlEventTouchUpInside];
     minBtn.tag = 800 + indexPath.row;
     [numView addSubview:minBtn];
+    
+    UIButton *deleteBtn = [[UIButton alloc]initWithFrame:CGRectMake(UI_View_Width -25, 115, 18, 20)];
+    [deleteBtn setBackgroundImage:[UIImage imageNamed:@"shanchu_03"] forState:UIControlStateNormal];
+//    [deleteBtn addTarget:self action:@selector(deleteBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    deleteBtn.tag = 1000+indexPath.row;
+    [cell addSubview:deleteBtn];
     
     return cell;
 }
@@ -185,5 +192,15 @@
     NSLog(@"%zd",_page);
     
 }
+//-(void)deleteBtnClick:(UIButton *)button{
+//    NSArray *visibleCells=[_tableView visibleCells];
+//    for (UITableViewCell *cell in visibleCells) {
+//        if (cell.tag==button.tag) {
+//            [self.cellInfoArray removeObjectAtIndex:[cell tag]];
+//            [self.myTableView reloadData];
+//            break;
+//        }
+//    }
+//}
 
 @end

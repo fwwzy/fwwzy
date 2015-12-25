@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PSCollectionViewCell.h"
 
-@interface NewPublishCell : UICollectionViewCell
+@interface NewPublishCell :UICollectionViewCell
 @property(nonatomic,strong)UIImageView *iconView;
 @property(nonatomic,strong)UILabel *nameLabel;
 @property(nonatomic,strong)UILabel *titleLabel;
