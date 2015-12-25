@@ -27,12 +27,10 @@
 
 -(void)loadSet {
     
+    
     HomePageVC *homePageVC = [[HomePageVC alloc] init];
     LCPanNavigationController *homePageNav = [[LCPanNavigationController alloc] initWithRootViewController:homePageVC];
     homePageNav.tabBarItem.tag = 0;
-//    LoginVC *loginVC = [[LoginVC alloc] init];
-//    LCPanNavigationController *loginNav = [[LCPanNavigationController alloc] initWithRootViewController:loginVC];
-//    loginNav.tabBarItem.tag = 0;
     
     NewPublishVC *newPublishVC = [[NewPublishVC alloc] init];
     LCPanNavigationController *newPublishNav = [[LCPanNavigationController alloc] initWithRootViewController:newPublishVC];
@@ -49,14 +47,17 @@
     NSMutableArray *list = [[NSMutableArray alloc] initWithObjects:homePageNav,newPublishNav,shopCartNav,mineNav, nil];
     self.viewControllers = list;
     
+    _imgViewList = [[NSMutableArray alloc]init];
+    
     float width = UI_View_Width/4;
     float height = self.tabBar.frame.size.height;
-    
+    NSArray *ImgArr = @[@"tb_db",@"tb_zxjx",@"tb_gwc",@"tb_wd"];
+    NSArray *selectImgArr = @[@"tb_duobao",@"tb_newpublish",@"tb_cart",@"tb_mine"];
     for (int i = 0; i < 4; i++) {
         
         //背景图片
         UIImageView *myImgView = [[UIImageView alloc] init];
-        myImgView.contentMode = UIViewContentModeScaleAspectFit;
+        //myImgView.contentMode = UIViewContentModeScaleAspectFit;
         [self.tabBar addSubview:myImgView];
         
         //按钮
@@ -66,15 +67,15 @@
         myBtn.tag = i;
         
         //添加图片
-        [myImgView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"R底部栏未选中%d.png",i]]];
-        [myImgView setHighlightedImage:[UIImage imageNamed:[NSString stringWithFormat:@"R底部栏选中%d.png",i]]];
+        [myImgView setImage:[UIImage imageNamed:ImgArr[i]]];
+        [myImgView setHighlightedImage:[UIImage imageNamed:selectImgArr[i]]];
         [myImgView setFrame:CGRectMake(width*i, 0, width, height)];
         [_imgViewList addObject:myImgView];
         [myBtn setFrame:myImgView.frame];
     }
-    
+     [self liSelectIndex:0];
     //设置颜色
-    [self.tabBar setBackgroundImage:[UIImage mm_imageWithColor:RGB_UI_COLOR(52, 55, 62) Size:self.tabBar.frame.size]];
+    [self.tabBar setBackgroundImage:[UIImage mm_imageWithColor:RGB_UI_COLOR(247, 247, 247) Size:self.tabBar.frame.size]];
     [self.tabBar setShadowImage:[UIImage mm_imageWithColor:[UIColor clearColor] Size:CGSizeMake(UI_View_Width, 0.7)]];
 }
 
@@ -95,9 +96,11 @@
     for(UIImageView *imgView in _imgViewList)
     {
         [imgView setHighlighted:NO];
+        imgView.contentMode = UIViewContentModeScaleAspectFit;
     }
     UIImageView *imgView = [_imgViewList objectAtIndex:index];
     [imgView setHighlighted:YES];
+    imgView.contentMode = UIViewContentModeScaleToFill;
 }
 
 - (void)didReceiveMemoryWarning {

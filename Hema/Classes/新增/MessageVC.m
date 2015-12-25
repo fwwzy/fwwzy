@@ -29,9 +29,15 @@
     
     CGSize contentSize  = [self.contentText boundingRectWithSize:CGSizeMake(UI_View_Width - 20, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:15]} context:nil].size;
     
-    [_contentLabel setFrame:CGRectMake(10, 10, UI_View_Width - 20, contentSize.height)];
+    [_contentLabel setFrame:CGRectMake(10, 10, UI_View_Width - 10, contentSize.height)];
     _contentLabel.text = self.contentText;
-    [self.view addSubview:_contentLabel];
+    
+    UIScrollView *scrollView = [[UIScrollView alloc] init];
+    scrollView.frame = CGRectMake(0, 0, UI_View_Width, self.view.height);
+    scrollView.contentSize = CGSizeMake(0, _contentLabel.size.height + 80);
+    scrollView.showsVerticalScrollIndicator = NO;
+    [scrollView addSubview:_contentLabel];
+    [self.view addSubview:scrollView];
 }
 
 

@@ -45,7 +45,7 @@
 - (void)loadData {
     
     imgSource = [[NSMutableArray alloc] init];
-    [imgSource addObjectsFromArray:@[@"newpulish",@"newpulish",@"newpulish",@"newpulish",@"newpulish"]];
+    [imgSource addObjectsFromArray:@[@"newpulish",@"newpulish",@"newpulish",@"newpulish"]];
     [self.mytable reloadData];
 }
 
@@ -112,9 +112,10 @@
                 
                 UIPageControl *topControl = [[UIPageControl alloc] init];
                 
-                [topControl setFrame:CGRectMake(0, 0 , 60, 20)];
-                topControl.center = CGPointMake(self.view.width / 2 - 30, 180);
-                topControl.numberOfPages = 5;
+                [topControl setFrame:CGRectMake(0, 0 , 90, 30)];
+                topControl.center = CGPointMake(self.view.width / 2 , 180);
+                topControl.numberOfPages = 4;
+                topControl.currentPage = 0;
                 topControl.tag = 2;
                 topControl.currentPageIndicatorTintColor = BB_Orange_Color;
                 topControl.pageIndicatorTintColor = BB_Gray_Color;
@@ -271,7 +272,7 @@
             
             UIView *frontView = [[UIView alloc] init];
             frontView.frame = CGRectMake(10, 200, (UI_View_Width / 5) * 0.83, 5);
-            frontView.backgroundColor = BB_Orange_Color;
+            frontView.backgroundColor = [UIColor colorWithRed:248.0/255 green:149.0/255 blue:24.0/255 alpha:1];
             frontView.alpha = 0.5;
             
             //购物车图标
@@ -310,7 +311,7 @@
             
             UIView *rfrontView = [[UIView alloc] init];
             rfrontView.frame = CGRectMake(10, 200, (UI_View_Width / 5) * 0.83, 5);
-            rfrontView.backgroundColor = BB_Orange_Color;
+            rfrontView.backgroundColor =  [UIColor colorWithRed:248.0/255 green:149.0/255 blue:24.0/255 alpha:1];
             rfrontView.alpha = 0.5;
             
             //购物车图标
@@ -360,7 +361,6 @@
 
 //导航搜索item点击事件
 - (void)searchClick:(HemaButton *)sender {
-    
 }
 
 //分类按钮点击事件
@@ -425,13 +425,16 @@
     
     UIPageControl *control = (id)[self.view viewWithTag:2];
     UIScrollView *scrollView = (id)[self.view viewWithTag:1];
-    CGPoint contentSet = CGPointMake(scrollView.contentOffset.x + UI_View_Width, 0);
-    scrollView.contentOffset = contentSet;
+    [UIView animateWithDuration:1 animations:^{
+        CGPoint contentSet = CGPointMake(scrollView.contentOffset.x + UI_View_Width, 0);
+        scrollView.contentOffset = contentSet;
+    }];
     
-    if (control.currentPage == 4) {
+     control.currentPage = scrollView.contentOffset.x / UI_View_Width;
+    if (control.currentPage == 3) {
         scrollView.contentOffset = CGPointMake(0, 0);
     }
-    control.currentPage = scrollView.contentOffset.x / UI_View_Width;
+   
     
 }
 
@@ -439,13 +442,15 @@
 - (void)prizeViewPass {
     
     UIScrollView *prizeView = (id)[self.view viewWithTag:3];
-    CGPoint prizeSet = CGPointMake(0, prizeView.contentOffset.y + 20);
-    prizeView.contentOffset = prizeSet;
     
-    if (prizeSet.y == prizeView.contentSize.height) {
-        prizeView.contentOffset = CGPointMake(0, 0);
-    }
-    
+    [UIView animateWithDuration:1 animations:^{
+        CGPoint prizeSet = CGPointMake(0, prizeView.contentOffset.y + 20);
+        prizeView.contentOffset = prizeSet;
+        if (prizeSet.y == prizeView.contentSize.height) {
+            prizeView.contentOffset = CGPointMake(0, 0);
+        }
+    }];
+
 }
 
 #pragma mark - scrollView代理方法

@@ -7,8 +7,11 @@
 //
 
 #import "LoginVC.h"
+#import "RegistVC.h"
+#import "FindPwdVC.h"
+#import "TabBarController.h"
 
-@interface LoginVC () {
+@interface LoginVC () <UITextFieldDelegate> {
     UITextField *_phoneTF;
     UITextField *_pwdTF;
 }
@@ -16,14 +19,14 @@
 
 @implementation LoginVC
 
+
 - (void)loadSet {
-    
-    self.navigationController.navigationBar.hidden = YES;
-    
+    self.navigationController.navigationBarHidden = YES;
     //自定义navigation
     HemaImgView *navigationView = [[HemaImgView alloc] init];
     navigationView.frame = CGRectMake(0, 0, UI_View_Width, self.view.height / 3.5);
-    navigationView.backgroundColor = BB_Red_Color;
+    navigationView.backgroundColor = [UIColor colorWithRed:217.0/255 green:29.0/255 blue:43.0/255 alpha:1];
+    navigationView.userInteractionEnabled = YES;
     [self.view addSubview:navigationView];
     
     HemaButton *backBtn = [[HemaButton alloc] init];
@@ -66,6 +69,7 @@
     
     _phoneTF = [[UITextField alloc] init];
     _phoneTF.frame = CGRectMake(45, phoneView.height / 10 , phoneView.size.width - 42, 40);
+    _phoneTF.delegate = self;
     _phoneTF.placeholder = @"请输入手机号";
     _phoneTF.keyboardType = UIKeyboardTypeNumberPad;
     
@@ -101,9 +105,8 @@
     //登陆按钮
     HemaButton *loginBtn = [[HemaButton alloc] init];
     loginBtn.frame = CGRectMake(30, pwdView.origin.y + pwdView.size.height + 20, UI_View_Width - 60, 40);
-    [loginBtn setBackgroundColor:BB_Red_Color];
     [loginBtn setTitle:@"登陆" forState:UIControlStateNormal];
-    [loginBtn setBackgroundImage:[UIImage imageNamed:@"lg_logo"] forState:UIControlStateNormal];
+    [loginBtn setBackgroundImage:[UIImage imageNamed:@"lg_login"] forState:UIControlStateNormal];
     [loginBtn addTarget:self action:@selector(loginBtnClick:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:loginBtn];
     
@@ -172,17 +175,21 @@
 
 //登陆点击
 - (void)loginBtnClick:(HemaButton *)sender {
-    
+    TabBarController *tabBarVC = [[TabBarController alloc] init];
+    [self presentViewController:tabBarVC animated:YES completion:nil];
 }
 
 //注册点击
 - (void)registBtnClick:(HemaButton *)sender {
-    
+    RegistVC *registVC = [[RegistVC alloc] init];
+    [self.navigationController pushViewController:registVC animated:YES];
 }
 
 //忘记密码点击
 - (void)forgetBtnClick:(HemaButton *)sender {
-    
+    FindPwdVC *findPwdVC = [[FindPwdVC alloc] init];
+   [self.navigationController pushViewController:findPwdVC animated:YES];
+   
 }
 
 //三方登陆点击
@@ -201,6 +208,18 @@
         }
             break;
     }
+}
+
+//手机号格式
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
+    
+    NSString * toBeString = [textField.text stringByReplacingCharactersInRange:range withString:string];
+    
+    if (toBeString.length > 11 && range.length!=1){
+        textField.text = [toBeString substringToIndex:11];
+        return NO;
+    }
+    return YES;
 }
 
 - (void)didReceiveMemoryWarning {

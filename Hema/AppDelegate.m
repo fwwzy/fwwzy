@@ -16,7 +16,7 @@
 #import "IQKeyboardManager.h"
 
 #import "TabBarController.h"
-
+#import "LoginVC.h"
 
 
 @interface AppDelegate ()
@@ -37,8 +37,10 @@
     _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     //创建默认的rootViewController
-    TabBarController *tabBarVC = [[TabBarController alloc] init];
-    _window.rootViewController = tabBarVC;
+    //TabBarController *tabBarVC = [[TabBarController alloc] init];
+    LoginVC *loginVC = [[LoginVC alloc] init];
+    LCPanNavigationController *rootNav = [[LCPanNavigationController alloc] initWithRootViewController:loginVC];
+    _window.rootViewController = rootNav;
     
     _window.backgroundColor = BB_White_Color;
     [_window makeKeyAndVisible];
