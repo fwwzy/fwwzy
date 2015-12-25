@@ -8,6 +8,7 @@
 
 #import "NewPublishVC.h"
 #import "NewPublishCell.h"
+#import "DetailVC.h"
 
 @interface NewPublishVC ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>{
     
@@ -18,18 +19,19 @@
 
 @implementation NewPublishVC
 
-- (void)loadSet {
+- (void)viewDidLoad {
     [self.navigationItem setNewTitle:@"最新揭晓"];
+    [self.navigationController.navigationBar setBarTintColor:BB_Red_Color];
     //列表
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc]init];
     [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
-    self.collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, UI_View_Width, UI_View_Height )collectionViewLayout:flowLayout];
+    self.collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, UI_View_Width, self.view.frame.size.height-49 )collectionViewLayout:flowLayout];
     _collectionView.delegate = self;
     _collectionView.dataSource = self;
     [self.view addSubview:_collectionView];
     [self.collectionView registerClass:[NewPublishCell class] forCellWithReuseIdentifier:@"cell"];
     //背景色
-    _collectionView.backgroundColor = [UIColor clearColor];
+    _collectionView.backgroundColor = [UIColor colorWithRed:252.0/255.0 green:245.0/255.0 blue:245.0/255.0 alpha:0.8];
     
     time = 100;
     NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(timerFireMethod:) userInfo:nil repeats:YES];
@@ -45,7 +47,11 @@
 }
 //每一个cell大小
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
-    return CGSizeMake(UI_View_Width/2-5, (UI_View_Height-60)/2);
+    NSLog(@"%f",(UI_View_Height+49)/2);
+    NSLog(@"%f",UI_View_Height);
+    NSLog(@"%f",[UIScreen mainScreen].bounds.size.height);
+    return CGSizeMake(UI_View_Width/2-5, (UI_View_Height+64)/2);
+   
 }
 //每个cell间距
 -(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
@@ -63,18 +69,29 @@
     cell.priceLabel.text = @"价格：";
     cell.numLabel.text = @"￥1234";
     
+    UIImageView *blackView = [[UIImageView alloc]initWithFrame:CGRectMake(0, (cell.height/2- cell.iconView.height/8), cell.iconView.width, cell.iconView.height/8)];
+    [blackView setImage:[UIImage imageNamed:@"np_black"]];
+    [cell.iconView addSubview:blackView];
+    
+    UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(cell.iconView.width/3, 0, cell.iconView.width/3, cell.iconView.height/8)];
+    titleLabel.text = @"正在揭晓";
+    titleLabel.font = [UIFont systemFontOfSize:11];
+    titleLabel.textColor = BB_White_Color;
+    titleLabel.textAlignment = NSTextAlignmentCenter;
+    [blackView addSubview:titleLabel];
+    
     UIView *timeView= [[UIView alloc]init];
-    timeView.frame = CGRectMake(10, CGRectGetMaxY(cell.numLabel.frame)+20, 150, 20);
+    timeView.frame = CGRectMake(10, CGRectGetMaxY(cell.numLabel.frame)+15, CGRectGetWidth(cell.frame)-20, 20);
     [cell addSubview:timeView];
     
-    UILabel *timeLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 12, 150, 20)];
-    timeLabel.text = @"           分             秒";
+    UILabel *timeLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 12, CGRectGetWidth(cell.frame)-20, 20)];
+    timeLabel.text = @"          分           秒";
     timeLabel.font = [UIFont systemFontOfSize:13];
     timeLabel.textColor = BB_Gray_Color;
     [timeView addSubview:timeLabel];
     
     for (int i =0 ; i<3; i++) {
-        UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(5 + i*60, 0, 30, 30)];
+        UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(5 + i*50, 0, 25, 25)];
         label.backgroundColor = [UIColor blackColor];
         label.textColor = BB_White_Color;
         label.tag = 600 * (i+1) + indexPath.row;
@@ -84,7 +101,7 @@
     
     if (indexPath.row == 2) {
         timeView.hidden = YES;
-        UIImageView *lineView = [[UIImageView alloc]initWithFrame:CGRectMake(10, CGRectGetMaxY(cell.priceLabel.frame) + 10, cell.frame.size.width - 20, 1)];
+        UIImageView *lineView = [[UIImageView alloc]initWithFrame:CGRectMake(10, CGRectGetMaxY(cell.priceLabel.frame) + 5, cell.frame.size.width - 20, 1)];
         [lineView setImage:[UIImage imageNamed:@"np_xuxian"]];
         [cell addSubview:lineView];
         cell.winerLabel.text = @"中奖者:";
@@ -92,11 +109,16 @@
         cell.phoneLabel.text = @"18223822237";
         cell.curLabel.text = @"本期夺宝：2人次";
         cell.timeLabel.text = @"揭晓时间：1分钟前";
+        titleLabel.text = @"已结束";
     }
     
     return cell;
 }
-
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    DetailVC *dvc = [[DetailVC alloc]init];
+    dvc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:dvc animated:YES];
+}
 - (void)timerFireMethod:(NSTimer *)timer
 {
     if (time == 0) {
@@ -125,7 +147,7 @@
         
         UILabel *label2 = (id)[self.view viewWithTag:1800 + i];
         label2.text = [NSString stringWithFormat:@"%zd",time];
-//        timeLabel.text = [NSString stringWithFormat:@"%ld分%ld秒%zd", (long)[d minute], (long)[d second],time];//倒计时显示
+        //        timeLabel.text = [NSString stringWithFormat:@"%ld分%ld秒%zd", (long)[d minute], (long)[d second],time];//倒计时显示
     }
     
     
