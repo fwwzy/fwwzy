@@ -18,6 +18,7 @@
 @property (nonatomic,strong) UILabel *resultLbl;
 @property (nonatomic,strong) HemaButton *sendBtn;
 @property (nonatomic,strong) NSTimer *timer;
+@property(nonatomic,strong) HemaButton *agreeBtn;
 
 @end
 
@@ -72,13 +73,14 @@
     _time = 5;
     
     //同意框
-    HemaButton *agreeBtn = [[HemaButton alloc] init];
-    agreeBtn.frame = CGRectMake(24, 191, 19, 19);
-    [agreeBtn setBackgroundImage:nil forState:UIControlStateNormal];
-    [agreeBtn setBackgroundImage:[UIImage imageNamed:@"rg_agree"] forState:UIControlStateSelected];
-    [agreeBtn addTarget:self action:@selector(agreeBtnClick:) forControlEvents:UIControlEventTouchUpInside];
-    agreeBtn.layer.borderColor = BB_Gray_Color.CGColor;
-    agreeBtn.layer.borderWidth = 1;
+    _agreeBtn = [[HemaButton alloc] init];
+    _agreeBtn.frame = CGRectMake(24, 191, 19, 19);
+    [_agreeBtn setBackgroundImage:nil forState:UIControlStateNormal];
+    [_agreeBtn setBackgroundImage:[UIImage imageNamed:@"rg_agree"] forState:UIControlStateSelected];
+    [_agreeBtn addTarget:self action:@selector(agreeBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    _agreeBtn.selected = YES;
+    _agreeBtn.layer.borderColor = BB_Gray_Color.CGColor;
+    _agreeBtn.layer.borderWidth = 1;
     
     //注册协议文字
     UILabel *agreeLbl = [[UILabel alloc] init];
@@ -113,7 +115,7 @@
     [self.view addSubview:_resultLbl];
     [self.view addSubview:_codeTF];
     [self.view addSubview:_sendBtn];
-    [self.view addSubview:agreeBtn];
+    [self.view addSubview:_agreeBtn];
     [self.view addSubview:agreeLbl];
     [self.view addSubview:registLbl];
     [self.view addSubview:nextBtn];
@@ -190,8 +192,14 @@
 
 //下一步点击
 - (void)nextBtnClick:(HemaButton *)sender {
+    if  (_agreeBtn.selected == YES) {
     SetPwdVC *setPwdVC = [[SetPwdVC alloc] init];
     [self.navigationController pushViewController:setPwdVC animated:YES];
+    } else {
+        UIAlertView *view = [[UIAlertView alloc] initWithTitle:@"提示！" message:@"请阅读并同意注册协议" delegate:self
+                                             cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [view show];
+    }
 }
 
 //手机号格式控制

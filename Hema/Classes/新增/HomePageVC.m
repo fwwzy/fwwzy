@@ -8,6 +8,9 @@
 
 #import "HomePageVC.h"
 #import "PrizeMsgVC.h"
+#import "ShareVC.h"
+#import "ClassifyVC.h"
+#import "goodsRedVC.h"
 
 @interface HomePageVC ()
 
@@ -15,6 +18,7 @@
 @property (nonatomic,copy) NSMutableArray *imgSource;
 @property (nonatomic,strong) NSTimer *timer;
 @property (nonatomic,strong) NSTimer *prizeTimer;
+
 
 @end
 
@@ -112,9 +116,9 @@
                 
                 UIPageControl *topControl = [[UIPageControl alloc] init];
                 
-                [topControl setFrame:CGRectMake(0, 0 , 90, 30)];
-                topControl.center = CGPointMake(self.view.width / 2 , 180);
-                topControl.numberOfPages = 4;
+                [topControl setFrame:CGRectMake(self.view.width / 2 - 45, 180 , 90, 30)];
+                //topControl.center = CGPointMake(self.view.width / 2 , 180);
+                topControl.numberOfPages = 3;
                 topControl.currentPage = 0;
                 topControl.tag = 2;
                 topControl.currentPageIndicatorTintColor = BB_Orange_Color;
@@ -365,7 +369,29 @@
 
 //分类按钮点击事件
 - (void)typeBtnClick:(HemaButton *)sender {
-    
+    switch (sender.tag - 50) {
+        case 0:{
+            ClassifyVC *classifyVC = [[ClassifyVC alloc] init];
+            [self.navigationController pushViewController:classifyVC animated:YES];
+        }
+            break;
+        case 1:{
+            goodsRedVC *RedVC = [[goodsRedVC alloc] init];
+            [self.navigationController pushViewController:RedVC animated:YES];
+        }
+            break;
+        case 2:{
+            ShareVC *shareVC = [[ShareVC alloc] init];
+            [self.navigationController pushViewController:shareVC animated:YES];
+        }
+            break;
+        case 3:{
+            
+        }
+            break;
+        default:
+            break;
+    }
 }
 
 //排序Item点击事件

@@ -163,8 +163,6 @@
     [thirdLogin addSubview:sepTwo];
     [self.view addSubview:thirdLogin];
     
-    
-    
 }
 
 - (void)loadData {
