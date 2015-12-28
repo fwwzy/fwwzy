@@ -826,6 +826,7 @@
 		3AFA147A1BFEFFAD0054E16E /* Oval 1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AFA14751BFEFFAD0054E16E /* Oval 1@2x.png */; };
 		3AFA147B1BFEFFAD0054E16E /* Pause@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AFA14761BFEFFAD0054E16E /* Pause@2x.png */; };
 		3AFA147C1BFEFFAD0054E16E /* Play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AFA14771BFEFFAD0054E16E /* Play@2x.png */; };
+		551BC2711C311AC800BC9890 /* UnDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 551BC2701C311AC800BC9890 /* UnDetailVC.m */; };
 		553A24D01C2BDA1900C6BD8A /* MyLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 553A24CF1C2BDA1900C6BD8A /* MyLabel.m */; };
 		5543E7861C2D14180006225D /* DetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5543E7851C2D14180006225D /* DetailVC.m */; };
 		554463471C2A4FDC0010D627 /* NewPublishVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 554463461C2A4FDC0010D627 /* NewPublishVC.m */; };
@@ -3022,6 +3023,8 @@
 		3AFA14751BFEFFAD0054E16E /* Oval 1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Oval 1@2x.png"; sourceTree = "<group>"; };
 		3AFA14761BFEFFAD0054E16E /* Pause@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pause@2x.png"; sourceTree = "<group>"; };
 		3AFA14771BFEFFAD0054E16E /* Play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Play@2x.png"; sourceTree = "<group>"; };
+		551BC26F1C311AC800BC9890 /* UnDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnDetailVC.h; sourceTree = "<group>"; };
+		551BC2701C311AC800BC9890 /* UnDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnDetailVC.m; sourceTree = "<group>"; };
 		553A24CE1C2BDA1900C6BD8A /* MyLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLabel.h; sourceTree = "<group>"; };
 		553A24CF1C2BDA1900C6BD8A /* MyLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLabel.m; sourceTree = "<group>"; };
 		5543E7841C2D14180006225D /* DetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailVC.h; sourceTree = "<group>"; };
@@ -7244,6 +7247,8 @@
 				554463461C2A4FDC0010D627 /* NewPublishVC.m */,
 				5543E7841C2D14180006225D /* DetailVC.h */,
 				5543E7851C2D14180006225D /* DetailVC.m */,
+				551BC26F1C311AC800BC9890 /* UnDetailVC.h */,
+				551BC2701C311AC800BC9890 /* UnDetailVC.m */,
 			);
 			name = NewPublish;
 			sourceTree = "<group>";
@@ -10623,7 +10628,7 @@
 				TargetAttributes = {
 					B77E18D41BC25A7D00DB3199 = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = ZVSJ7X42V6;
+						DevelopmentTeam = RL82BKB59R;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -11418,6 +11423,7 @@
 				B7777D3F1BC3A93800452D6E /* XMPPPlainAuthentication.m in Sources */,
 				B7777DA01BC3A93800452D6E /* XMPPPing.m in Sources */,
 				B7F165621BF8752800EE5EF2 /* BFButton.m in Sources */,
+				551BC2711C311AC800BC9890 /* UnDetailVC.m in Sources */,
 				B799C3791BEF322A005080E4 /* TYGValid.m in Sources */,
 				B7CC8F491BCE5C19006B5869 /* AHReach.m in Sources */,
 				3AEE94CF1BF588CE007F6BD5 /* NSString+Trims.m in Sources */,
