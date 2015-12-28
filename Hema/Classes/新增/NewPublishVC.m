@@ -9,6 +9,7 @@
 #import "NewPublishVC.h"
 #import "NewPublishCell.h"
 #import "DetailVC.h"
+#import "UnDetailVC.h"
 
 @interface NewPublishVC ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>{
     
@@ -115,16 +116,22 @@
     return cell;
 }
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    DetailVC *dvc = [[DetailVC alloc]init];
-    dvc.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:dvc animated:YES];
+    if (indexPath.row == 2) {
+        UnDetailVC *uvc = [[UnDetailVC alloc]init];
+        uvc.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:uvc animated:YES];
+    }else{
+        DetailVC *dvc = [[DetailVC alloc]init];
+        dvc.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:dvc animated:YES];
+    }
 }
 - (void)timerFireMethod:(NSTimer *)timer
 {
     if (time == 0) {
         time = 100;
     }
-    time-=1.2;
+    time-=1.3;
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSDateComponents *components = [[NSDateComponents alloc] init];
     [components setYear:2016];

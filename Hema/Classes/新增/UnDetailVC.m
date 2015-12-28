@@ -1,24 +1,24 @@
 //
-//  DetailVC.m
+//  UnDetailVC.m
 //  Hema
 //
-//  Created by Lsy on 15/12/25.
+//  Created by Lsy on 15/12/28.
 //  Copyright © 2015年 Hemaapp. All rights reserved.
 //
 
-#import "DetailVC.h"
+#import "UnDetailVC.h"
 
-@interface DetailVC (){
-    NSInteger time;
+@interface UnDetailVC (){
     UIScrollView *_adView;
     UIPageControl *_pageView;
     NSMutableArray *imgSource;
     NSTimer *_prizeTimer;
+    UIView *_blackView;
 }
 
 @end
 
-@implementation DetailVC
+@implementation UnDetailVC
 
 -(void)loadSet{
     [self.navigationItem setNewTitle:@"奖品详情"];
@@ -28,7 +28,6 @@
     [self reSetTableViewFrame:CGRectMake(0, 0, UI_View_Width, UI_View_Height-49)];
     self.view.backgroundColor = BB_White_Color;
     
-     NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(timerFireMethod:) userInfo:nil repeats:YES];
     _prizeTimer = [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(topScrollViewPass) userInfo:nil repeats:YES];
     
     CGSize screenSize = [UIScreen mainScreen].bounds.size;
@@ -75,6 +74,32 @@
     goBtn.backgroundColor = BB_Red_Color;
     [goBtn setTitle:@"立即前往" forState:UIControlStateNormal];
     [dayView addSubview:goBtn];
+    
+    _blackView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, UI_View_Width, UI_View_Height+80)];
+    UIWindow * window = [UIApplication sharedApplication].keyWindow;
+    [window addSubview:_blackView];
+    _blackView.userInteractionEnabled = YES;
+    
+    UIImageView *blackView1 = [[UIImageView alloc]initWithFrame:_blackView.frame];
+    [blackView1 setImage:[UIImage imageNamed:@"np_blackView"]];
+    [_blackView addSubview:blackView1];
+    blackView1.userInteractionEnabled = YES;
+    
+    UIImageView *redBagView = [[UIImageView alloc]initWithFrame:CGRectMake(UI_View_Width/6, _blackView.height / 4, UI_View_Width*2/3, _blackView.height/2)];
+    [redBagView setImage:[UIImage imageNamed:@"hongbao_03"]];
+    [blackView1 addSubview:redBagView];
+    redBagView.userInteractionEnabled = YES;
+    
+    UILabel *theDayLabel = [[UILabel alloc]initWithFrame:CGRectMake(redBagView.width/4 + 5, redBagView.height/8, redBagView.width/2, 20)];
+    theDayLabel.text = @"第12355期";
+    theDayLabel.textColor = BB_Red_Color;
+    theDayLabel.font = [UIFont systemFontOfSize:18];
+    [redBagView addSubview:theDayLabel];
+    
+    UIButton *robBtn = [[UIButton alloc]initWithFrame:CGRectMake(redBagView.width/3, redBagView.width*3/4 - 5, redBagView.width/3, redBagView.width/3)];
+    robBtn.backgroundColor = [UIColor clearColor];
+    [robBtn addTarget:self action:@selector(robBtnClick) forControlEvents:UIControlEventTouchUpInside];
+    [redBagView addSubview:robBtn];
 }
 
 - (void)loadData {
@@ -100,7 +125,7 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) {
         if (indexPath.row == 1) {
-            return 60;
+            return 155;
         }
     }
     if (indexPath.section == 2) {
@@ -133,6 +158,8 @@
     UIImageView *placeView = [[UIImageView alloc]init];
     //人数
     UILabel *peopleLabel = [[UILabel alloc]init];
+    //背景
+    UIImageView *bgView = [[UIImageView alloc]init];
     if (indexPath.section == 0) {
         if (indexPath.row == 0) {
             lastLabel .frame = CGRectMake(10, 12.5, 35, 15);
@@ -152,37 +179,63 @@
             nameLabel.font = [UIFont systemFontOfSize:15];
         }
         if (indexPath.row == 1) {
-            nameLabel.frame = CGRectMake(10, 20, 70, 20);
-            nameLabel.text = @"揭晓倒计时";
-            nameLabel.textColor = BB_Gray_Color;
-            nameLabel.font = [UIFont systemFontOfSize:12];
+            bgView.frame = CGRectMake(5, 5, UI_View_Width - 10, 145);
+            [bgView setImage:[UIImage imageNamed:@"biankuang_03"]];
             
-            UIView *timeView= [[UIView alloc]init];
-            timeView.frame = CGRectMake(80,20,155, 20);
-            [cell addSubview:timeView];
+            UIImageView *winView = [[UIImageView alloc]initWithFrame:CGRectMake(15, 15, 40, 40)];
+            [winView setImage:[UIImage imageNamed:@"np_detailicon"]];
+            [bgView addSubview:winView];
             
-            UILabel *timeLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 12, 155, 20)];
-            timeLabel.text = @"          分           秒";
-            timeLabel.font = [UIFont systemFontOfSize:13];
-            timeLabel.textColor = BB_Gray_Color;
-            [timeView addSubview:timeLabel];
+            UILabel *winLabel = [[UILabel alloc]initWithFrame:CGRectMake(65, 18, 150, 15)];
+            winLabel.text = @"获奖者：18532625352";
+//            winLabel.textColor = BB_Gray_Color;
+            winLabel.font = [UIFont systemFontOfSize:13];
+            [bgView addSubview:winLabel];
             
-            for (int i =0 ; i<3; i++) {
-                UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(5 + i*50, 0, 25, 25)];
-                label.backgroundColor = [UIColor blackColor];
-                label.textColor = BB_White_Color;
-                label.tag = 6000 + i;
-                label.textAlignment = NSTextAlignmentCenter;
-                [timeView addSubview:label];
-            }
-            lastLabel.frame = CGRectMake(240, 20, 70, 20);
-            lastLabel.textColor = [UIColor colorWithRed:211.0/255.0 green:178.0/255.0 blue:118.0/255.0 alpha:0.8];
-            lastLabel.font = [UIFont systemFontOfSize:11];
-            NSMutableAttributedString *content = [[NSMutableAttributedString alloc]initWithString:[NSString stringWithFormat:@"查看计算规则"]];
-            NSRange contentRange = {0,[content length]};
-            [content addAttribute:NSUnderlineStyleAttributeName value:[NSNumber numberWithInteger:NSUnderlineStyleSingle] range:contentRange];
-            lastLabel.attributedText = content;
-
+            UILabel *IPLabel = [[UILabel alloc]initWithFrame:CGRectMake(65, 35, 230, 15)];
+            IPLabel.text = @"用户IP：221.2.71.110（山东济南）";
+            //            IPLabel.textColor = BB_Gray_Color;
+            IPLabel.font = [UIFont systemFontOfSize:13];
+            [bgView addSubview:IPLabel];
+            
+            UILabel *winerLabel = [[UILabel alloc]initWithFrame:CGRectMake(65, 52, 200, 15)];
+            //            winerLabel.textColor = BB_Gray_Color;
+            winerLabel.font = [UIFont systemFontOfSize:13];
+            NSString *myStr = @"参与次数：3人次";
+            NSMutableAttributedString *attrString = [[NSMutableAttributedString alloc] initWithString:myStr];
+            NSRange range = [myStr rangeOfString:@"3"];
+            UIColor *color = BB_Red_Color;
+            [attrString addAttribute:NSForegroundColorAttributeName value:color range:range];
+            winerLabel.attributedText = attrString;
+            [bgView addSubview:winerLabel];
+            
+            UILabel *winDayLabel = [[UILabel alloc]initWithFrame:CGRectMake(65, 69, 240, 15)];
+            winDayLabel.text = @"揭晓时间：2015-12-08 12:35:25:102";
+            //            winDayLabel.textColor = BB_Gray_Color;
+            winDayLabel.font = [UIFont systemFontOfSize:13];
+            [bgView addSubview:winDayLabel];
+            
+            UIView *grayView = [[UIView alloc]initWithFrame:CGRectMake(0, 100, bgView.width, 45)];
+            grayView.backgroundColor = BB_Back_Color_Here;
+            [bgView addSubview:grayView];
+            
+            UILabel *luckLabel = [[UILabel alloc]initWithFrame:CGRectMake(10, 15, 60, 15)];
+            luckLabel.textColor = BB_Gray_Color;
+            luckLabel.text = @"幸运号：";
+            luckLabel.font = [UIFont systemFontOfSize:13];
+            [grayView addSubview:luckLabel];
+            
+            UILabel *luckNumLabel = [[UILabel alloc]initWithFrame:CGRectMake(70, 15, 100, 15)];
+            luckNumLabel.textColor = BB_Red_Color;
+            luckNumLabel.text = @"100000095";
+            luckNumLabel.font = [UIFont systemFontOfSize:15];
+            [grayView addSubview:luckNumLabel];
+            
+            UIButton *countBtn = [[UIButton alloc]initWithFrame:CGRectMake(UI_View_Width - 80, 12, 60, 21)];
+            countBtn.backgroundColor = BB_Red_Color;
+            [countBtn setTitle:@"计算详情" forState:UIControlStateNormal];
+            countBtn.titleLabel.font = [UIFont systemFontOfSize:11];
+            [grayView addSubview:countBtn];
         }
     }
     if (indexPath.section == 1) {
@@ -253,6 +306,7 @@
     [cell addSubview:iconView];
     [cell addSubview:placeView];
     [cell addSubview:peopleLabel];
+    [cell addSubview:bgView];
     return cell;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
@@ -270,36 +324,6 @@
 }
 
 #pragma mark - 事件
-- (void)timerFireMethod:(NSTimer *)timer
-{
-    if (time == 0) {
-        time = 100;
-    }
-    time-=1.3;
-    NSCalendar *calendar = [NSCalendar currentCalendar];
-    NSDateComponents *components = [[NSDateComponents alloc] init];
-    [components setYear:2016];
-    [components setMonth:12];
-    [components setDay:23];
-    [components setHour:16];
-    [components setMinute:0];
-    [components setSecond:0];
-    NSDate *fireDate = [calendar dateFromComponents:components];//目标时间
-    NSDate *today = [NSDate date];//当前时间
-    unsigned int unitFlags = NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit;
-    NSDateComponents *d = [calendar components:unitFlags fromDate:today toDate:fireDate options:0];//计算时间差
-    
-    UILabel *label = (id)[self.view viewWithTag:6000];
-    label.text = [NSString stringWithFormat:@"%zd",[d minute]];
-        
-    UILabel *label1 = (id)[self.view viewWithTag:6001];
-    label1.text = [NSString stringWithFormat:@"%zd",[d second]];
-        
-    UILabel *label2 = (id)[self.view viewWithTag:6002];
-    label2.text = [NSString stringWithFormat:@"%zd",time];
-        //        timeLabel.text = [NSString stringWithFormat:@"%ld分%ld秒%zd", (long)[d minute], (long)[d second],time];//倒计时显示
-    
-}
 
 - (void)topScrollViewPass {
     
@@ -317,6 +341,8 @@
     
     
 }
-
-
+-(void)robBtnClick{
+    _blackView.hidden = YES;
+    NSLog(@"===============");
+}
 @end
