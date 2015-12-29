@@ -255,6 +255,14 @@
     [cell addSubview:peopleLabel];
     return cell;
 }
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section == 1) {
+        if (indexPath.row == 0) {
+            OverDetailVC *ovc = [[OverDetailVC alloc]init];
+            [self.navigationController pushViewController:ovc animated:YES];
+        }
+    }
+}
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
     return 10;
 }

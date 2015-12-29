@@ -831,6 +831,8 @@
 		5543E7861C2D14180006225D /* DetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5543E7851C2D14180006225D /* DetailVC.m */; };
 		554463471C2A4FDC0010D627 /* NewPublishVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 554463461C2A4FDC0010D627 /* NewPublishVC.m */; };
 		5544634D1C2A6A2E0010D627 /* NewPublishCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5544634C1C2A6A2E0010D627 /* NewPublishCell.m */; };
+		5564DA1A1C324DB000B56EAE /* OverDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5564DA191C324DB000B56EAE /* OverDetailVC.m */; };
+		5564DA1F1C32830C00B56EAE /* CountDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5564DA1E1C32830C00B56EAE /* CountDetailVC.m */; };
 		941684531C2B828D00A88A46 /* newpulish.png in Resources */ = {isa = PBXBuildFile; fileRef = 941684521C2B828D00A88A46 /* newpulish.png */; };
 		9416845E1C2B832C00A88A46 /* hp_cart.png in Resources */ = {isa = PBXBuildFile; fileRef = 941684541C2B832C00A88A46 /* hp_cart.png */; };
 		9416845F1C2B832C00A88A46 /* hp_msg.png in Resources */ = {isa = PBXBuildFile; fileRef = 941684551C2B832C00A88A46 /* hp_msg.png */; };
@@ -3046,6 +3048,10 @@
 		554463461C2A4FDC0010D627 /* NewPublishVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewPublishVC.m; sourceTree = "<group>"; };
 		5544634B1C2A6A2E0010D627 /* NewPublishCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewPublishCell.h; sourceTree = "<group>"; };
 		5544634C1C2A6A2E0010D627 /* NewPublishCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewPublishCell.m; sourceTree = "<group>"; };
+		5564DA181C324DB000B56EAE /* OverDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverDetailVC.h; sourceTree = "<group>"; };
+		5564DA191C324DB000B56EAE /* OverDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverDetailVC.m; sourceTree = "<group>"; };
+		5564DA1D1C32830C00B56EAE /* CountDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountDetailVC.h; sourceTree = "<group>"; };
+		5564DA1E1C32830C00B56EAE /* CountDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountDetailVC.m; sourceTree = "<group>"; };
 		941684521C2B828D00A88A46 /* newpulish.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newpulish.png; sourceTree = "<group>"; };
 		941684541C2B832C00A88A46 /* hp_cart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hp_cart.png; sourceTree = "<group>"; };
 		941684551C2B832C00A88A46 /* hp_msg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hp_msg.png; sourceTree = "<group>"; };
@@ -7284,6 +7290,10 @@
 				5543E7851C2D14180006225D /* DetailVC.m */,
 				551BC26F1C311AC800BC9890 /* UnDetailVC.h */,
 				551BC2701C311AC800BC9890 /* UnDetailVC.m */,
+				5564DA181C324DB000B56EAE /* OverDetailVC.h */,
+				5564DA191C324DB000B56EAE /* OverDetailVC.m */,
+				5564DA1D1C32830C00B56EAE /* CountDetailVC.h */,
+				5564DA1E1C32830C00B56EAE /* CountDetailVC.m */,
 			);
 			name = NewPublish;
 			sourceTree = "<group>";
@@ -12333,8 +12343,10 @@
 				3AEDB2CF1BFC7B2000AD7E95 /* CLBlurBand.m in Sources */,
 				3AF02ADF1BE85CF000AF0597 /* HSDownloadManager.m in Sources */,
 				3AEE953C1BF588CF007F6BD5 /* UIView+draggable.m in Sources */,
+				5564DA1F1C32830C00B56EAE /* CountDetailVC.m in Sources */,
 				3AF02A841BE720EB00AF0597 /* MJRefreshHeaderView.m in Sources */,
 				B76EC22A1BEF0DD0001DDFA8 /* TYAlertScaleFadeAnimation.m in Sources */,
+				5564DA1A1C324DB000B56EAE /* OverDetailVC.m in Sources */,
 				B7F1656F1BF8778100EE5EF2 /* NSProcessInfo+BFKit.m in Sources */,
 				947759ED1C31294500EA9073 /* goodsRedVC.m in Sources */,
 				553A24D01C2BDA1900C6BD8A /* MyLabel.m in Sources */,
@@ -12432,6 +12444,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -12476,6 +12489,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
