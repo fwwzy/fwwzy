@@ -7,6 +7,7 @@
 //
 
 #import "UnDetailVC.h"
+#import "CountDetailVC.h"
 
 @interface UnDetailVC (){
     UIScrollView *_adView;
@@ -88,18 +89,27 @@
     UIImageView *redBagView = [[UIImageView alloc]initWithFrame:CGRectMake(UI_View_Width/6, _blackView.height / 4, UI_View_Width*2/3, _blackView.height/2)];
     [redBagView setImage:[UIImage imageNamed:@"hongbao_03"]];
     [blackView1 addSubview:redBagView];
+    redBagView.tag = 2000;
     redBagView.userInteractionEnabled = YES;
     
     UILabel *theDayLabel = [[UILabel alloc]initWithFrame:CGRectMake(redBagView.width/4 + 5, redBagView.height/8, redBagView.width/2, 20)];
     theDayLabel.text = @"第12355期";
     theDayLabel.textColor = BB_Red_Color;
     theDayLabel.font = [UIFont systemFontOfSize:18];
+    theDayLabel.tag = 2001;
     [redBagView addSubview:theDayLabel];
     
     UIButton *robBtn = [[UIButton alloc]initWithFrame:CGRectMake(redBagView.width/3, redBagView.width*3/4 - 5, redBagView.width/3, redBagView.width/3)];
     robBtn.backgroundColor = [UIColor clearColor];
     [robBtn addTarget:self action:@selector(robBtnClick) forControlEvents:UIControlEventTouchUpInside];
+    robBtn.tag = 2002;
     [redBagView addSubview:robBtn];
+    
+    UIButton *closeBtn = [[UIButton alloc]initWithFrame:CGRectMake(redBagView.width- 20, 0, 20, 20)];
+    [closeBtn setBackgroundImage:[UIImage imageNamed:@"np_close"] forState:UIControlStateNormal];
+    [closeBtn addTarget:self action:@selector(closeBtn) forControlEvents:UIControlEventTouchUpInside];
+    [redBagView addSubview:closeBtn];
+    
 }
 
 - (void)loadData {
@@ -181,6 +191,7 @@
         if (indexPath.row == 1) {
             bgView.frame = CGRectMake(5, 5, UI_View_Width - 10, 145);
             [bgView setImage:[UIImage imageNamed:@"biankuang_03"]];
+            bgView.userInteractionEnabled = YES;
             
             UIImageView *winView = [[UIImageView alloc]initWithFrame:CGRectMake(15, 15, 40, 40)];
             [winView setImage:[UIImage imageNamed:@"np_detailicon"]];
@@ -235,6 +246,7 @@
             countBtn.backgroundColor = BB_Red_Color;
             [countBtn setTitle:@"计算详情" forState:UIControlStateNormal];
             countBtn.titleLabel.font = [UIFont systemFontOfSize:11];
+            [countBtn addTarget:self action:@selector(countBtnClick) forControlEvents:UIControlEventTouchUpInside];
             [grayView addSubview:countBtn];
         }
     }
@@ -309,6 +321,14 @@
     [cell addSubview:bgView];
     return cell;
 }
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section == 1) {
+        if (indexPath.row == 0) {
+            OverDetailVC *ovc = [[OverDetailVC alloc]init];
+            [self.navigationController pushViewController:ovc animated:YES];
+        }
+    }
+}
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
     return 10;
 }
@@ -342,7 +362,28 @@
     
 }
 -(void)robBtnClick{
+//    _blackView.hidden = YES;
+    UIImageView *image = (id)[_blackView viewWithTag:2000];
+    [image setImage:[UIImage imageNamed:@"hongbao1_03"]];
+    
+    UIButton *btn = (id)[_blackView viewWithTag:2002];
+    [btn addTarget:self action:@selector(btnClcik) forControlEvents:UIControlEventTouchUpInside];
+    
+    UILabel *label = (id)[_blackView viewWithTag:2001];
+    label.hidden = YES;
+    UIImageView *img = [[UIImageView alloc]initWithFrame:CGRectMake(image.width/4 + 5, image.height/8, image.width/2, 25)];
+    [img setImage:[UIImage imageNamed:@"1"]];
+    [image addSubview:img];
+    
+}
+-(void)btnClcik{
     _blackView.hidden = YES;
-    NSLog(@"===============");
+}
+-(void)closeBtn{
+    _blackView.hidden = YES;
+}
+-(void)countBtnClick{
+    CountDetailVC *cvc = [[CountDetailVC alloc]init];
+    [self.navigationController pushViewController:cvc animated:YES];
 }
 @end

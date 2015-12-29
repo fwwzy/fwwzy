@@ -7,6 +7,7 @@
 //
 
 #import "PullRefreshGroupVC.h"
+#import "OverDetailVC.h"
 
 @interface DetailVC : PullRefreshGroupVC
 
