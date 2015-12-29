@@ -28,7 +28,7 @@
     
     //红包view
     HemaImgView *redView = [[HemaImgView alloc] init];
-    redView.frame = CGRectMake(0, 0, UI_View_Width, 200);
+    redView.frame = CGRectMake(0, 0, UI_View_Width, self.view.height / 3);
     redView.image = [UIImage imageNamed:@"hp_redview"];
     
     //红包累计总额
@@ -42,12 +42,12 @@
     
     //抢红包
     HemaImgView *grabView = [[HemaImgView alloc] init];
-    grabView.frame = CGRectMake(15, 215, 60, 15);
+    grabView.frame = CGRectMake(15, redView.origin.y + redView.size.height + 15, 60, 15);
     grabView.image = [UIImage imageNamed:@"hp_hongbao"];
     
     //时间
     UILabel *timeLbl = [[UILabel alloc] init];
-    timeLbl.frame = CGRectMake(UI_View_Width - 150, 215, 140, 20);
+    timeLbl.frame = CGRectMake(UI_View_Width - 150, grabView.origin.y, 140, 20);
     timeLbl.textAlignment = NSTextAlignmentRight;
     timeLbl.font = [UIFont systemFontOfSize:15];
     timeLbl.textColor = BB_Gray_Color;
@@ -55,7 +55,7 @@
     
     //中奖信息
     UILabel *prizeLbl = [[UILabel alloc] init];
-    prizeLbl.frame = CGRectMake(15, 250, UI_View_Width - 30, 20);
+    prizeLbl.frame = CGRectMake(15, grabView.origin.y + grabView.size.height + 15, UI_View_Width - 30, 20);
     prizeLbl.font = [UIFont systemFontOfSize:14];
     prizeLbl.textColor = BB_Blake_Color;
     NSString *NubString = [NSString stringWithFormat:@"182****%zd",arc4random()%9999];
@@ -68,12 +68,12 @@
     
     //抢一抢
     HemaButton *grabBtn = [[HemaButton alloc] init];
-    grabBtn.frame = CGRectMake(UI_View_Width / 2 - 40, 290, 80, 30);
+    grabBtn.frame = CGRectMake(UI_View_Width / 2 - 40, prizeLbl.origin.y + prizeLbl.size.height + 20, 80, 30);
     [grabBtn setImage:[UIImage imageNamed:@"hp_qiang"] forState:UIControlStateNormal];
     
     //活动规则
     UIView *ruleView = [[UIView alloc] init];
-    ruleView.frame = CGRectMake(0, 340, UI_View_Width, self.view.height / 2.5);
+    ruleView.frame = CGRectMake(0, grabBtn.origin.y + grabBtn.size.height + 30, UI_View_Width, self.view.height / 2.5);
     ruleView.backgroundColor = RGB_UI_COLOR(245, 245, 245);
     
     HemaImgView *ruleImg = [[HemaImgView alloc] init];
@@ -109,7 +109,7 @@
     joinContent.font = [UIFont systemFontOfSize:15];
     joinContent.text = @"随便都行";
     
-    scrollView.contentSize = CGSizeMake(0, 350 + self.view.height / 3);
+    scrollView.contentSize = CGSizeMake(0, ruleView.origin.y + self.view.height / 3);
     scrollView.showsVerticalScrollIndicator = NO;
     NSLog(@"%f",scrollView.contentSize.height);
 

@@ -60,7 +60,7 @@
     NSString *repPrizeStr = @"(第2531期)小米智能秤";
     NSString *prizeStr = [NSString stringWithFormat:@"获奖奖品:%@",repPrizeStr];
     NSMutableAttributedString *attrPrizeStr = [[NSMutableAttributedString alloc] initWithString:prizeStr];
-    UIColor *colorPrize = RGB_UI_COLOR(96, 190, 175);
+    UIColor *colorPrize = RGB_UI_COLOR(1, 182, 159);
     [attrPrizeStr addAttribute:NSForegroundColorAttributeName value:colorPrize range:NSMakeRange(5, repPrizeStr.length)];
     prizeName.attributedText = attrPrizeStr;
     
@@ -119,7 +119,7 @@
         [_scrollView addSubview:goodsImg];
     }
     
-    _scrollView.contentSize = CGSizeMake(0, 220 + 4 * 200);
+    _scrollView.contentSize = CGSizeMake(0, contentLabel.origin.y + contentLabel.size.height + 4 * 217);
     _scrollView.showsVerticalScrollIndicator = NO;
     
     [_scrollView addSubview:iconView];

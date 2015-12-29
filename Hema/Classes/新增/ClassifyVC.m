@@ -7,6 +7,7 @@
 //
 
 #import "ClassifyVC.h"
+#import "ClassifyListVC.h"
 
 @interface ClassifyVC ()
 
@@ -56,6 +57,12 @@
         [cell.contentView addSubview:titleLabel];
     }
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    ClassifyListVC *classifyListVC = [[ClassifyListVC alloc] init];
+    classifyListVC.titleName = @"十元专区";
+    [self.navigationController pushViewController:classifyListVC animated:YES];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

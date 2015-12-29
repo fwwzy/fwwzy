@@ -11,6 +11,8 @@
 #import "ShareVC.h"
 #import "ClassifyVC.h"
 #import "goodsRedVC.h"
+#import "FAQVC.h"
+#import "SumbitOrderVC.h"
 
 @interface HomePageVC ()
 
@@ -118,7 +120,7 @@
                 
                 [topControl setFrame:CGRectMake(self.view.width / 2 - 45, 180 , 90, 30)];
                 //topControl.center = CGPointMake(self.view.width / 2 , 180);
-                topControl.numberOfPages = 3;
+                topControl.numberOfPages = 4;
                 topControl.currentPage = 0;
                 topControl.tag = 2;
                 topControl.currentPageIndicatorTintColor = BB_Orange_Color;
@@ -271,12 +273,12 @@
             //开奖进度条
             UIView *backView = [[UIView alloc] init];
             backView.frame = CGRectMake(10, 200, UI_View_Width / 5, 5);
-            backView.backgroundColor = [UIColor lightGrayColor];
+            backView.backgroundColor = RGB_UI_COLOR(208, 208, 208);
             backView.alpha = 0.5;
             
             UIView *frontView = [[UIView alloc] init];
             frontView.frame = CGRectMake(10, 200, (UI_View_Width / 5) * 0.83, 5);
-            frontView.backgroundColor = [UIColor colorWithRed:248.0/255 green:149.0/255 blue:24.0/255 alpha:1];
+            frontView.backgroundColor = RGB_UI_COLOR(248, 190, 24);
             frontView.alpha = 0.5;
             
             //购物车图标
@@ -310,12 +312,12 @@
             //开奖进度条
             UIView *rbackView = [[UIView alloc] init];
             rbackView.frame = CGRectMake(10, 200, UI_View_Width / 5, 5);
-            rbackView.backgroundColor = [UIColor lightGrayColor];
+            rbackView.backgroundColor = RGB_UI_COLOR(208, 208, 208);
             rbackView.alpha = 0.5;
             
             UIView *rfrontView = [[UIView alloc] init];
             rfrontView.frame = CGRectMake(10, 200, (UI_View_Width / 5) * 0.83, 5);
-            rfrontView.backgroundColor =  [UIColor colorWithRed:248.0/255 green:149.0/255 blue:24.0/255 alpha:1];
+            rfrontView.backgroundColor =  RGB_UI_COLOR(248, 190, 24);
             rfrontView.alpha = 0.5;
             
             //购物车图标
@@ -386,6 +388,8 @@
         }
             break;
         case 3:{
+            FAQVC *faqVC = [[FAQVC alloc] init];
+            [self.navigationController pushViewController:faqVC animated:YES];
             
         }
             break;
@@ -436,7 +440,6 @@
             break;
 
     }
-    NSLog(@"%zd",sender.tag);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -454,14 +457,12 @@
     [UIView animateWithDuration:1 animations:^{
         CGPoint contentSet = CGPointMake(scrollView.contentOffset.x + UI_View_Width, 0);
         scrollView.contentOffset = contentSet;
+        
+        control.currentPage = scrollView.contentOffset.x / UI_View_Width;
+        if (contentSet.x == scrollView.contentSize.width) {
+            scrollView.contentOffset = CGPointMake(0, 0);
+        }
     }];
-    
-     control.currentPage = scrollView.contentOffset.x / UI_View_Width;
-    if (control.currentPage == 3) {
-        scrollView.contentOffset = CGPointMake(0, 0);
-    }
-   
-    
 }
 
 //定时器中奖信息轮播
@@ -494,8 +495,14 @@
     
     if (1 == scrollView.tag) {
         UIPageControl *control = (id)[self.view viewWithTag:2];
+        if (scrollView.contentOffset.x + UI_View_Width > scrollView.contentSize.width) {
+//            scrollView.contentOffset = CGPointMake(0, 0);
+//            control.currentPage = 0;
+        } else {
         control.currentPage = scrollView.contentOffset.x / UI_View_Width;
+        }
     }
+    NSLog(@"%f",scrollView.contentOffset.x);
     
 }
 
