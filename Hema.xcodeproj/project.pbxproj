@@ -872,6 +872,17 @@
 		941684A51C2D4CB100A88A46 /* np_black.png in Resources */ = {isa = PBXBuildFile; fileRef = 941684A21C2D4CB100A88A46 /* np_black.png */; };
 		941684A61C2D4CB100A88A46 /* sc_minus1.png in Resources */ = {isa = PBXBuildFile; fileRef = 941684A31C2D4CB100A88A46 /* sc_minus1.png */; };
 		941684A71C2D4CB100A88A46 /* shanchu_03.png in Resources */ = {isa = PBXBuildFile; fileRef = 941684A41C2D4CB100A88A46 /* shanchu_03.png */; };
+		944953381C336F6E005E9BBF /* hp_payfail.png in Resources */ = {isa = PBXBuildFile; fileRef = 944953361C336F6E005E9BBF /* hp_payfail.png */; };
+		944953391C336F6E005E9BBF /* hp_paysuccess.png in Resources */ = {isa = PBXBuildFile; fileRef = 944953371C336F6E005E9BBF /* hp_paysuccess.png */; };
+		9449533C1C33729D005E9BBF /* SearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9449533B1C33729D005E9BBF /* SearchVC.m */; };
+		9449533E1C337860005E9BBF /* hp_textfield.png in Resources */ = {isa = PBXBuildFile; fileRef = 9449533D1C337860005E9BBF /* hp_textfield.png */; };
+		944953411C33A4BB005E9BBF /* SearchResultVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 944953401C33A4BB005E9BBF /* SearchResultVC.m */; };
+		944953491C33BF47005E9BBF /* hp_ggselect.png in Resources */ = {isa = PBXBuildFile; fileRef = 944953451C33BF47005E9BBF /* hp_ggselect.png */; };
+		9449534A1C33BF47005E9BBF /* hp_ggunselect.png in Resources */ = {isa = PBXBuildFile; fileRef = 944953461C33BF47005E9BBF /* hp_ggunselect.png */; };
+		9449534B1C33BF47005E9BBF /* hp_xxselect.png in Resources */ = {isa = PBXBuildFile; fileRef = 944953471C33BF47005E9BBF /* hp_xxselect.png */; };
+		9449534C1C33BF47005E9BBF /* hp_xxunselect.png in Resources */ = {isa = PBXBuildFile; fileRef = 944953481C33BF47005E9BBF /* hp_xxunselect.png */; };
+		9449534F1C33C444005E9BBF /* NoticeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9449534E1C33C444005E9BBF /* NoticeVC.m */; };
+		944953521C33CEC3005E9BBF /* LjjUISegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 944953511C33CEC3005E9BBF /* LjjUISegmentedControl.m */; };
 		94721A9B1C322272007A901D /* ClassifyListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 94721A9A1C322272007A901D /* ClassifyListVC.m */; };
 		94721A9E1C3235BF007A901D /* FAQVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 94721A9D1C3235BF007A901D /* FAQVC.m */; };
 		94721AA01C325123007A901D /* hp_service.png in Resources */ = {isa = PBXBuildFile; fileRef = 94721A9F1C325123007A901D /* hp_service.png */; };
@@ -3100,6 +3111,21 @@
 		941684A21C2D4CB100A88A46 /* np_black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = np_black.png; sourceTree = "<group>"; };
 		941684A31C2D4CB100A88A46 /* sc_minus1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sc_minus1.png; sourceTree = "<group>"; };
 		941684A41C2D4CB100A88A46 /* shanchu_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shanchu_03.png; sourceTree = "<group>"; };
+		944953361C336F6E005E9BBF /* hp_payfail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hp_payfail.png; sourceTree = "<group>"; };
+		944953371C336F6E005E9BBF /* hp_paysuccess.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hp_paysuccess.png; sourceTree = "<group>"; };
+		9449533A1C33729D005E9BBF /* SearchVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchVC.h; sourceTree = "<group>"; };
+		9449533B1C33729D005E9BBF /* SearchVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchVC.m; sourceTree = "<group>"; };
+		9449533D1C337860005E9BBF /* hp_textfield.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hp_textfield.png; sourceTree = "<group>"; };
+		9449533F1C33A4BB005E9BBF /* SearchResultVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultVC.h; sourceTree = "<group>"; };
+		944953401C33A4BB005E9BBF /* SearchResultVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultVC.m; sourceTree = "<group>"; };
+		944953451C33BF47005E9BBF /* hp_ggselect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hp_ggselect.png; sourceTree = "<group>"; };
+		944953461C33BF47005E9BBF /* hp_ggunselect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hp_ggunselect.png; sourceTree = "<group>"; };
+		944953471C33BF47005E9BBF /* hp_xxselect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hp_xxselect.png; sourceTree = "<group>"; };
+		944953481C33BF47005E9BBF /* hp_xxunselect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hp_xxunselect.png; sourceTree = "<group>"; };
+		9449534D1C33C444005E9BBF /* NoticeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoticeVC.h; sourceTree = "<group>"; };
+		9449534E1C33C444005E9BBF /* NoticeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoticeVC.m; sourceTree = "<group>"; };
+		944953501C33CEC3005E9BBF /* LjjUISegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LjjUISegmentedControl.h; sourceTree = "<group>"; };
+		944953511C33CEC3005E9BBF /* LjjUISegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LjjUISegmentedControl.m; sourceTree = "<group>"; };
 		94721A991C322272007A901D /* ClassifyListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassifyListVC.h; sourceTree = "<group>"; };
 		94721A9A1C322272007A901D /* ClassifyListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassifyListVC.m; sourceTree = "<group>"; };
 		94721A9C1C3235BF007A901D /* FAQVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAQVC.h; sourceTree = "<group>"; };
@@ -7274,6 +7300,12 @@
 				94721A9D1C3235BF007A901D /* FAQVC.m */,
 				94721AA11C325C3B007A901D /* SumbitOrderVC.h */,
 				94721AA21C325C3B007A901D /* SumbitOrderVC.m */,
+				9449533A1C33729D005E9BBF /* SearchVC.h */,
+				9449533B1C33729D005E9BBF /* SearchVC.m */,
+				9449533F1C33A4BB005E9BBF /* SearchResultVC.h */,
+				944953401C33A4BB005E9BBF /* SearchResultVC.m */,
+				9449534D1C33C444005E9BBF /* NoticeVC.h */,
+				9449534E1C33C444005E9BBF /* NoticeVC.m */,
 			);
 			name = HomePage;
 			sourceTree = "<group>";
@@ -7346,6 +7378,13 @@
 		948783401C2A9A9400E52B11 /* 新增 */ = {
 			isa = PBXGroup;
 			children = (
+				944953451C33BF47005E9BBF /* hp_ggselect.png */,
+				944953461C33BF47005E9BBF /* hp_ggunselect.png */,
+				944953471C33BF47005E9BBF /* hp_xxselect.png */,
+				944953481C33BF47005E9BBF /* hp_xxunselect.png */,
+				9449533D1C337860005E9BBF /* hp_textfield.png */,
+				944953361C336F6E005E9BBF /* hp_payfail.png */,
+				944953371C336F6E005E9BBF /* hp_paysuccess.png */,
 				94721AA81C3292D0007A901D /* 1.png */,
 				94721AA91C3292D0007A901D /* np_close.png */,
 				94721AAA1C3292D0007A901D /* np_count.png */,
@@ -9073,6 +9112,8 @@
 		B77C3A981BC4CAC100B7E028 /* 类库 */ = {
 			isa = PBXGroup;
 			children = (
+				944953501C33CEC3005E9BBF /* LjjUISegmentedControl.h */,
+				944953511C33CEC3005E9BBF /* LjjUISegmentedControl.m */,
 				B77C3A991BC4CAC100B7E028 /* HemaEditorVC.h */,
 				B77C3A9A1BC4CAC100B7E028 /* HemaEditorVC.m */,
 				B77C3A9C1BC4CAE000B7E028 /* HemaWebVC.h */,
@@ -10775,6 +10816,7 @@
 				3AF02A621BE720EB00AF0597 /* reader_bg2@2x.png in Resources */,
 				941684671C2B832C00A88A46 /* hp_type.png in Resources */,
 				B76F09601BD39C580095F655 /* icon2.png in Resources */,
+				944953381C336F6E005E9BBF /* hp_payfail.png in Resources */,
 				B77E1AE01BC2A50C00DB3199 /* VoiceSearchFeedback019.png in Resources */,
 				3A69A1D81C04284B0002F776 /* NotificationBackgroundErrorIcon.png in Resources */,
 				3AEDB27A1BFC426600AD7E95 /* sticker_9.png in Resources */,
@@ -10796,6 +10838,7 @@
 				B77E1ABE1BC2A50C00DB3199 /* VoiceSearchFeedback002.png in Resources */,
 				941684621C2B832C00A88A46 /* hp_prize.png in Resources */,
 				B7D3D8E71BD09457000A0962 /* WechatShortVideo_close.png in Resources */,
+				9449534C1C33BF47005E9BBF /* hp_xxunselect.png in Resources */,
 				3A52F0351BEB088D00D081FE /* share_facebook@2x.png in Resources */,
 				B7D3D8EA1BD09457000A0962 /* WechatShortVideo_scan_focus.png in Resources */,
 				B77C3ABA1BC4FBF800B7E028 /* R设置之1.png in Resources */,
@@ -10814,6 +10857,7 @@
 				94775A021C31422400EA9073 /* np_detailicon.png in Resources */,
 				B77E1AE91BC2A50C00DB3199 /* chat_receiver_audio_playing003@2x.png in Resources */,
 				947759D71C3107AE00EA9073 /* hp_qiangred.png in Resources */,
+				9449534A1C33BF47005E9BBF /* hp_ggunselect.png in Resources */,
 				B77E1AA91BC2A50C00DB3199 /* 87*87.png in Resources */,
 				B77C3AE71BC53BA800B7E028 /* R充值按钮.png in Resources */,
 				94721AAE1C3292D0007A901D /* np_count.png in Resources */,
@@ -10940,6 +10984,7 @@
 				941684A01C2D3F7500A88A46 /* tb_mine.png in Resources */,
 				3AF02AEB1BE8894500AF0597 /* R绝对大图片.jpg in Resources */,
 				3AEDB2561BFC426600AD7E95 /* filter_1.JPG in Resources */,
+				944953391C336F6E005E9BBF /* hp_paysuccess.png in Resources */,
 				3AEDB2441BFC426600AD7E95 /* face_14.png in Resources */,
 				94721AA61C326E20007A901D /* hp_select.png in Resources */,
 				3AF02A671BE720EB00AF0597 /* reader_comments@2x.png in Resources */,
@@ -10965,6 +11010,7 @@
 				B77E1AAA1BC2A50C00DB3199 /* 引导页-4-01.png in Resources */,
 				3A69A1E51C04284B0002F776 /* NotificationButtonBackground@2x.png in Resources */,
 				3AF845641BE9A6B800FEF930 /* com.skin.1108.zip in Resources */,
+				9449534B1C33BF47005E9BBF /* hp_xxselect.png in Resources */,
 				3A2F0DCE1BFC8456000EE3B9 /* R白色方形效果.png in Resources */,
 				9487834D1C2A9AD600E52B11 /* lg_qq.png in Resources */,
 				B77E1ADD1BC2A50C00DB3199 /* VoiceSearchFeedback017@2x.png in Resources */,
@@ -11406,6 +11452,7 @@
 				3AEDB25A1BFC426600AD7E95 /* filter_2.JPG in Resources */,
 				3AEDB29E1BFC426600AD7E95 /* makecards_puzzle3_storyboard6_icon@2x.png in Resources */,
 				B77E1A931BC2A50C00DB3199 /* R蓝色对勾选中.png in Resources */,
+				9449533E1C337860005E9BBF /* hp_textfield.png in Resources */,
 				B77E1AEE1BC2A50C00DB3199 /* chat_sender_audio_playing_002@2x.png in Resources */,
 				947759D11C3107AE00EA9073 /* hp_help.png in Resources */,
 				B77E1AF91BC2A50C00DB3199 /* R聊天之切换键盘按钮.png in Resources */,
@@ -11427,6 +11474,7 @@
 				B7777BB61BC39FC800452D6E /* AMap.bundle in Resources */,
 				B77E1A9C1BC2A50C00DB3199 /* R地图.png in Resources */,
 				B77E1A711BC2A50C00DB3199 /* R公交2.png in Resources */,
+				944953491C33BF47005E9BBF /* hp_ggselect.png in Resources */,
 				B77E1AAE1BC2A50C00DB3199 /* 引导页-5-01.png in Resources */,
 				3AF02A5F1BE720EB00AF0597 /* r_drag-dot@2x.png in Resources */,
 				3AEDB2AA1BFC426600AD7E95 /* makecards_puzzle_storyboard6_icon@2x.png in Resources */,
@@ -12008,6 +12056,7 @@
 				B7777BBB1BC39FC800452D6E /* MANaviAnnotation.m in Sources */,
 				B76F09B51BD3EF3D0095F655 /* UIButton+TitleColor.m in Sources */,
 				B728C1621BDBDF120004B4A9 /* DrawView.m in Sources */,
+				944953521C33CEC3005E9BBF /* LjjUISegmentedControl.m in Sources */,
 				3A52F02A1BEB046400D081FE /* RWDropdownMenu.m in Sources */,
 				3ADAC0A61BD8BEB000EB507F /* IQUIView+Hierarchy.m in Sources */,
 				B728C1631BDBDF120004B4A9 /* LineChartView.m in Sources */,
@@ -12020,6 +12069,7 @@
 				B7777D861BC3A93800452D6E /* NSDate+XMPPDateTimeProfiles.m in Sources */,
 				B7777D8F1BC3A93800452D6E /* XMPPCapsResourceCoreDataStorageObject.m in Sources */,
 				B76F09AE1BD3EF3D0095F655 /* UIViewController+ChangeColor.m in Sources */,
+				944953411C33A4BB005E9BBF /* SearchResultVC.m in Sources */,
 				B77E19991BC26ABE00DB3199 /* AllVC.m in Sources */,
 				3AEE951C1BF588CE007F6BD5 /* UINavigationController+BATransitions.m in Sources */,
 				B7F165591BF86F0700EE5EF2 /* BFSystemSound.m in Sources */,
@@ -12209,6 +12259,7 @@
 				B76C9B0C1C01A5F200AB8C5F /* QBPlasticPopupMenu.m in Sources */,
 				3AF02A501BE720EB00AF0597 /* E_EveryChapter.m in Sources */,
 				3AEE94E21BF588CE007F6BD5 /* CAShapeLayer+UIBezierPath.m in Sources */,
+				9449533C1C33729D005E9BBF /* SearchVC.m in Sources */,
 				B728C15F1BDBDF120004B4A9 /* BarChartView.m in Sources */,
 				B7777D8A1BC3A93800452D6E /* XMPPTransports.m in Sources */,
 				3AEE948B1BF588CE007F6BD5 /* NSManagedObjectContext+FetchRequestsConstructors.m in Sources */,
@@ -12356,6 +12407,7 @@
 				3ADAC0AD1BD8BEB000EB507F /* IQTitleBarButtonItem.m in Sources */,
 				B77C3AD01BC517C900B7E028 /* RColectionListVC.m in Sources */,
 				3A69A1B51C0407800002F776 /* UIImage+MWPhotoBrowser.m in Sources */,
+				9449534F1C33C444005E9BBF /* NoticeVC.m in Sources */,
 				3AEDB2CF1BFC7B2000AD7E95 /* CLBlurBand.m in Sources */,
 				3AF02ADF1BE85CF000AF0597 /* HSDownloadManager.m in Sources */,
 				3AEE953C1BF588CF007F6BD5 /* UIView+draggable.m in Sources */,

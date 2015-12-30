@@ -13,6 +13,8 @@
 #import "goodsRedVC.h"
 #import "FAQVC.h"
 #import "SumbitOrderVC.h"
+#import "SearchVC.h"
+#import "NoticeVC.h"
 
 @interface HomePageVC ()
 
@@ -361,12 +363,16 @@
 
 //导航消息item点击事件
 - (void)msgClick:(HemaButton *)sender {
-    PrizeMsgVC *msgVC = [[PrizeMsgVC alloc] init];
-    [self.navigationController pushViewController:msgVC animated:YES];
+    NoticeVC *noticeVC = [[NoticeVC alloc] init];
+    [self.navigationController pushViewController:noticeVC animated:YES];
+//    PrizeMsgVC *msgVC = [[PrizeMsgVC alloc] init];
+//    [self.navigationController pushViewController:msgVC animated:YES];
 }
 
 //导航搜索item点击事件
 - (void)searchClick:(HemaButton *)sender {
+    SearchVC *searchVC = [[SearchVC alloc] init];
+    [self.navigationController pushViewController:searchVC animated:YES];
 }
 
 //分类按钮点击事件
@@ -390,7 +396,6 @@
         case 3:{
             FAQVC *faqVC = [[FAQVC alloc] init];
             [self.navigationController pushViewController:faqVC animated:YES];
-            
         }
             break;
         default:
@@ -482,6 +487,7 @@
 
 #pragma mark - scrollView代理方法
 
+//停止定时器
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
     [super scrollViewWillBeginDragging:scrollView];
     
@@ -490,6 +496,7 @@
     }
 }
 
+//拖动
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     [super scrollViewDidScroll:scrollView];
     
@@ -502,11 +509,10 @@
         control.currentPage = scrollView.contentOffset.x / UI_View_Width;
         }
     }
-    NSLog(@"%f",scrollView.contentOffset.x);
     
 }
 
-//scrollView滑动代理方法
+//开启定时器
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     if (1 == scrollView.tag) {

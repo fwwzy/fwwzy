@@ -107,7 +107,7 @@
                 
                 //单选框
                 HemaButton *selectBtn = [[HemaButton alloc] init];
-                selectBtn.frame = CGRectMake(UI_View_Width - 70, 13, 28, 28);
+                selectBtn.frame = CGRectMake(UI_View_Width - 40, 13, 28, 28);
                 [selectBtn setImage:[UIImage imageNamed:@"hp_payyes"] forState:UIControlStateNormal];
                 [selectBtn setImage:[UIImage imageNamed:@"hp_selected"] forState:UIControlStateSelected];
                 [selectBtn addTarget:self action:@selector(selectBtnClick:) forControlEvents:UIControlEventTouchUpInside];
@@ -125,7 +125,7 @@
                 
                 //switch
                 UISwitch *redSwitch = [[UISwitch alloc] init];
-                redSwitch.frame = CGRectMake(UI_View_Width - 70, 10, 35, 20);
+                redSwitch.frame = CGRectMake(UI_View_Width - 60, 10, 35, 20);
                 redSwitch.thumbTintColor = BB_White_Color;
                 redSwitch.onTintColor = RGB_UI_COLOR(237, 88, 99);
                 redSwitch.tintColor = BB_Gray_Color;
@@ -183,7 +183,7 @@
                 
                 //单选框
                 HemaButton *selectBtn = [[HemaButton alloc] init];
-                selectBtn.frame = CGRectMake(UI_View_Width - 70, 15, 28, 28);
+                selectBtn.frame = CGRectMake(UI_View_Width - 40, 15, 28, 28);
                 selectBtn.tag = 1 + 10;
                 [selectBtn setImage:[UIImage imageNamed:@"hp_payyes"] forState:UIControlStateNormal];
                 [selectBtn setImage:[UIImage imageNamed:@"hp_selected"] forState:UIControlStateSelected];
@@ -207,7 +207,7 @@
             //提交
             cell.backgroundColor = RGB_UI_COLOR(255, 248, 250);
             HemaButton *submitBtn = [[HemaButton alloc] init];
-            submitBtn.frame = CGRectMake(50, 15, UI_View_Width - 100, 50);
+            submitBtn.frame = CGRectMake(60, 5, UI_View_Width - 120, 40);
             [submitBtn setBackgroundImage:[UIImage imageNamed:@"lg_login"] forState:UIControlStateNormal];
             [submitBtn setTitle:@"提交" forState:UIControlStateNormal];
             
