@@ -8,6 +8,7 @@
 
 #import "UnDetailVC.h"
 #import "CountDetailVC.h"
+#import "ShareVC.h"
 
 @interface UnDetailVC (){
     UIScrollView *_adView;
@@ -74,6 +75,7 @@
     UIButton *goBtn = [[UIButton alloc]initWithFrame:CGRectMake(UI_View_Width-100, 0, 100, 49)];
     goBtn.backgroundColor = BB_Red_Color;
     [goBtn setTitle:@"立即前往" forState:UIControlStateNormal];
+    [goBtn addTarget:self action:@selector(goBtnClick) forControlEvents:UIControlEventTouchUpInside];
     [dayView addSubview:goBtn];
     
     _blackView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, UI_View_Width, UI_View_Height+80)];
@@ -324,6 +326,10 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 1) {
         if (indexPath.row == 0) {
+            ShareVC *hvc = [[ShareVC alloc]init];
+            [self.navigationController pushViewController:hvc animated:YES];
+        }
+        if (indexPath.row == 1) {
             OverDetailVC *ovc = [[OverDetailVC alloc]init];
             [self.navigationController pushViewController:ovc animated:YES];
         }
@@ -341,6 +347,9 @@
     if (scrollView == _adView) {
         _pageView.currentPage = scrollView.contentOffset.x/scrollView.bounds.size.width;
     }
+    if (1 == scrollView.tag) {
+        _prizeTimer = [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(topScrollViewPass) userInfo:nil repeats:YES];
+    }
 }
 
 #pragma mark - 事件
@@ -352,15 +361,38 @@
     [UIView animateWithDuration:1 animations:^{
         CGPoint contentSet = CGPointMake(scrollView.contentOffset.x + UI_View_Width, 0);
         scrollView.contentOffset = contentSet;
+        
+        control.currentPage = scrollView.contentOffset.x / UI_View_Width;
+        if (contentSet.x == scrollView.contentSize.width) {
+            scrollView.contentOffset = CGPointMake(0, 0);
+        }
     }];
+}
+#pragma mark - scrollView代理方法
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    [super scrollViewWillBeginDragging:scrollView];
     
-    control.currentPage = scrollView.contentOffset.x / UI_View_Width;
-    if (control.currentPage == 3) {
-        scrollView.contentOffset = CGPointMake(0, 0);
+    if (1 == scrollView.tag) {
+        [_prizeTimer invalidate];
+    }
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    [super scrollViewDidScroll:scrollView];
+    
+    if (1 == scrollView.tag) {
+        UIPageControl *control = (id)[self.view viewWithTag:2];
+        if (scrollView.contentOffset.x + UI_View_Width > scrollView.contentSize.width) {
+            //            scrollView.contentOffset = CGPointMake(0, 0);
+            //            control.currentPage = 0;
+        } else {
+            control.currentPage = scrollView.contentOffset.x / UI_View_Width;
+        }
     }
     
-    
 }
+
 -(void)robBtnClick{
 //    _blackView.hidden = YES;
     UIImageView *image = (id)[_blackView viewWithTag:2000];
@@ -385,5 +417,8 @@
 -(void)countBtnClick{
     CountDetailVC *cvc = [[CountDetailVC alloc]init];
     [self.navigationController pushViewController:cvc animated:YES];
+}
+-(void)goBtnClick{
+    
 }
 @end

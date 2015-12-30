@@ -7,6 +7,8 @@
 //
 
 #import "DetailVC.h"
+#import "ShareVC.h"
+
 
 @interface DetailVC (){
     NSInteger time;
@@ -14,6 +16,7 @@
     UIPageControl *_pageView;
     NSMutableArray *imgSource;
     NSTimer *_prizeTimer;
+    UIView *_blackView;
 }
 
 @end
@@ -74,7 +77,39 @@
     UIButton *goBtn = [[UIButton alloc]initWithFrame:CGRectMake(UI_View_Width-100, 0, 100, 49)];
     goBtn.backgroundColor = BB_Red_Color;
     [goBtn setTitle:@"立即前往" forState:UIControlStateNormal];
+    [goBtn addTarget:self action:@selector(goBtnClick) forControlEvents:UIControlEventTouchUpInside];
     [dayView addSubview:goBtn];
+    //计算方式
+    _blackView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, UI_View_Width, UI_View_Height+80)];
+    UIWindow * window = [UIApplication sharedApplication].keyWindow;
+    [window addSubview:_blackView];
+    _blackView.userInteractionEnabled = YES;
+    _blackView.hidden = YES;
+    
+    UIImageView *blackView1 = [[UIImageView alloc]initWithFrame:_blackView.frame];
+    [blackView1 setImage:[UIImage imageNamed:@"np_blackView"]];
+    [_blackView addSubview:blackView1];
+    blackView1.userInteractionEnabled = YES;
+    
+    UIView *medoView = [[UIView alloc]initWithFrame:CGRectMake(UI_View_Width/8, _blackView.height/4, UI_View_Width*3/4, _blackView.height/2)];
+    medoView.backgroundColor = BB_White_Color;
+    [blackView1 addSubview:medoView];
+    
+    //    UILabel *medoLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, medoView.width, medoView.height/8)];
+    //    medoLabel.backgroundColor = BB_Back_Color_Here;
+    //    medoLabel.text = @"幸运号码计算方式";
+    //    medoLabel.font = [UIFont systemFontOfSize:16];
+    //    medoLabel.textAlignment = NSTextAlignmentCenter;
+    //    [medoView addSubview:medoLabel];
+    
+    UIButton *medoBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, medoView.height - medoView.height/8, medoView.width, medoView.height/8)];
+    medoBtn.backgroundColor = [UIColor clearColor];
+    [medoBtn addTarget:self action:@selector(medoBtnClcik) forControlEvents:UIControlEventTouchUpInside];
+    [medoView addSubview:medoBtn];
+    
+    UIImageView *medoimageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, medoView.width, medoView.height)];
+    [medoimageView setImage:[UIImage imageNamed:@"np_countmedo"]];
+    [medoView addSubview:medoimageView];
 }
 
 - (void)loadData {
@@ -175,14 +210,16 @@
                 label.textAlignment = NSTextAlignmentCenter;
                 [timeView addSubview:label];
             }
-            lastLabel.frame = CGRectMake(240, 20, 70, 20);
-            lastLabel.textColor = [UIColor colorWithRed:211.0/255.0 green:178.0/255.0 blue:118.0/255.0 alpha:0.8];
-            lastLabel.font = [UIFont systemFontOfSize:11];
-            NSMutableAttributedString *content = [[NSMutableAttributedString alloc]initWithString:[NSString stringWithFormat:@"查看计算规则"]];
-            NSRange contentRange = {0,[content length]};
-            [content addAttribute:NSUnderlineStyleAttributeName value:[NSNumber numberWithInteger:NSUnderlineStyleSingle] range:contentRange];
-            lastLabel.attributedText = content;
-
+            UIButton *countBtn=[[UIButton alloc]initWithFrame:CGRectMake(240, 23, 70, 20)];
+            NSMutableAttributedString *title = [[NSMutableAttributedString alloc] initWithString:@"查看计算规则"];
+            NSRange titleRange = {0,[title length]};
+            [title addAttribute:NSUnderlineStyleAttributeName value:[NSNumber numberWithInteger:NSUnderlineStyleSingle] range:titleRange];
+            [countBtn setAttributedTitle:title
+                              forState:UIControlStateNormal];
+            countBtn.titleLabel.textColor = [UIColor colorWithRed:211.0/255.0 green:178.0/255.0 blue:118.0/255.0 alpha:0.8];
+            [countBtn.titleLabel setFont:[UIFont systemFontOfSize:11]];
+            [countBtn addTarget:self action:@selector(countBtnClick) forControlEvents:UIControlEventTouchUpInside];
+            [cell addSubview:countBtn];
         }
     }
     if (indexPath.section == 1) {
@@ -258,6 +295,10 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 1) {
         if (indexPath.row == 0) {
+            ShareVC *hvc = [[ShareVC alloc]init];
+            [self.navigationController pushViewController:hvc animated:YES];
+        }
+        if (indexPath.row == 1) {
             OverDetailVC *ovc = [[OverDetailVC alloc]init];
             [self.navigationController pushViewController:ovc animated:YES];
         }
@@ -274,6 +315,9 @@
 -(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
     if (scrollView == _adView) {
         _pageView.currentPage = scrollView.contentOffset.x/scrollView.bounds.size.width;
+    }
+    if (1 == scrollView.tag) {
+        _prizeTimer = [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(topScrollViewPass) userInfo:nil repeats:YES];
     }
 }
 
@@ -316,15 +360,45 @@
     [UIView animateWithDuration:1 animations:^{
         CGPoint contentSet = CGPointMake(scrollView.contentOffset.x + UI_View_Width, 0);
         scrollView.contentOffset = contentSet;
+        
+        control.currentPage = scrollView.contentOffset.x / UI_View_Width;
+        if (contentSet.x == scrollView.contentSize.width) {
+            scrollView.contentOffset = CGPointMake(0, 0);
+        }
     }];
+}
+#pragma mark - scrollView代理方法
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    [super scrollViewWillBeginDragging:scrollView];
     
-    control.currentPage = scrollView.contentOffset.x / UI_View_Width;
-    if (control.currentPage == 3) {
-        scrollView.contentOffset = CGPointMake(0, 0);
+    if (1 == scrollView.tag) {
+        [_prizeTimer invalidate];
     }
-    
-    
 }
 
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    [super scrollViewDidScroll:scrollView];
+    
+    if (1 == scrollView.tag) {
+        UIPageControl *control = (id)[self.view viewWithTag:2];
+        if (scrollView.contentOffset.x + UI_View_Width > scrollView.contentSize.width) {
+            //            scrollView.contentOffset = CGPointMake(0, 0);
+            //            control.currentPage = 0;
+        } else {
+            control.currentPage = scrollView.contentOffset.x / UI_View_Width;
+        }
+    }
+    
+}
+-(void)medoBtnClcik{
+    _blackView.hidden = YES;
+}
+-(void)countBtnClick{
+    _blackView.hidden = NO;
+}
+-(void)goBtnClick{
+    
+}
 
 @end

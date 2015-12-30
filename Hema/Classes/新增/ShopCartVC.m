@@ -8,6 +8,7 @@
 
 #import "ShopCartVC.h"
 #import "MyLabel.h"
+#import "SumbitOrderVC.h"
 
 @interface ShopCartVC (){
     UITableView *_tableView;
@@ -23,7 +24,6 @@
 - (void)loadSet {
     [self.navigationItem setNewTitle:@"购物车"];
     _page = 3;
-    NSLog(@"%zd",_page);
     //左按钮
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeSystem];
     btn.frame = CGRectMake(0, 0, 14, 20);
@@ -57,6 +57,12 @@
     [attrString addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:18] range:range2];
     _titleLabel.attributedText = attrString;
     [allView addSubview:_titleLabel];
+    
+    UIButton *buyBtn = [[UIButton alloc]initWithFrame:CGRectMake(allView.width - 90, 10, 80, 30)];
+    buyBtn.backgroundColor = BB_Red_Color;
+    [buyBtn setTitle:@"立即购买" forState:UIControlStateNormal];
+    [buyBtn addTarget:self action:@selector(buyBtnClcik) forControlEvents:UIControlEventTouchUpInside];
+    [allView addSubview:buyBtn];
 }
 
 - (void)loadData {
@@ -168,7 +174,6 @@
             _titleLabel.attributedText = attrString;
 
         }
-    NSLog(@"%zd",_page);
 }
 -(void)numBtnPlus:(UIButton *)button{
     MyLabel *midLabel = (id)[self.view viewWithTag:700+(button.tag - 900)];
@@ -188,9 +193,12 @@
     [attrString addAttribute:NSForegroundColorAttributeName value:color1 range:range2];
     [attrString addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:16] range:range2];
     _titleLabel.attributedText = attrString;
-
-    NSLog(@"%zd",_page);
     
+}
+-(void)buyBtnClcik{
+    SumbitOrderVC *svc = [[SumbitOrderVC alloc]init];
+    svc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:svc animated:YES];
 }
 //-(void)deleteBtnClick:(UIButton *)button{
 //    NSArray *visibleCells=[_tableView visibleCells];
