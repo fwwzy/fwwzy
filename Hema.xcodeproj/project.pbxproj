@@ -883,6 +883,11 @@
 		9449534C1C33BF47005E9BBF /* hp_xxunselect.png in Resources */ = {isa = PBXBuildFile; fileRef = 944953481C33BF47005E9BBF /* hp_xxunselect.png */; };
 		9449534F1C33C444005E9BBF /* NoticeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9449534E1C33C444005E9BBF /* NoticeVC.m */; };
 		944953521C33CEC3005E9BBF /* LjjUISegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 944953511C33CEC3005E9BBF /* LjjUISegmentedControl.m */; };
+		944953581C33DE6B005E9BBF /* np_countmedo.png in Resources */ = {isa = PBXBuildFile; fileRef = 944953531C33DE6B005E9BBF /* np_countmedo.png */; };
+		944953591C33DE6B005E9BBF /* np_countOpen.png in Resources */ = {isa = PBXBuildFile; fileRef = 944953541C33DE6B005E9BBF /* np_countOpen.png */; };
+		9449535A1C33DE6B005E9BBF /* np_countResult.png in Resources */ = {isa = PBXBuildFile; fileRef = 944953551C33DE6B005E9BBF /* np_countResult.png */; };
+		9449535B1C33DE6B005E9BBF /* np_numberA.png in Resources */ = {isa = PBXBuildFile; fileRef = 944953561C33DE6B005E9BBF /* np_numberA.png */; };
+		9449535C1C33DE6B005E9BBF /* np_numberB.png in Resources */ = {isa = PBXBuildFile; fileRef = 944953571C33DE6B005E9BBF /* np_numberB.png */; };
 		94721A9B1C322272007A901D /* ClassifyListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 94721A9A1C322272007A901D /* ClassifyListVC.m */; };
 		94721A9E1C3235BF007A901D /* FAQVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 94721A9D1C3235BF007A901D /* FAQVC.m */; };
 		94721AA01C325123007A901D /* hp_service.png in Resources */ = {isa = PBXBuildFile; fileRef = 94721A9F1C325123007A901D /* hp_service.png */; };
@@ -3126,6 +3131,11 @@
 		9449534E1C33C444005E9BBF /* NoticeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoticeVC.m; sourceTree = "<group>"; };
 		944953501C33CEC3005E9BBF /* LjjUISegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LjjUISegmentedControl.h; sourceTree = "<group>"; };
 		944953511C33CEC3005E9BBF /* LjjUISegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LjjUISegmentedControl.m; sourceTree = "<group>"; };
+		944953531C33DE6B005E9BBF /* np_countmedo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = np_countmedo.png; sourceTree = "<group>"; };
+		944953541C33DE6B005E9BBF /* np_countOpen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = np_countOpen.png; sourceTree = "<group>"; };
+		944953551C33DE6B005E9BBF /* np_countResult.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = np_countResult.png; sourceTree = "<group>"; };
+		944953561C33DE6B005E9BBF /* np_numberA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = np_numberA.png; sourceTree = "<group>"; };
+		944953571C33DE6B005E9BBF /* np_numberB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = np_numberB.png; sourceTree = "<group>"; };
 		94721A991C322272007A901D /* ClassifyListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassifyListVC.h; sourceTree = "<group>"; };
 		94721A9A1C322272007A901D /* ClassifyListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassifyListVC.m; sourceTree = "<group>"; };
 		94721A9C1C3235BF007A901D /* FAQVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAQVC.h; sourceTree = "<group>"; };
@@ -7378,6 +7388,11 @@
 		948783401C2A9A9400E52B11 /* 新增 */ = {
 			isa = PBXGroup;
 			children = (
+				944953531C33DE6B005E9BBF /* np_countmedo.png */,
+				944953541C33DE6B005E9BBF /* np_countOpen.png */,
+				944953551C33DE6B005E9BBF /* np_countResult.png */,
+				944953561C33DE6B005E9BBF /* np_numberA.png */,
+				944953571C33DE6B005E9BBF /* np_numberB.png */,
 				944953451C33BF47005E9BBF /* hp_ggselect.png */,
 				944953461C33BF47005E9BBF /* hp_ggunselect.png */,
 				944953471C33BF47005E9BBF /* hp_xxselect.png */,
@@ -10788,6 +10803,7 @@
 				B77E1A911BC2A50C00DB3199 /* R红色对勾选中.png in Resources */,
 				B77E1AB61BC2A50C00DB3199 /* chatFire_audioPlaying1@2x.png in Resources */,
 				B77E1ACE1BC2A50C00DB3199 /* VoiceSearchFeedback010.png in Resources */,
+				9449535B1C33DE6B005E9BBF /* np_numberA.png in Resources */,
 				B77E1A781BC2A50C00DB3199 /* R我的位置.png in Resources */,
 				B7777B451BC399EE00452D6E /* ShareSDKiPhoneDefaultShareViewUI.bundle in Resources */,
 				B7777B941BC39FBA00452D6E /* AlipaySDK.bundle in Resources */,
@@ -10866,6 +10882,7 @@
 				B76EC2241BEF0DD0001DDFA8 /* btn_share_weixin@2x.png in Resources */,
 				3AECA7E31C0703D7006036E2 /* VIP_on@3x.png in Resources */,
 				B77C3AAC1BC4EF4800B7E028 /* R资料相框.png in Resources */,
+				9449535A1C33DE6B005E9BBF /* np_countResult.png in Resources */,
 				3AEDB2791BFC426600AD7E95 /* sticker_8.png in Resources */,
 				3AF845A01BE9B61500FEF930 /* .gitignore in Resources */,
 				3A17B06B1BFD9891005C0D6C /* epub.bundle in Resources */,
@@ -11213,6 +11230,7 @@
 				3AEDB15F1BFC3DFB00AD7E95 /* number_three_style_6.plist in Resources */,
 				3AEDB14E1BFC3DFB00AD7E95 /* number_five_style_1.plist in Resources */,
 				3A17B07A1BFDAC54005C0D6C /* icon_back@2x.png in Resources */,
+				9449535C1C33DE6B005E9BBF /* np_numberB.png in Resources */,
 				B77E1A661BC2A50C00DB3199 /* R底部栏未选中1.png in Resources */,
 				B77E1A6E1BC2A50C00DB3199 /* Rstart@2x.png in Resources */,
 				B77E1AC11BC2A50C00DB3199 /* VoiceSearchFeedback003@2x.png in Resources */,
@@ -11292,6 +11310,7 @@
 				B77E1B021BC2A50C00DB3199 /* R聊天底部录像.png in Resources */,
 				B77E1ADE1BC2A50C00DB3199 /* VoiceSearchFeedback018.png in Resources */,
 				B7777D461BC3A93800452D6E /* copying.txt in Resources */,
+				944953591C33DE6B005E9BBF /* np_countOpen.png in Resources */,
 				B77E1A6D1BC2A50C00DB3199 /* Rend@2x.png in Resources */,
 				3A69A1AC1C0407800002F776 /* VideoOverlay@3x.png in Resources */,
 				3AECA7D41C0703D7006036E2 /* 首页_黑@3x.png in Resources */,
@@ -11420,6 +11439,7 @@
 				941684A11C2D3F7500A88A46 /* tb_newpublish.png in Resources */,
 				B77E1A9E1BC2A50C00DB3199 /* R警告.png in Resources */,
 				3AEDB1611BFC3DFB00AD7E95 /* number_two_style_2.plist in Resources */,
+				944953581C33DE6B005E9BBF /* np_countmedo.png in Resources */,
 				3AEDB2801BFC426600AD7E95 /* makecards_puzzle5_storyboard3_icon@2x.png in Resources */,
 				9487834E1C2A9AD600E52B11 /* lg_sina.png in Resources */,
 				3AEDB1541BFC3DFB00AD7E95 /* number_four_style_1.plist in Resources */,
