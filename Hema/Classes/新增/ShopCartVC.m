@@ -24,12 +24,12 @@
 - (void)loadSet {
     [self.navigationItem setNewTitle:@"购物车"];
     _page = 3;
-    //左按钮
-    UIButton *btn = [UIButton buttonWithType:UIButtonTypeSystem];
-    btn.frame = CGRectMake(0, 0, 14, 20);
-    [btn setBackgroundImage:[UIImage imageNamed:@"lg_back"] forState:UIControlStateNormal];
-    UIBarButtonItem *btni = [[UIBarButtonItem alloc]initWithCustomView:btn];
-    self.navigationItem.leftBarButtonItem = btni;
+//    //左按钮
+//    UIButton *btn = [UIButton buttonWithType:UIButtonTypeSystem];
+//    btn.frame = CGRectMake(0, 0, 14, 20);
+//    [btn setBackgroundImage:[UIImage imageNamed:@"lg_back"] forState:UIControlStateNormal];
+//    UIBarButtonItem *btni = [[UIBarButtonItem alloc]initWithCustomView:btn];
+//    self.navigationItem.leftBarButtonItem = btni;
     //列表
     //[self.mytable setSeparatorInset:UIEdgeInsetsMake(0, 0, UI_View_Width, UI_View_Height -49-50)];
     [self.mytable setSeparatorStyle:UITableViewCellSeparatorStyleSingleLine];
