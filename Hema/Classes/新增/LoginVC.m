@@ -63,7 +63,7 @@
     phoneImg.image = [UIImage imageNamed:@"lg_phone"];
     
     UILabel *phoneSep = [[UILabel alloc] init];
-    phoneSep.frame = CGRectMake(38, phoneView.height / 3.5, 1, 22);
+    phoneSep.frame = CGRectMake(38, phoneView.height / 3.5, 1, 20);
     phoneSep.backgroundColor = BB_Gray_Color;
     phoneSep.alpha = 0.5;
     
@@ -89,7 +89,7 @@
     pwdImg.image = [UIImage imageNamed:@"lg_lock"];
     
     UILabel *pwdSep = [[UILabel alloc] init];
-    pwdSep.frame = CGRectMake(38, phoneView.height / 3.5, 1, 22);
+    pwdSep.frame = CGRectMake(38, phoneView.height / 3.5, 1, 20);
     pwdSep.backgroundColor = BB_Gray_Color;
     pwdSep.alpha = 0.5;
     

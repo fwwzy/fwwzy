@@ -7,7 +7,7 @@
 //
 
 #import "ClassifyListVC.h"
-#import "DetailVC.h"
+#import "PrizeDetailVC.h"
 
 @interface ClassifyListVC ()
 
@@ -52,7 +52,7 @@
         //商品名称
         UILabel *userName = [[UILabel alloc] init];
         userName.frame = CGRectMake(30 + self.view.width / 2.5, 15, UI_View_Width - self.view.width / 2.5 - 40, iconView.size.height / 3);
-        userName.lineBreakMode = NSLineBreakByWordWrapping;
+        userName.lineBreakMode = NSLineBreakByTruncatingTail;
         userName.numberOfLines = 0;
         userName.font = [UIFont systemFontOfSize:16];
         userName.text = @"Apple ipad mini 4 64G(颜色随机唯一的不同.....)";
@@ -121,8 +121,8 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    DetailVC *detailVC = [[DetailVC alloc] init];
-    [self.navigationController pushViewController:detailVC animated:YES];
+    PrizeDetailVC *prizeDetailVC = [[PrizeDetailVC alloc] init];
+    [self.navigationController pushViewController:prizeDetailVC animated:YES];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

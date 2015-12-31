@@ -30,6 +30,8 @@
 @synthesize dataSource;
 @synthesize imgSource;
 
+
+
 - (void)loadSet {
     
     //导航item设置
@@ -96,7 +98,7 @@
         }
     }
     if (indexPath.section == 1) {
-        return 50;
+        return 40;
     }
     return 230;
 }
@@ -121,7 +123,6 @@
                 UIPageControl *topControl = [[UIPageControl alloc] init];
                 
                 [topControl setFrame:CGRectMake(self.view.width / 2 - 45, 180 , 90, 30)];
-                //topControl.center = CGPointMake(self.view.width / 2 , 180);
                 topControl.numberOfPages = 4;
                 topControl.currentPage = 0;
                 topControl.tag = 2;
@@ -212,17 +213,18 @@
             for (int i = 0; i < 4; i++) {
                 
                 HemaButton *itemBtn = [[HemaButton alloc] init];
-                itemBtn.frame = CGRectMake(self.view.width / 10 + i * self.view.width / 4.5 , -1, 45, 50);
+                itemBtn.frame = CGRectMake(self.view.width / 10 + i * self.view.width / 4.5 , -7, 45, 50);
+                [itemBtn.titleLabel setFont:[UIFont systemFontOfSize:15]];
                 [itemBtn setTitleColor:BB_Gray_Color forState:UIControlStateNormal];
                 if (i == 0) {
                      [itemBtn setTitleColor:BB_Red_Color forState:UIControlStateNormal];
                 }
                 if (i == 3) {
                     HemaImgView *upImg = [[HemaImgView alloc] init];
-                    upImg.frame = CGRectMake(itemBtn.origin.x + itemBtn.size.width, 18, 7, 4);
+                    upImg.frame = CGRectMake(itemBtn.origin.x + itemBtn.size.width, 12, 7, 4);
                     upImg.image = [UIImage imageNamed:@"hp_up"];
                     HemaImgView *downImg = [[HemaImgView alloc] init];
-                    downImg.frame = CGRectMake(itemBtn.origin.x + itemBtn.size.width, 25, 7, 4);
+                    downImg.frame = CGRectMake(itemBtn.origin.x + itemBtn.size.width, 19, 7, 4);
                     downImg.image = [UIImage imageNamed:@"hp_down"];
                     [cell.contentView addSubview:upImg];
                     [cell.contentView addSubview:downImg];
@@ -261,7 +263,6 @@
             //开奖进度label
             UILabel *lprizeLabel = [[UILabel alloc] init];
             [lprizeLabel setFrame:CGRectMake(10, 180, UI_View_Width / 3, 20)];
-            lprizeLabel.font = [UIFont systemFontOfSize:12];
             [lprizeLabel setTextColor:[UIColor grayColor]];
             
             NSString *prizeText = @"开奖进度83%";
@@ -345,8 +346,8 @@
             [cell.contentView addSubview:rightView];
             
             if (HM_ISIPHONE4 || HM_ISIPHONE5) {
-                [lprizeLabel setFont:[UIFont systemFontOfSize:15]];
-                [rprizeLabel setFont:[UIFont systemFontOfSize:15]];
+                [lprizeLabel setFont:[UIFont systemFontOfSize:12]];
+                [rprizeLabel setFont:[UIFont systemFontOfSize:12]];
             }
             
             UITapGestureRecognizer *leftTapGR = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(leftViewClick:)];

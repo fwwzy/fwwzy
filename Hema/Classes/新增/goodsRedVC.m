@@ -8,7 +8,10 @@
 
 #import "goodsRedVC.h"
 
-@interface goodsRedVC ()
+@interface goodsRedVC () {
+    UIImageView *_backView;
+    float _autoHeight;
+}
 
 @end
 
@@ -70,6 +73,7 @@
     HemaButton *grabBtn = [[HemaButton alloc] init];
     grabBtn.frame = CGRectMake(UI_View_Width / 2 - 40, prizeLbl.origin.y + prizeLbl.size.height + 20, 80, 30);
     [grabBtn setImage:[UIImage imageNamed:@"hp_qiang"] forState:UIControlStateNormal];
+    [grabBtn addTarget:self action:@selector(grabBtbClick:) forControlEvents:UIControlEventTouchUpInside];
     
     //活动规则
     UIView *ruleView = [[UIView alloc] init];
@@ -89,11 +93,19 @@
     UILabel *timeLabel = [[UILabel alloc] init];
     timeLabel.frame = CGRectMake(27, 55, 200, 20);
     timeLabel.text = @"活动时间";
+    timeLabel.font = [UIFont systemFontOfSize:14];
     
     UILabel *timeContent = [[UILabel alloc] init];
     timeContent.frame = CGRectMake(37, 85, UI_View_Width - 50, 20);
-    timeContent.font = [UIFont systemFontOfSize:15];
+    timeContent.font = [UIFont systemFontOfSize:14];
+    timeContent.lineBreakMode = NSLineBreakByWordWrapping;
+    timeContent.numberOfLines = 0;
     timeContent.text = @"活动时间我也不知道";
+    
+    NSDictionary *attribute = @{NSFontAttributeName: [UIFont systemFontOfSize:14]};
+    CGSize sizeTitle = [timeContent.text boundingRectWithSize:CGSizeMake(UI_View_Height - 50, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:attribute context:nil].size;
+    timeContent.frame = CGRectMake(37, 85, UI_View_Width - 50, sizeTitle.height);
+    _autoHeight += sizeTitle.height;
     
     //标志
     HemaImgView *rule2Flag = [[HemaImgView alloc] init];
@@ -103,15 +115,24 @@
     UILabel *joinLabel = [[UILabel alloc] init];
     joinLabel.frame = CGRectMake(27, 115, 200, 20);
     joinLabel.text = @"参与资格";
+    joinLabel.font = [UIFont systemFontOfSize:14];
     
     UILabel *joinContent = [[UILabel alloc] init];
     joinContent.frame = CGRectMake(37, 145, UI_View_Width - 50, 20);
-    joinContent.font = [UIFont systemFontOfSize:15];
+    joinContent.font = [UIFont systemFontOfSize:14];
+    joinContent.lineBreakMode = NSLineBreakByWordWrapping;
+    joinContent.numberOfLines = 0;
     joinContent.text = @"随便都行";
     
-    scrollView.contentSize = CGSizeMake(0, ruleView.origin.y + self.view.height / 3);
+    NSDictionary *attr = @{NSFontAttributeName: [UIFont systemFontOfSize:14]};
+    CGSize size = [joinContent.text boundingRectWithSize:CGSizeMake(UI_View_Height - 50, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:attr context:nil].size;
+    joinContent.frame = CGRectMake(37, 145, UI_View_Width - 50, size.height);
+    _autoHeight += size.height;
+    
+    scrollView.contentSize = CGSizeMake(0,20 + ruleView.origin.y + self.view.height / 3 + _autoHeight);
+    ruleView.frame = CGRectMake(0, grabBtn.origin.y + grabBtn.size.height + 30, UI_View_Width, self.view.height / 2.5 + _autoHeight);
     scrollView.showsVerticalScrollIndicator = NO;
-    NSLog(@"%f",scrollView.contentSize.height);
+
 
     [redView addSubview:redTotal];
     [scrollView addSubview:redView];
@@ -132,9 +153,54 @@
     
 }
 
+//抢一抢点击事件
+- (void)grabBtbClick:(HemaButton *)sender {
+    _backView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, UI_View_Width, UI_View_Height+80)];
+    UIWindow * window = [UIApplication sharedApplication].keyWindow;
+    _backView.image = [UIImage imageNamed:@"np_blackView"];
+    [window addSubview:_backView];
+    _backView.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tapGR = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closeBackView:)];
+    [_backView addGestureRecognizer:tapGR];
+    
+    //成功
+    UIImageView *redView = [[UIImageView alloc] init];
+    redView.frame = CGRectMake(0, 0, UI_View_Width / 1.5, self.view.height / 3);
+    redView.center = CGPointMake(self.view.width / 2, self.view.height / 2);
+    redView.image = [UIImage imageNamed:@"hp_qiangred"];
+    redView.userInteractionEnabled = YES;
+    
+    //失败
+    UIImageView *failView = [[UIImageView alloc] init];
+    failView.frame = CGRectMake(0, 0, UI_View_Width / 1.5, self.view.height / 3.5);
+    failView.center = CGPointMake(self.view.width / 2, self.view.height / 2);
+    failView.image = [UIImage imageNamed:@"hp_fail"];
+    failView.userInteractionEnabled = YES;
+    
+    UILabel *titleLbl = [[UILabel alloc] init];
+    titleLbl.frame = CGRectMake(0, redView.size.height - 40, redView.size.width, 40);
+    titleLbl.font = [UIFont systemFontOfSize:13];
+    titleLbl.textColor = BB_Blake_Color;
+    titleLbl.textAlignment = NSTextAlignmentCenter;
+    NSString *replaceStr = [NSString stringWithFormat:@"%zd",1000];
+    NSString *totalStr = [NSString stringWithFormat:@"红包金额%@元",replaceStr];
+    NSMutableAttributedString *attrStr = [[NSMutableAttributedString alloc] initWithString:totalStr];
+    NSRange range = [totalStr rangeOfString:replaceStr];
+    [attrStr addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:19] range:range];
+    [attrStr addAttribute:NSForegroundColorAttributeName value:BB_Red_Color range:range];
+    titleLbl.attributedText = attrStr;
+    
+    [redView addSubview:titleLbl];
+    [_backView addSubview:redView];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)closeBackView:(UITapGestureRecognizer *)gesture {
+    [_backView removeFromSuperview];
 }
 
 /*

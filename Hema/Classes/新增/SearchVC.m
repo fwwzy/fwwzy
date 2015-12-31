@@ -160,7 +160,7 @@
         if (indexPath.section == 1) {
             //清空搜索记录
             UIButton *removeBtn = [[UIButton alloc] init];
-            removeBtn.frame = CGRectMake(UI_View_Width / 2 - UI_View_Width / 4, 20, UI_View_Width / 2, 40) ;
+            removeBtn.frame = CGRectMake(UI_View_Width / 2 - UI_View_Width / 4, 20, UI_View_Width / 2, 40) ; 
              [removeBtn setTitle:@"清空搜索记录" forState:UIControlStateNormal];
             removeBtn.layer.borderColor = RGB_UI_COLOR(150, 150, 150).CGColor;
             removeBtn.layer.borderWidth = 1;
@@ -201,6 +201,7 @@
 loop:
     return YES;
 }
+
 
 - (void)removeBtnClick:(UIButton *)sender {
     for (int i = 0; i < 100; i ++) {

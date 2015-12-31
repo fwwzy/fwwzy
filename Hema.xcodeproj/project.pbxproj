@@ -872,6 +872,9 @@
 		941684A51C2D4CB100A88A46 /* np_black.png in Resources */ = {isa = PBXBuildFile; fileRef = 941684A21C2D4CB100A88A46 /* np_black.png */; };
 		941684A61C2D4CB100A88A46 /* sc_minus1.png in Resources */ = {isa = PBXBuildFile; fileRef = 941684A31C2D4CB100A88A46 /* sc_minus1.png */; };
 		941684A71C2D4CB100A88A46 /* shanchu_03.png in Resources */ = {isa = PBXBuildFile; fileRef = 941684A41C2D4CB100A88A46 /* shanchu_03.png */; };
+		944365181C35195800B5F822 /* PrizeDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 944365171C35195800B5F822 /* PrizeDetailVC.m */; };
+		9443651A1C3524D500B5F822 /* hp_shopcart.png in Resources */ = {isa = PBXBuildFile; fileRef = 944365191C3524D500B5F822 /* hp_shopcart.png */; };
+		9443651C1C35290B00B5F822 /* hp_goodscart.png in Resources */ = {isa = PBXBuildFile; fileRef = 9443651B1C35290B00B5F822 /* hp_goodscart.png */; };
 		944953381C336F6E005E9BBF /* hp_payfail.png in Resources */ = {isa = PBXBuildFile; fileRef = 944953361C336F6E005E9BBF /* hp_payfail.png */; };
 		944953391C336F6E005E9BBF /* hp_paysuccess.png in Resources */ = {isa = PBXBuildFile; fileRef = 944953371C336F6E005E9BBF /* hp_paysuccess.png */; };
 		9449533C1C33729D005E9BBF /* SearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9449533B1C33729D005E9BBF /* SearchVC.m */; };
@@ -3116,6 +3119,10 @@
 		941684A21C2D4CB100A88A46 /* np_black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = np_black.png; sourceTree = "<group>"; };
 		941684A31C2D4CB100A88A46 /* sc_minus1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sc_minus1.png; sourceTree = "<group>"; };
 		941684A41C2D4CB100A88A46 /* shanchu_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shanchu_03.png; sourceTree = "<group>"; };
+		944365161C35195800B5F822 /* PrizeDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrizeDetailVC.h; sourceTree = "<group>"; };
+		944365171C35195800B5F822 /* PrizeDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrizeDetailVC.m; sourceTree = "<group>"; };
+		944365191C3524D500B5F822 /* hp_shopcart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hp_shopcart.png; sourceTree = "<group>"; };
+		9443651B1C35290B00B5F822 /* hp_goodscart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hp_goodscart.png; sourceTree = "<group>"; };
 		944953361C336F6E005E9BBF /* hp_payfail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hp_payfail.png; sourceTree = "<group>"; };
 		944953371C336F6E005E9BBF /* hp_paysuccess.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hp_paysuccess.png; sourceTree = "<group>"; };
 		9449533A1C33729D005E9BBF /* SearchVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchVC.h; sourceTree = "<group>"; };
@@ -7316,6 +7323,8 @@
 				944953401C33A4BB005E9BBF /* SearchResultVC.m */,
 				9449534D1C33C444005E9BBF /* NoticeVC.h */,
 				9449534E1C33C444005E9BBF /* NoticeVC.m */,
+				944365161C35195800B5F822 /* PrizeDetailVC.h */,
+				944365171C35195800B5F822 /* PrizeDetailVC.m */,
 			);
 			name = HomePage;
 			sourceTree = "<group>";
@@ -7388,6 +7397,8 @@
 		948783401C2A9A9400E52B11 /* 新增 */ = {
 			isa = PBXGroup;
 			children = (
+				9443651B1C35290B00B5F822 /* hp_goodscart.png */,
+				944365191C3524D500B5F822 /* hp_shopcart.png */,
 				944953531C33DE6B005E9BBF /* np_countmedo.png */,
 				944953541C33DE6B005E9BBF /* np_countOpen.png */,
 				944953551C33DE6B005E9BBF /* np_countResult.png */,
@@ -11409,6 +11420,7 @@
 				3AEDB2401BFC426600AD7E95 /* face_10.png in Resources */,
 				3A52F0371BEB088D00D081FE /* share_twitter@2x.png in Resources */,
 				3AEDB26A1BFC426600AD7E95 /* sticker_17.png in Resources */,
+				9443651A1C3524D500B5F822 /* hp_shopcart.png in Resources */,
 				B7777B411BC399EE00452D6E /* WeiboSDK.bundle in Resources */,
 				3AEDB29B1BFC426600AD7E95 /* makecards_puzzle3_storyboard5_icon.png in Resources */,
 				B77E7C101BD253A00058DD07 /* icon_next@2x.png in Resources */,
@@ -11430,6 +11442,7 @@
 				B76EC2221BEF0DD0001DDFA8 /* btn_share_QQhaoyou@2x.png in Resources */,
 				B77E1AB51BC2A50C00DB3199 /* chatFire_audioPlaying1.png in Resources */,
 				3AEDB2A51BFC426600AD7E95 /* makecards_puzzle_storyboard4_icon.png in Resources */,
+				9443651C1C35290B00B5F822 /* hp_goodscart.png in Resources */,
 				3AF845621BE9A6B800FEF930 /* theme_icon_yellowduck@2x.png in Resources */,
 				3AEDB24B1BFC426600AD7E95 /* face_20.png in Resources */,
 				3AEDB2411BFC426600AD7E95 /* face_11.png in Resources */,
@@ -11734,6 +11747,7 @@
 				B7F1653E1BF86E1700EE5EF2 /* NSDate+BFKit.m in Sources */,
 				3AF02A761BE720EB00AF0597 /* E_SettingBottomBar.m in Sources */,
 				3AEE95041BF588CE007F6BD5 /* UIImage+Capture.m in Sources */,
+				944365181C35195800B5F822 /* PrizeDetailVC.m in Sources */,
 				3AEE94B11BF588CE007F6BD5 /* NSNumber+CGFloat.m in Sources */,
 				3AEE951A1BF588CE007F6BD5 /* UINavigationBar+Awesome.m in Sources */,
 				3AF02A6F1BE720EB00AF0597 /* E_DrawerView.m in Sources */,

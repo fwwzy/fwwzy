@@ -7,8 +7,10 @@
 //
 
 #import "SumbitOrderVC.h"
-
-@interface SumbitOrderVC ()
+#import "HomePageVC.h"
+@interface SumbitOrderVC () {
+    UIImageView *_backView;
+}
 
 @end
 
@@ -184,7 +186,7 @@
                 //单选框
                 HemaButton *selectBtn = [[HemaButton alloc] init];
                 selectBtn.frame = CGRectMake(UI_View_Width - 40, 15, 28, 28);
-                selectBtn.tag = 1 + 10;
+                selectBtn.tag = i + 10;
                 [selectBtn setImage:[UIImage imageNamed:@"hp_payyes"] forState:UIControlStateNormal];
                 [selectBtn setImage:[UIImage imageNamed:@"hp_selected"] forState:UIControlStateSelected];
                 [selectBtn addTarget:self action:@selector(payTypeClick:) forControlEvents:UIControlEventTouchUpInside];
@@ -210,6 +212,7 @@
             submitBtn.frame = CGRectMake(60, 5, UI_View_Width - 120, 40);
             [submitBtn setBackgroundImage:[UIImage imageNamed:@"lg_login"] forState:UIControlStateNormal];
             [submitBtn setTitle:@"提交" forState:UIControlStateNormal];
+            [submitBtn addTarget:self action:@selector(submitBtnClick:) forControlEvents:UIControlEventTouchUpInside];
             
             [cell.contentView addSubview:submitBtn];
         }
@@ -218,10 +221,12 @@
     return cell;
 }
 
+//余额支付选择
 - (void)selectBtnClick:(HemaButton *)sender {
     sender.selected = !sender.selected;
 }
 
+//支付方式选择
 - (void)payTypeClick:(HemaButton *)sender {
     switch (sender.tag - 10) {
         case 1:{
@@ -232,6 +237,61 @@
         default:
             break;
     }
+}
+
+//提交按钮点击时间
+- (void)submitBtnClick:(HemaButton *)sender {
+    
+    _backView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, UI_View_Width, UI_View_Height+80)];
+    UIWindow * window = [UIApplication sharedApplication].keyWindow;
+    _backView.image = [UIImage imageNamed:@"np_blackView"];
+    [window addSubview:_backView];
+    _backView.userInteractionEnabled = YES;
+    
+    //成功
+    UIImageView *payView = [[UIImageView alloc] init];
+    payView.frame = CGRectMake(0, 0, self.view.height / 2.5, self.view.height / 2.5);
+    payView.center = CGPointMake(self.view.center.x, self.view.center.y - 40);
+    payView.image = [UIImage imageNamed:@"hp_success"];
+    //[_backView addSubview:payView];
+    
+    //关闭按钮
+    UIButton *closeBtn = [[UIButton alloc] init];
+    closeBtn.frame = CGRectMake(payView.origin.x + payView.self.width / 1.2, payView.origin.y, 30, 30);
+    [closeBtn setImage:[UIImage imageNamed:@"hp_close"] forState:UIControlStateNormal];
+    [closeBtn addTarget:self action:@selector(closeBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    [_backView addSubview:closeBtn];
+    
+    NSTimer *pushTimer = [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(pushHomePage) userInfo:nil repeats:NO];
+    
+    //失败
+    //成功
+    UIImageView *failView = [[UIImageView alloc] init];
+    failView.frame = CGRectMake(0, 0, self.view.height / 2.5, self.view.height / 2.5);
+    failView.center = CGPointMake(self.view.center.x, self.view.center.y - 40);
+    failView.image = [UIImage imageNamed:@"hp_payno"];
+    [_backView addSubview:failView];
+    
+    //重新支付
+    UIButton *rePayBtn = [[UIButton alloc] init];
+    rePayBtn.frame = CGRectMake(payView.size.width / 2 - self.view.height / 12, failView.size.height / 2 + self.view.height / 15, self.view.height / 6, self.view.height / 24);
+    [rePayBtn setBackgroundColor:BB_Red_Color];
+    [rePayBtn setTitle:@"重新支付" forState:UIControlStateNormal];
+    [rePayBtn.titleLabel setFont:[UIFont systemFontOfSize:14]];
+    [rePayBtn setTitleColor:BB_White_Color forState:UIControlStateNormal];
+    [failView addSubview:rePayBtn];
+    
+    
+    [_backView addSubview:closeBtn];
+}
+
+- (void)pushHomePage {
+    [_backView removeFromSuperview];
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)closeBtnClick:(UIButton *)sender {
+    [_backView removeFromSuperview];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -40,6 +40,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *cellId = @"classifyCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+    
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
         
@@ -52,10 +53,12 @@
         UILabel *titleLabel = [[UILabel alloc] init];
         titleLabel.frame = CGRectMake(70, 25, UI_View_Width - 85, 20);
         titleLabel.text = @"假肢只是一直戈偶";
+        titleLabel.font = [UIFont systemFontOfSize:15];
         
         [cell.contentView addSubview:iconView];
         [cell.contentView addSubview:titleLabel];
     }
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 

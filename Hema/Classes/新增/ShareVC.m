@@ -91,6 +91,7 @@
         appraiseLbl.frame = CGRectMake(15, 75, UI_View_Width - 100, 20);
         appraiseLbl.font = [UIFont systemFontOfSize:18];
         appraiseLbl.text = @"太爽辣，我又可以装逼辣";
+        appraiseLbl.lineBreakMode = NSLineBreakByTruncatingTail;
         
         NSArray *imgArr = @[@"newpulish",@"newpulish",@"newpulish",@"newpulish"];
         //晒单图片
