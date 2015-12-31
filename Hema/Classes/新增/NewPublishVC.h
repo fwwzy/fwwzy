@@ -9,6 +9,6 @@
 
 #import "PullRefreshCollectionVC.h"
 
-@interface NewPublishVC : UIViewController
+@interface NewPublishVC : AllVC
 @property(nonatomic,strong)UICollectionView *collectionView;
 @end

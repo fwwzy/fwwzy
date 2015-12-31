@@ -22,7 +22,7 @@
 
 - (void)viewDidLoad {
     [self.navigationItem setNewTitle:@"最新揭晓"];
-    [self.navigationController.navigationBar setBarTintColor:BB_Red_Color];
+    [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"hp_navigationbar"]]];
     //列表
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc]init];
     [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];

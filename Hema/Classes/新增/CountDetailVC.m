@@ -223,7 +223,4 @@
 -(void)countBtnClick{
     _blackView.hidden = NO;
 }
--(void)medoBtnClcik{
-    _blackView.hidden = YES;
-}
 @end
