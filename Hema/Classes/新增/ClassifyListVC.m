@@ -8,6 +8,7 @@
 
 #import "ClassifyListVC.h"
 #import "PrizeDetailVC.h"
+#import "SumbitOrderVC.h"
 
 @interface ClassifyListVC ()
 
@@ -102,11 +103,13 @@
         HemaButton *buyNowBtn = [[HemaButton alloc] init];
         buyNowBtn.frame = CGRectMake(UI_View_Width - 140, iconView.origin.y + iconView.size.height - 27, 58, 27);
         [buyNowBtn setImage:[UIImage imageNamed:@"hp_buynow"] forState:UIControlStateNormal];
+        [buyNowBtn addTarget:self action:@selector(buyNowBtnClick:) forControlEvents:UIControlEventTouchUpInside];
         
         //加入购物车
         HemaButton *addCartBtn = [[HemaButton alloc] init];
         addCartBtn.frame = CGRectMake(UI_View_Width - 70, buyNowBtn.origin.y, 58, 27);
         [addCartBtn setImage:[UIImage imageNamed:@"hp_addcart"] forState:UIControlStateNormal];
+        [addCartBtn addTarget:self action:@selector(addCartBtnClick:) forControlEvents:UIControlEventTouchUpInside];
         
         [cell.contentView addSubview:iconView];
         [cell.contentView addSubview:userName];
@@ -123,6 +126,15 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     PrizeDetailVC *prizeDetailVC = [[PrizeDetailVC alloc] init];
     [self.navigationController pushViewController:prizeDetailVC animated:YES];
+}
+
+- (void)buyNowBtnClick:(HemaButton *)sender {
+    SumbitOrderVC *submitOrderVC = [[SumbitOrderVC alloc] init];
+    [self.navigationController pushViewController:submitOrderVC animated:YES];
+}
+
+- (void)addCartBtn:(HemaButton *)sender {
+    
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
