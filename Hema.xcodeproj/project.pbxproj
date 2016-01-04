@@ -978,6 +978,15 @@
 		94910D371C3A3D42009947B2 /* SafeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 94910D361C3A3D42009947B2 /* SafeVC.m */; };
 		94910D3D1C3A4D77009947B2 /* ResetPwdVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 94910D3C1C3A4D77009947B2 /* ResetPwdVC.m */; };
 		94910D401C3A54C0009947B2 /* RechargeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 94910D3F1C3A54C0009947B2 /* RechargeVC.m */; };
+		94910D641C3A830E009947B2 /* MineMessVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 94910D5D1C3A830E009947B2 /* MineMessVC.m */; };
+		94910D651C3A830E009947B2 /* MineNameVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 94910D5F1C3A830E009947B2 /* MineNameVC.m */; };
+		94910D661C3A830E009947B2 /* MinePlaceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 94910D611C3A830E009947B2 /* MinePlaceVC.m */; };
+		94910D671C3A830E009947B2 /* MineWelVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 94910D631C3A830E009947B2 /* MineWelVC.m */; };
+		94910D6D1C3A8456009947B2 /* mine_placeadd.png in Resources */ = {isa = PBXBuildFile; fileRef = 94910D681C3A8456009947B2 /* mine_placeadd.png */; };
+		94910D6E1C3A8456009947B2 /* mine_placejiantou1.png in Resources */ = {isa = PBXBuildFile; fileRef = 94910D691C3A8456009947B2 /* mine_placejiantou1.png */; };
+		94910D6F1C3A8456009947B2 /* mine_placekuang.png in Resources */ = {isa = PBXBuildFile; fileRef = 94910D6A1C3A8456009947B2 /* mine_placekuang.png */; };
+		94910D701C3A8456009947B2 /* mine_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 94910D6B1C3A8456009947B2 /* mine_right.png */; };
+		94910D711C3A8456009947B2 /* mine_upicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 94910D6C1C3A8456009947B2 /* mine_upicon.png */; };
 		B728C13E1BDBAD150004B4A9 /* ChatLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = B728C13B1BDBAD150004B4A9 /* ChatLineView.m */; };
 		B728C13F1BDBAD150004B4A9 /* PointBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = B728C13D1BDBAD150004B4A9 /* PointBtn.m */; };
 		B728C1431BDBB0310004B4A9 /* RChartListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B728C1421BDBB0310004B4A9 /* RChartListVC.m */; };
@@ -3275,6 +3284,19 @@
 		94910D3C1C3A4D77009947B2 /* ResetPwdVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetPwdVC.m; sourceTree = "<group>"; };
 		94910D3E1C3A54C0009947B2 /* RechargeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RechargeVC.h; sourceTree = "<group>"; };
 		94910D3F1C3A54C0009947B2 /* RechargeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RechargeVC.m; sourceTree = "<group>"; };
+		94910D5C1C3A830E009947B2 /* MineMessVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineMessVC.h; sourceTree = "<group>"; };
+		94910D5D1C3A830E009947B2 /* MineMessVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineMessVC.m; sourceTree = "<group>"; };
+		94910D5E1C3A830E009947B2 /* MineNameVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineNameVC.h; sourceTree = "<group>"; };
+		94910D5F1C3A830E009947B2 /* MineNameVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineNameVC.m; sourceTree = "<group>"; };
+		94910D601C3A830E009947B2 /* MinePlaceVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MinePlaceVC.h; sourceTree = "<group>"; };
+		94910D611C3A830E009947B2 /* MinePlaceVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MinePlaceVC.m; sourceTree = "<group>"; };
+		94910D621C3A830E009947B2 /* MineWelVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineWelVC.h; sourceTree = "<group>"; };
+		94910D631C3A830E009947B2 /* MineWelVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineWelVC.m; sourceTree = "<group>"; };
+		94910D681C3A8456009947B2 /* mine_placeadd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mine_placeadd.png; sourceTree = "<group>"; };
+		94910D691C3A8456009947B2 /* mine_placejiantou1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mine_placejiantou1.png; sourceTree = "<group>"; };
+		94910D6A1C3A8456009947B2 /* mine_placekuang.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mine_placekuang.png; sourceTree = "<group>"; };
+		94910D6B1C3A8456009947B2 /* mine_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mine_right.png; sourceTree = "<group>"; };
+		94910D6C1C3A8456009947B2 /* mine_upicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mine_upicon.png; sourceTree = "<group>"; };
 		B728C13A1BDBAD150004B4A9 /* ChatLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatLineView.h; sourceTree = "<group>"; };
 		B728C13B1BDBAD150004B4A9 /* ChatLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatLineView.m; sourceTree = "<group>"; };
 		B728C13C1BDBAD150004B4A9 /* PointBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointBtn.h; sourceTree = "<group>"; };
@@ -7390,6 +7412,14 @@
 		9487832B1C2A4F7300E52B11 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				94910D5C1C3A830E009947B2 /* MineMessVC.h */,
+				94910D5D1C3A830E009947B2 /* MineMessVC.m */,
+				94910D5E1C3A830E009947B2 /* MineNameVC.h */,
+				94910D5F1C3A830E009947B2 /* MineNameVC.m */,
+				94910D601C3A830E009947B2 /* MinePlaceVC.h */,
+				94910D611C3A830E009947B2 /* MinePlaceVC.m */,
+				94910D621C3A830E009947B2 /* MineWelVC.h */,
+				94910D631C3A830E009947B2 /* MineWelVC.m */,
 				948783331C2A62F300E52B11 /* MineVC.h */,
 				948783341C2A62F300E52B11 /* MineVC.m */,
 				94910D1C1C3A0487009947B2 /* SettingVC.h */,
@@ -7471,6 +7501,11 @@
 		948783401C2A9A9400E52B11 /* 新增 */ = {
 			isa = PBXGroup;
 			children = (
+				94910D681C3A8456009947B2 /* mine_placeadd.png */,
+				94910D691C3A8456009947B2 /* mine_placejiantou1.png */,
+				94910D6A1C3A8456009947B2 /* mine_placekuang.png */,
+				94910D6B1C3A8456009947B2 /* mine_right.png */,
+				94910D6C1C3A8456009947B2 /* mine_upicon.png */,
 				94910D331C3A34FB009947B2 /* sz_icon.png */,
 				94910D1F1C3A0D6A009947B2 /* mine_next.png */,
 				9443651D1C35343000B5F822 /* mine_bask.png */,
@@ -11095,6 +11130,7 @@
 				B77E7C451BD28B2A0058DD07 /* germany.svg in Resources */,
 				B77E1A941BC2A50C00DB3199 /* R返回箭头.png in Resources */,
 				3A69A18E1C0407800002F776 /* ImageError@3x.png in Resources */,
+				94910D701C3A8456009947B2 /* mine_right.png in Resources */,
 				3AEE94A11BF588CE007F6BD5 /* NSDateTimeAgo.bundle in Resources */,
 				3AEDB2701BFC426600AD7E95 /* sticker_22.png in Resources */,
 				941684971C2D38FD00A88A46 /* tb_gwc.png in Resources */,
@@ -11222,6 +11258,7 @@
 				3AEDB2481BFC426600AD7E95 /* face_18.png in Resources */,
 				B77E1A951BC2A50C00DB3199 /* R选取图片按钮.png in Resources */,
 				3A4A6A3F1BEC8EA300AE6639 /* SVProgressHUD.bundle in Resources */,
+				94910D6F1C3A8456009947B2 /* mine_placekuang.png in Resources */,
 				B77E1A681BC2A50C00DB3199 /* R底部栏未选中3.png in Resources */,
 				3AEDB2861BFC426600AD7E95 /* makecards_puzzle5_storyboard6_icon@2x.png in Resources */,
 				B77E1AD31BC2A50C00DB3199 /* VoiceSearchFeedback012@2x.png in Resources */,
@@ -11230,6 +11267,7 @@
 				3AEDB2431BFC426600AD7E95 /* face_13.png in Resources */,
 				B77E1ABB1BC2A50C00DB3199 /* messageSendFail@2x.png in Resources */,
 				B77E1A761BC2A50C00DB3199 /* R小三角上.png in Resources */,
+				94910D6E1C3A8456009947B2 /* mine_placejiantou1.png in Resources */,
 				3AF02A6C1BE720EB00AF0597 /* sina@2x.png in Resources */,
 				3AEDB1561BFC3DFB00AD7E95 /* number_four_style_3.plist in Resources */,
 				3AEDB2631BFC426600AD7E95 /* sticker_10.png in Resources */,
@@ -11277,6 +11315,7 @@
 				B7D3D8EB1BD09457000A0962 /* WechatShortVideo_scan_focus@2x.png in Resources */,
 				3A69A19F1C0407800002F776 /* PlayButtonOverlayLargeTap@2x.png in Resources */,
 				B77E1AC31BC2A50C00DB3199 /* VoiceSearchFeedback004@2x.png in Resources */,
+				94910D6D1C3A8456009947B2 /* mine_placeadd.png in Resources */,
 				3A52F0331BEB088D00D081FE /* share_album@2x.png in Resources */,
 				3AED0B321BFB2C2C00EDEEAB /* R美图底部栏@2x.png in Resources */,
 				B77E1AA01BC2A50C00DB3199 /* R首页搜索.png in Resources */,
@@ -11287,6 +11326,7 @@
 				3AEDB9561BF9B55300E70488 /* full_pause_icon.png in Resources */,
 				941684611C2B832C00A88A46 /* hp_point.png in Resources */,
 				3AEDB2551BFC426600AD7E95 /* face_9.png in Resources */,
+				94910D711C3A8456009947B2 /* mine_upicon.png in Resources */,
 				3AEDB27F1BFC426600AD7E95 /* makecards_puzzle5_storyboard3_icon.png in Resources */,
 				3AEDB9601BF9B55300E70488 /* zoomout@2x.png in Resources */,
 				3A3677CA1BE1EC0D00DF844F /* R小视频返回.png in Resources */,
@@ -11713,6 +11753,7 @@
 				3AF51B531C0581000091BBD8 /* MDRadialProgressLabel.m in Sources */,
 				B7777D701BC3A93800452D6E /* XMPPMUC.m in Sources */,
 				B7D3D97A1BD0BAD3000A0962 /* MMDateView.m in Sources */,
+				94910D641C3A830E009947B2 /* MineMessVC.m in Sources */,
 				3AF02A7E1BE720EB00AF0597 /* E_WebViewControler.m in Sources */,
 				B76EC2251BEF0DD0001DDFA8 /* TYAlertController+BlurEffects.m in Sources */,
 				B7D3D9FC1BD4F382000A0962 /* CameraFocalReticule.m in Sources */,
@@ -11842,6 +11883,8 @@
 				B7777D8E1BC3A93800452D6E /* XMPPCapsCoreDataStorageObject.m in Sources */,
 				3AF02A7D1BE720EB00AF0597 /* E_SearchViewController.m in Sources */,
 				941684811C2CD23E00A88A46 /* RegistVC.m in Sources */,
+				94910D661C3A830E009947B2 /* MinePlaceVC.m in Sources */,
+				94910D671C3A830E009947B2 /* MineWelVC.m in Sources */,
 				3AF02A711BE720EB00AF0597 /* E_ListView.m in Sources */,
 				B728C1771BDC9BCA0004B4A9 /* TEAClockChart.m in Sources */,
 				3AEE950D1BF588CE007F6BD5 /* UIImage+Resize.m in Sources */,
@@ -11952,6 +11995,7 @@
 				B7777D401BC3A93800452D6E /* XMPPSCRAMSHA1Authentication.m in Sources */,
 				B7F165331BF86CD400EE5EF2 /* UIDevice+BFKit.m in Sources */,
 				B77E7C6F1BD33E120058DD07 /* LGAlertViewCell.m in Sources */,
+				94910D651C3A830E009947B2 /* MineNameVC.m in Sources */,
 				94721A9B1C322272007A901D /* ClassifyListVC.m in Sources */,
 				3ADAC0AF1BD8BEB000EB507F /* IQUIView+IQKeyboardToolbar.m in Sources */,
 				3AF16F6D1BD9BEC0000D3652 /* UIImage+SplitImageIntoTwoParts.m in Sources */,
