@@ -186,6 +186,7 @@
 //忘记密码点击
 - (void)forgetBtnClick:(HemaButton *)sender {
     FindPwdVC *findPwdVC = [[FindPwdVC alloc] init];
+    findPwdVC.titleName = @"找回密码";
    [self.navigationController pushViewController:findPwdVC animated:YES];
    
 }

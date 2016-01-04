@@ -54,14 +54,14 @@
         //用户名
         UILabel *userName = [[UILabel alloc] init];
         userName.frame = CGRectMake(70, 30, UI_View_Width - 150, 20);
-        userName.font = [UIFont systemFontOfSize:17];
+        userName.font = [UIFont systemFontOfSize:13];
         userName.text = @"亓化泽(假肢)";
         
         //时间
         UILabel *timeLbl = [[UILabel alloc] init];
         timeLbl.frame = CGRectMake(UI_View_Width - 150, 30, 140, 20);
         timeLbl.textAlignment = NSTextAlignmentRight;
-        timeLbl.font = [UIFont systemFontOfSize:15];
+        timeLbl.font = [UIFont systemFontOfSize:12];
         timeLbl.textColor = BB_Gray_Color;
         timeLbl.text = @"2014-02-25";
         
@@ -76,20 +76,20 @@
         //商品名称
         UILabel *goodsName = [[UILabel alloc] init];
         goodsName.frame = CGRectMake(15, 15, UI_View_Width - 100, 25);
-        goodsName.font = [UIFont systemFontOfSize:20];
+        goodsName.font = [UIFont systemFontOfSize:17];
         goodsName.text = @"LOL无敌账号";
         
         //商品详情
         UILabel *goodsDetail = [[UILabel alloc] init];
         goodsDetail.frame = CGRectMake(15, 40, UI_View_Width - 100, 20);
-        goodsDetail.font = [UIFont systemFontOfSize:15];
+        goodsDetail.font = [UIFont systemFontOfSize:13];
         goodsDetail.textColor = BB_Gray_Color;
         goodsDetail.text = @"(第2531期)英雄联盟全英雄全皮肤账号";
         
         //晒单评价
         UILabel *appraiseLbl = [[UILabel alloc] init];
         appraiseLbl.frame = CGRectMake(15, 75, UI_View_Width - 100, 20);
-        appraiseLbl.font = [UIFont systemFontOfSize:18];
+        appraiseLbl.font = [UIFont systemFontOfSize:15];
         appraiseLbl.text = @"太爽辣，我又可以装逼辣";
         appraiseLbl.lineBreakMode = NSLineBreakByTruncatingTail;
         

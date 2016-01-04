@@ -9,5 +9,5 @@
 #import "AllVC.h"
 
 @interface FindPwdVC : AllVC
-
+@property (nonatomic,copy) NSString *titleName;
 @end

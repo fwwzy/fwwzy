@@ -10,4 +10,6 @@
 
 @interface SetPwdVC : AllVC
 
+@property (nonatomic,copy) NSString *titleName;
+
 @end

@@ -103,12 +103,12 @@
     //描述
     UILabel *contentLabel = [[UILabel alloc] init];
     contentLabel.frame = CGRectMake(15, 230, UI_View_Width - 30, 20);
-    contentLabel.font = [UIFont systemFontOfSize:18];
+    contentLabel.font = [UIFont systemFontOfSize:16];
     contentLabel.lineBreakMode = NSLineBreakByTruncatingTail;
     contentLabel.numberOfLines = 0;
     contentLabel.text = @"花了1000000中了个这个，运气太TM差了，劳资准备在冲5000W看看能不能中个手电筒，太想要那个手电筒了，楼下小卖部5块钱一个，但我觉得那个一点意义都没有，不如花钱抢这个来的有意义，感谢上帝我要中个手电筒";
     
-    NSDictionary *attribute = @{NSFontAttributeName: [UIFont systemFontOfSize:18]};
+    NSDictionary *attribute = @{NSFontAttributeName: [UIFont systemFontOfSize:16]};
     CGSize contentSize = [contentLabel.text boundingRectWithSize:CGSizeMake(UI_View_Width - 30  , MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:attribute context:nil].size;
     contentLabel.frame = CGRectMake(15, 230, UI_View_Width - 30, contentSize.height);
     

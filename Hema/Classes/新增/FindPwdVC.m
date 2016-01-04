@@ -7,7 +7,7 @@
 //
 
 #import "FindPwdVC.h"
-
+#import "SetPwdVC.h"
 @interface FindPwdVC ()<UITextFieldDelegate> {
     NSInteger _time;
 }
@@ -24,7 +24,10 @@
 @implementation FindPwdVC
 
 - (void)viewWillDisappear:(BOOL)animated {
+    if ([self.titleName isEqualToString:@"设置支付密码"]) {
+    } else {
     self.navigationController.navigationBarHidden = YES;
+    }
 }
 - (void)viewWillAppear:(BOOL)animated {
     self.navigationController.navigationBarHidden = NO;
@@ -32,17 +35,17 @@
 
 - (void)loadSet {
   
-    [self.navigationItem setNewTitle:@"找回密码"];
+    [self.navigationItem setNewTitle:self.titleName];
     [self.navigationItem setLeftItemWithTarget:self action:@selector(leftbtnPressed:) image:@"lg_back"];
     //密码输入框
     _phoneTF = [[UITextField alloc] init];
-    _phoneTF.frame = CGRectMake(23, 15, UI_View_Width - 30, 50);
+    _phoneTF.frame = CGRectMake(23, 15, UI_View_Width - 30, 40);
     _phoneTF.keyboardType = UIKeyboardTypeNumberPad;
     _phoneTF.delegate = self;
     _phoneTF.placeholder = @"请输入手机号";
     
     UIView *phoneView = [[UIView alloc] init];
-    phoneView.frame = CGRectMake(14, 15, UI_View_Width - 28, 50);
+    phoneView.frame = CGRectMake(14, 15, UI_View_Width - 28, 40);
     phoneView.layer.borderWidth = 1;
     phoneView.layer.borderColor = BB_Gray_Color.CGColor;
     
@@ -54,18 +57,18 @@
     
     //验证码输入框
     _codeTF = [[UITextField alloc] init];
-    _codeTF.frame = CGRectMake(23, 120, UI_View_Width / 1.7, 50);
+    _codeTF.frame = CGRectMake(23, 120, UI_View_Width / 1.7, 40);
     _codeTF.keyboardType = UIKeyboardTypeNumberPad;
     _codeTF.placeholder = @"请输入验证码";
     
     UIView *codeView = [[UIView alloc] init];
-    codeView.frame = CGRectMake(14, 120, UI_View_Width / 1.7, 50);
+    codeView.frame = CGRectMake(14, 120, UI_View_Width / 1.7, 40);
     codeView.layer.borderWidth = 1;
     codeView.layer.borderColor = BB_Gray_Color.CGColor;
     
     //发送按钮
     _sendBtn = [[HemaButton alloc] init];
-    _sendBtn.frame = CGRectMake(codeView.origin.x + codeView.size.width - 1, 120, UI_View_Width - 26 - UI_View_Width / 1.7, 50);
+    _sendBtn.frame = CGRectMake(codeView.origin.x + codeView.size.width - 1, 120, UI_View_Width - 26 - UI_View_Width / 1.7, 40);
     [_sendBtn setBackgroundImage:[UIImage imageNamed:@"lg_login"] forState:UIControlStateNormal];
     [_sendBtn setTitle:@"发送验证码" forState:UIControlStateNormal];
     [_sendBtn addTarget:self action:@selector(sendBtnClick:) forControlEvents:UIControlEventTouchUpInside];
@@ -73,7 +76,7 @@
     
     //下一步按钮
     HemaButton *nextBtn = [[HemaButton alloc] init];
-    nextBtn.frame = CGRectMake(43, 250, UI_View_Width - 86, 50);
+    nextBtn.frame = CGRectMake(43, 210, UI_View_Width - 86, 40);
     [nextBtn setBackgroundImage:[UIImage imageNamed:@"lg_login"] forState:UIControlStateNormal];
     [nextBtn addTarget:self action:@selector(nextBtnClick:) forControlEvents:UIControlEventTouchUpInside];
     [nextBtn setTitle:@"下一步" forState:UIControlStateNormal];
@@ -156,7 +159,11 @@
 }
 
 - (void)nextBtnClick:(HemaButton *)sender {
-    
+    SetPwdVC *setPwdVC = [[SetPwdVC alloc] init];
+    if ([self.titleName isEqualToString:@"设置支付密码"]) {
+        setPwdVC.titleName = self.titleName;
+    }
+    [self.navigationController pushViewController:setPwdVC animated:YES];
 }
 
 //清除按钮点击事件

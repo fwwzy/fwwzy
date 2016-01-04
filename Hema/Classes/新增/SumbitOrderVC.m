@@ -209,7 +209,7 @@
             //提交
             cell.backgroundColor = RGB_UI_COLOR(255, 248, 250);
             HemaButton *submitBtn = [[HemaButton alloc] init];
-            submitBtn.frame = CGRectMake(60, 5, UI_View_Width - 120, 40);
+            submitBtn.frame = CGRectMake(60, 15, UI_View_Width - 120, 40);
             [submitBtn setBackgroundImage:[UIImage imageNamed:@"lg_login"] forState:UIControlStateNormal];
             [submitBtn setTitle:@"提交" forState:UIControlStateNormal];
             [submitBtn addTarget:self action:@selector(submitBtnClick:) forControlEvents:UIControlEventTouchUpInside];

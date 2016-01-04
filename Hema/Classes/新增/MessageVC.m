@@ -27,7 +27,7 @@
     _contentLabel.numberOfLines = 0;
     _contentLabel.lineBreakMode = NSLineBreakByWordWrapping;
     
-    CGSize contentSize  = [self.contentText boundingRectWithSize:CGSizeMake(UI_View_Width - 20, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:15]} context:nil].size;
+    CGSize contentSize  = [self.contentText boundingRectWithSize:CGSizeMake(UI_View_Width - 10, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:15]} context:nil].size;
     
     [_contentLabel setFrame:CGRectMake(10, 10, UI_View_Width - 10, contentSize.height)];
     _contentLabel.text = self.contentText;

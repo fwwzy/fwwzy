@@ -26,35 +26,35 @@
 
 - (void)loadSet {
     
-    [self.navigationItem setNewTitle:@"设置密码"];
+    [self.navigationItem setNewTitle:self.titleName];
     [self.navigationItem setLeftItemWithTarget:self action:@selector(leftbtnPressed:) image:@"lg_back"];
     
     //密码输入框
     _firstTF = [[UITextField alloc] init];
-    _firstTF.frame = CGRectMake(23, 15, UI_View_Width - 30, 50);
+    _firstTF.frame = CGRectMake(23, 15, UI_View_Width - 30, 40);
     _firstTF.delegate = self;
     _firstTF.secureTextEntry = YES;
     _firstTF.placeholder = @"密码";
     
     UIView *firstView = [[UIView alloc] init];
-    firstView.frame = CGRectMake(14, 15, UI_View_Width - 28, 50);
+    firstView.frame = CGRectMake(14, 15, UI_View_Width - 28, 40);
     firstView.layer.borderWidth = 1;
     firstView.layer.borderColor = BB_Gray_Color.CGColor;
     
     //确认密码输入框
     _secondTF = [[UITextField alloc] init];
-    _secondTF.frame = CGRectMake(23, 80, UI_View_Width - 30, 50);
+    _secondTF.frame = CGRectMake(23, 80, UI_View_Width - 30, 40);
     _secondTF.secureTextEntry = YES;
     _secondTF.placeholder = @"确认密码";
     
     UIView *secondView = [[UIView alloc] init];
-    secondView.frame = CGRectMake(14, 80, UI_View_Width - 30, 50);
+    secondView.frame = CGRectMake(14, 80, UI_View_Width - 30, 40);
     secondView.layer.borderWidth = 1;
     secondView.layer.borderColor = BB_Gray_Color.CGColor;
     
     //提交
     HemaButton *commitBtn = [[HemaButton alloc] init];
-    commitBtn.frame = CGRectMake(43, 170, UI_View_Width - 86, 50);
+    commitBtn.frame = CGRectMake(43, 170, UI_View_Width - 86, 40);
     [commitBtn setBackgroundImage:[UIImage imageNamed:@"lg_login"] forState:UIControlStateNormal];
     [commitBtn addTarget:self action:@selector(commitBtnClick:) forControlEvents:UIControlEventTouchUpInside];
     [commitBtn setTitle:@"提交" forState:UIControlStateNormal];
