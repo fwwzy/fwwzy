@@ -7,6 +7,8 @@
 //
 
 #import "MineVC.h"
+#import "MineMessVC.h"
+#import "MinePlaceVC.h"
 
 @interface MineVC ()<UITableViewDataSource,UITableViewDelegate>{
     UITableView *_tableView;
@@ -21,7 +23,9 @@
     self.navigationController.navigationBarHidden = YES;
     //导航
     UIView *navView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, UI_View_Width, self.view.height/3)];
-    navView.backgroundColor = [UIColor colorWithRed:217.0/255 green:29.0/255 blue:43.0/255 alpha:1];
+//    navView.backgroundColor = [UIColor colorWithRed:217.0/255 green:29.0/255 blue:43.0/255 alpha:1];
+        navView.backgroundColor = [UIColor colorWithRed:179.0/255 green:23.0/255 blue:40.0/255 alpha:1];
+    navView.userInteractionEnabled = YES;
     [self.view addSubview:navView];
     //标题
     UILabel *loginLbl = [[UILabel alloc] init];
@@ -37,7 +41,10 @@
     //头像
     UIImageView *iconView = [[UIImageView alloc]initWithFrame:CGRectMake(UI_View_Width/2-33, 60, 66, 66)];
     [iconView setImage:[UIImage imageNamed:@"mine_icon"]];
+    iconView.userInteractionEnabled = YES;
     [navView addSubview:iconView];
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(iconViewClick)];
+    [iconView addGestureRecognizer:tap];
     //昵称
     UILabel *nameLabel = [[UILabel alloc]initWithFrame:CGRectMake(UI_View_Width/2-50, 136, 100, 15)];
     nameLabel.text = @"夺宝奇兵";
@@ -56,6 +63,7 @@
     _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, self.view.height/3, UI_View_Width, self.view.height-self.view.height/3-64)];
     _tableView.delegate = self;
     _tableView.dataSource = self;
+    _tableView.backgroundColor =[UIColor colorWithRed:252.0/255.0 green:245.0/255.0 blue:245.0/255.0 alpha:0.8];
     [self.view addSubview:_tableView];
 }
 - (void)loadData {
@@ -214,12 +222,20 @@
     picView.backgroundColor = [UIColor colorWithRed:252.0/255.0 green:245.0/255.0 blue:245.0/255.0 alpha:0.8];
     return picView;
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section == 2) {
+        if (indexPath.row == 3) {
+            MinePlaceVC *mpc = [[MinePlaceVC alloc]init];
+            mpc.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:mpc animated:YES];
+        }
+    }
 }
-
-
+#pragma mark - 点击事件
+-(void)iconViewClick{
+    MineMessVC *mvc = [[MineMessVC alloc]init];
+    mvc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:mvc animated:YES];
+}
 
 @end

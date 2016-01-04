@@ -833,6 +833,10 @@
 		5544634D1C2A6A2E0010D627 /* NewPublishCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5544634C1C2A6A2E0010D627 /* NewPublishCell.m */; };
 		5564DA1A1C324DB000B56EAE /* OverDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5564DA191C324DB000B56EAE /* OverDetailVC.m */; };
 		5564DA1F1C32830C00B56EAE /* CountDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5564DA1E1C32830C00B56EAE /* CountDetailVC.m */; };
+		558275B91C3A0C7E0086D96A /* MineMessVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 558275B81C3A0C7E0086D96A /* MineMessVC.m */; };
+		558275C01C3A44DA0086D96A /* MineNameVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 558275BF1C3A44DA0086D96A /* MineNameVC.m */; };
+		558275C31C3A5A3B0086D96A /* MineWelVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 558275C21C3A5A3B0086D96A /* MineWelVC.m */; };
+		558275C61C3A73D90086D96A /* MinePlaceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 558275C51C3A73D90086D96A /* MinePlaceVC.m */; };
 		941684531C2B828D00A88A46 /* newpulish.png in Resources */ = {isa = PBXBuildFile; fileRef = 941684521C2B828D00A88A46 /* newpulish.png */; };
 		9416845E1C2B832C00A88A46 /* hp_cart.png in Resources */ = {isa = PBXBuildFile; fileRef = 941684541C2B832C00A88A46 /* hp_cart.png */; };
 		9416845F1C2B832C00A88A46 /* hp_msg.png in Resources */ = {isa = PBXBuildFile; fileRef = 941684551C2B832C00A88A46 /* hp_msg.png */; };
@@ -3091,6 +3095,14 @@
 		5564DA191C324DB000B56EAE /* OverDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverDetailVC.m; sourceTree = "<group>"; };
 		5564DA1D1C32830C00B56EAE /* CountDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountDetailVC.h; sourceTree = "<group>"; };
 		5564DA1E1C32830C00B56EAE /* CountDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountDetailVC.m; sourceTree = "<group>"; };
+		558275B71C3A0C7E0086D96A /* MineMessVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineMessVC.h; sourceTree = "<group>"; };
+		558275B81C3A0C7E0086D96A /* MineMessVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineMessVC.m; sourceTree = "<group>"; };
+		558275BE1C3A44DA0086D96A /* MineNameVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineNameVC.h; sourceTree = "<group>"; };
+		558275BF1C3A44DA0086D96A /* MineNameVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineNameVC.m; sourceTree = "<group>"; };
+		558275C11C3A5A3B0086D96A /* MineWelVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineWelVC.h; sourceTree = "<group>"; };
+		558275C21C3A5A3B0086D96A /* MineWelVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineWelVC.m; sourceTree = "<group>"; };
+		558275C41C3A73D90086D96A /* MinePlaceVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MinePlaceVC.h; sourceTree = "<group>"; };
+		558275C51C3A73D90086D96A /* MinePlaceVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MinePlaceVC.m; sourceTree = "<group>"; };
 		941684521C2B828D00A88A46 /* newpulish.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newpulish.png; sourceTree = "<group>"; };
 		941684541C2B832C00A88A46 /* hp_cart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hp_cart.png; sourceTree = "<group>"; };
 		941684551C2B832C00A88A46 /* hp_msg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hp_msg.png; sourceTree = "<group>"; };
@@ -7366,6 +7378,14 @@
 			children = (
 				948783331C2A62F300E52B11 /* MineVC.h */,
 				948783341C2A62F300E52B11 /* MineVC.m */,
+				558275B71C3A0C7E0086D96A /* MineMessVC.h */,
+				558275B81C3A0C7E0086D96A /* MineMessVC.m */,
+				558275BE1C3A44DA0086D96A /* MineNameVC.h */,
+				558275BF1C3A44DA0086D96A /* MineNameVC.m */,
+				558275C11C3A5A3B0086D96A /* MineWelVC.h */,
+				558275C21C3A5A3B0086D96A /* MineWelVC.m */,
+				558275C41C3A73D90086D96A /* MinePlaceVC.h */,
+				558275C51C3A73D90086D96A /* MinePlaceVC.m */,
 			);
 			name = Mine;
 			sourceTree = "<group>";
@@ -11600,6 +11620,7 @@
 				B77E1B651BC2AD8500DB3199 /* SDWebImageDownloaderOperation.m in Sources */,
 				B7D3D9D01BD0FA78000A0962 /* RChangPasswordVC.m in Sources */,
 				3ADAC0A71BD8BEB000EB507F /* IQUIWindow+Hierarchy.m in Sources */,
+				558275C31C3A5A3B0086D96A /* MineWelVC.m in Sources */,
 				B7777D4A1BC3A93800452D6E /* XMPPMessage.m in Sources */,
 				3AEE94E11BF588CE007F6BD5 /* CAMediaTimingFunction+AdditionalEquations.m in Sources */,
 				3A52F0201BEAEEDA00D081FE /* ActionSheetStringPicker.m in Sources */,
@@ -12269,6 +12290,7 @@
 				948783351C2A62F300E52B11 /* MineVC.m in Sources */,
 				3AEE94E81BF588CE007F6BD5 /* UIApplication+Permissions.m in Sources */,
 				B76EC22E1BEF0DD0001DDFA8 /* UIView+TYAlertView.m in Sources */,
+				558275B91C3A0C7E0086D96A /* MineMessVC.m in Sources */,
 				3AED0B2D1BFB112E00EDEEAB /* FXLabel.m in Sources */,
 				3AEE94CD1BF588CE007F6BD5 /* NSString+Score.m in Sources */,
 				B77E1B131BC2A88B00DB3199 /* HemaRequest.m in Sources */,
@@ -12339,6 +12361,7 @@
 				B777CC971BC42D0A009A11A8 /* HemaTapGR.m in Sources */,
 				3AEE94EB1BF588CE007F6BD5 /* UIBezierPath+LxThroughPointsBezier.m in Sources */,
 				B728C1791BDC9BCA0004B4A9 /* TEATimeRange.m in Sources */,
+				558275C01C3A44DA0086D96A /* MineNameVC.m in Sources */,
 				B728C1781BDC9BCA0004B4A9 /* TEAContributionGraph.m in Sources */,
 				B7F165501BF86EA700EE5EF2 /* NSString+BFKit.m in Sources */,
 				3ADAC0AC1BD8BEB000EB507F /* IQBarButtonItem.m in Sources */,
@@ -12362,6 +12385,7 @@
 				B7777D8A1BC3A93800452D6E /* XMPPTransports.m in Sources */,
 				3AEE948B1BF588CE007F6BD5 /* NSManagedObjectContext+FetchRequestsConstructors.m in Sources */,
 				B7777AF31BC379FB00452D6E /* PullRefreshPlainVC.m in Sources */,
+				558275C61C3A73D90086D96A /* MinePlaceVC.m in Sources */,
 				B7CA07E11BC6300600089F76 /* RLeftSlideVC.m in Sources */,
 				B7777B981BC39FBA00452D6E /* Order.m in Sources */,
 				B76F09B81BD3EF3D0095F655 /* UINavigationBar+BarTintColor.m in Sources */,
