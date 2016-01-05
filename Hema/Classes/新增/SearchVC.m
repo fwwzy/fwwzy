@@ -54,6 +54,7 @@
     _tableView.delegate = self;
     _tableView.dataSource = self;
     _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    _tableView.showsVerticalScrollIndicator = NO;
     [self.view addSubview:_tableView];
 
     
@@ -89,7 +90,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
-        return 44;
+        return 50;
     }
     return 80;
 }
@@ -161,6 +162,8 @@
         }
         if (indexPath.section == 1) {
             //清空搜索记录
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            cell.userInteractionEnabled = NO;
             UIButton *removeBtn = [[UIButton alloc] init];
             removeBtn.frame = CGRectMake(UI_View_Width / 2 - UI_View_Width / 4, 20, UI_View_Width / 2, 40) ; 
              [removeBtn setTitle:@"清空搜索记录" forState:UIControlStateNormal];

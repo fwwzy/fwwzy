@@ -130,7 +130,7 @@
                 redSwitch.frame = CGRectMake(UI_View_Width - 60, 10, 35, 20);
                 redSwitch.thumbTintColor = BB_White_Color;
                 redSwitch.onTintColor = RGB_UI_COLOR(237, 88, 99);
-                redSwitch.tintColor = BB_Gray_Color;
+                redSwitch.tintColor = RGB_UI_COLOR(237, 88, 99);
                 
                 [cell.contentView addSubview:redLbl];
                 [cell.contentView addSubview:redSwitch];
@@ -228,14 +228,13 @@
 
 //支付方式选择
 - (void)payTypeClick:(HemaButton *)sender {
-    switch (sender.tag - 10) {
-        case 1:{
+    for (int i = 10; i < 13; i++) {
+        UIButton *btn = (UIButton *)[self.mytable viewWithTag:i];
+        if (sender == btn) {
             sender.selected = !sender.selected;
+        } else {
+            btn.selected = NO;
         }
-            break;
-            
-        default:
-            break;
     }
 }
 

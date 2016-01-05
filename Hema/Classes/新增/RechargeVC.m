@@ -7,15 +7,18 @@
 //
 
 #import "RechargeVC.h"
+#import "MineRedVC.h"
 
-@interface RechargeVC ()<UITextFieldDelegate>
+@interface RechargeVC ()<UITextFieldDelegate> {
+    NSMutableArray *_selectArr;
+}
 
 @end
 
 @implementation RechargeVC
 
 - (void)loadSet {
-    
+
     [self.navigationItem setNewTitle:@"抢币充值"];
     [self.navigationItem setLeftItemWithTarget:self action:@selector(leftbtnPressed:) image:@"lg_back"];
     self.view.backgroundColor = RGB_UI_COLOR(255, 246, 246);
@@ -172,7 +175,7 @@
                     textView.frame = CGRectMake(17 + UI_View_Width / 3.2 * (i - 3), 60, UI_View_Width / 3.6, 35);
                     [HemaFunction addbordertoView:textView radius:5 width:0.8 color:BB_Gray_Color];
                     UITextField *textField = [[UITextField alloc] init];
-                    textField.frame = CGRectMake(15, 0, UI_View_Width / 3.6 - 15, 35);
+                    textField.frame = CGRectMake(20, 0, UI_View_Width / 3.6 - 15, 35);
                     textField.placeholder = @"输入金额";
                     textField.font = [UIFont systemFontOfSize:14];
                     textField.tag = i + 1;
@@ -233,6 +236,8 @@
                 [selectBtn setImage:[UIImage imageNamed:@"hp_payyes"] forState:UIControlStateNormal];
                 [selectBtn setImage:[UIImage imageNamed:@"hp_selected"] forState:UIControlStateSelected];
                 [selectBtn addTarget:self action:@selector(payTypeClick:) forControlEvents:UIControlEventTouchUpInside];
+                _selectArr = [[NSMutableArray alloc] init];
+                
                 
                 //分割线
                 UILabel *sepLbl = [[UILabel alloc] init];
@@ -247,6 +252,7 @@
             }
         }
     }
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 
@@ -279,6 +285,20 @@
 
 //提交按钮点击事件
 - (void)submitBtnClick:(UIButton *)sender {
+    MineRedVC *mineRedVC = [[MineRedVC alloc] init];
+    [self.navigationController pushViewController:mineRedVC animated:YES];
+}
+
+//支付方式选择
+- (void)payTypeClick:(UIButton *)sender {
+    for (int i = 10; i < 13; i++) {
+        UIButton *btn = (UIButton *)[self.mytable viewWithTag:i];
+        if (sender == btn) {
+            sender.selected = !sender.selected;
+        } else {
+        btn.selected = NO;
+        }
+    }
     
 }
 /*

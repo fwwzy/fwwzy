@@ -987,6 +987,12 @@
 		94910D6F1C3A8456009947B2 /* mine_placekuang.png in Resources */ = {isa = PBXBuildFile; fileRef = 94910D6A1C3A8456009947B2 /* mine_placekuang.png */; };
 		94910D701C3A8456009947B2 /* mine_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 94910D6B1C3A8456009947B2 /* mine_right.png */; };
 		94910D711C3A8456009947B2 /* mine_upicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 94910D6C1C3A8456009947B2 /* mine_upicon.png */; };
+		94EC8F5A1C3B620300E4838C /* MineRedVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 94EC8F591C3B620300E4838C /* MineRedVC.m */; };
+		94EC8F5C1C3B677400E4838C /* mine_usered.png in Resources */ = {isa = PBXBuildFile; fileRef = 94EC8F5B1C3B677400E4838C /* mine_usered.png */; };
+		94EC8F611C3B8DCF00E4838C /* mine_getred.png in Resources */ = {isa = PBXBuildFile; fileRef = 94EC8F601C3B8DCF00E4838C /* mine_getred.png */; };
+		94EC8F631C3BA57B00E4838C /* mine_gotred.png in Resources */ = {isa = PBXBuildFile; fileRef = 94EC8F621C3BA57B00E4838C /* mine_gotred.png */; };
+		94EC8F661C3BB8E600E4838C /* RedMethodVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 94EC8F651C3BB8E600E4838C /* RedMethodVC.m */; };
+		94EC8F691C3BC10C00E4838C /* MineMoneyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 94EC8F681C3BC10C00E4838C /* MineMoneyVC.m */; };
 		B728C13E1BDBAD150004B4A9 /* ChatLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = B728C13B1BDBAD150004B4A9 /* ChatLineView.m */; };
 		B728C13F1BDBAD150004B4A9 /* PointBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = B728C13D1BDBAD150004B4A9 /* PointBtn.m */; };
 		B728C1431BDBB0310004B4A9 /* RChartListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B728C1421BDBB0310004B4A9 /* RChartListVC.m */; };
@@ -3297,6 +3303,15 @@
 		94910D6A1C3A8456009947B2 /* mine_placekuang.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mine_placekuang.png; sourceTree = "<group>"; };
 		94910D6B1C3A8456009947B2 /* mine_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mine_right.png; sourceTree = "<group>"; };
 		94910D6C1C3A8456009947B2 /* mine_upicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mine_upicon.png; sourceTree = "<group>"; };
+		94EC8F581C3B620300E4838C /* MineRedVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineRedVC.h; sourceTree = "<group>"; };
+		94EC8F591C3B620300E4838C /* MineRedVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineRedVC.m; sourceTree = "<group>"; };
+		94EC8F5B1C3B677400E4838C /* mine_usered.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mine_usered.png; sourceTree = "<group>"; };
+		94EC8F601C3B8DCF00E4838C /* mine_getred.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mine_getred.png; sourceTree = "<group>"; };
+		94EC8F621C3BA57B00E4838C /* mine_gotred.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mine_gotred.png; sourceTree = "<group>"; };
+		94EC8F641C3BB8E600E4838C /* RedMethodVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedMethodVC.h; sourceTree = "<group>"; };
+		94EC8F651C3BB8E600E4838C /* RedMethodVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedMethodVC.m; sourceTree = "<group>"; };
+		94EC8F671C3BC10C00E4838C /* MineMoneyVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineMoneyVC.h; sourceTree = "<group>"; };
+		94EC8F681C3BC10C00E4838C /* MineMoneyVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineMoneyVC.m; sourceTree = "<group>"; };
 		B728C13A1BDBAD150004B4A9 /* ChatLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatLineView.h; sourceTree = "<group>"; };
 		B728C13B1BDBAD150004B4A9 /* ChatLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatLineView.m; sourceTree = "<group>"; };
 		B728C13C1BDBAD150004B4A9 /* PointBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointBtn.h; sourceTree = "<group>"; };
@@ -7438,6 +7453,12 @@
 				94910D3C1C3A4D77009947B2 /* ResetPwdVC.m */,
 				94910D3E1C3A54C0009947B2 /* RechargeVC.h */,
 				94910D3F1C3A54C0009947B2 /* RechargeVC.m */,
+				94EC8F581C3B620300E4838C /* MineRedVC.h */,
+				94EC8F591C3B620300E4838C /* MineRedVC.m */,
+				94EC8F641C3BB8E600E4838C /* RedMethodVC.h */,
+				94EC8F651C3BB8E600E4838C /* RedMethodVC.m */,
+				94EC8F671C3BC10C00E4838C /* MineMoneyVC.h */,
+				94EC8F681C3BC10C00E4838C /* MineMoneyVC.m */,
 			);
 			name = Mine;
 			sourceTree = "<group>";
@@ -7501,6 +7522,9 @@
 		948783401C2A9A9400E52B11 /* 新增 */ = {
 			isa = PBXGroup;
 			children = (
+				94EC8F621C3BA57B00E4838C /* mine_gotred.png */,
+				94EC8F601C3B8DCF00E4838C /* mine_getred.png */,
+				94EC8F5B1C3B677400E4838C /* mine_usered.png */,
 				94910D681C3A8456009947B2 /* mine_placeadd.png */,
 				94910D691C3A8456009947B2 /* mine_placejiantou1.png */,
 				94910D6A1C3A8456009947B2 /* mine_placekuang.png */,
@@ -11085,6 +11109,7 @@
 				B7777DBE1BC3A93800452D6E /* README.txt in Resources */,
 				9443653A1C35343000B5F822 /* mine_twoma.png in Resources */,
 				B7D3DA001BD4F382000A0962 /* Cool Camera Mockup.sketch in Resources */,
+				94EC8F611C3B8DCF00E4838C /* mine_getred.png in Resources */,
 				B77E1AB91BC2A50C00DB3199 /* chatFire_audioPlaying3.png in Resources */,
 				3AF02A5B1BE720EB00AF0597 /* Chapter7.txt in Resources */,
 				B77E1AF51BC2A50C00DB3199 /* R群组logo.png in Resources */,
@@ -11092,6 +11117,7 @@
 				9416847B1C2BF7B200A88A46 /* sc_plus.png in Resources */,
 				3A69A1E61C04284B0002F776 /* TSMessagesDefaultDesign.json in Resources */,
 				3AEDB1581BFC3DFB00AD7E95 /* number_four_style_5.plist in Resources */,
+				94EC8F631C3BA57B00E4838C /* mine_gotred.png in Resources */,
 				3AF02A691BE720EB00AF0597 /* reader_font_decrease@2x.png in Resources */,
 				B77E1A691BC2A50C00DB3199 /* R底部栏选中0.png in Resources */,
 				3A3677BB1BE1EBFF00DF844F /* kr-video-player-fullscreen@3x.png in Resources */,
@@ -11223,6 +11249,7 @@
 				94721AAD1C3292D0007A901D /* np_close.png in Resources */,
 				B77E1AB01BC2A50C00DB3199 /* 引导页-5-03.png in Resources */,
 				3AF02A651BE720EB00AF0597 /* reader_bg5@2x.png in Resources */,
+				94EC8F5C1C3B677400E4838C /* mine_usered.png in Resources */,
 				3AEDB9581BF9B55300E70488 /* point_normal.png in Resources */,
 				947759D51C3107AE00EA9073 /* hp_payyes.png in Resources */,
 				3AEDB2641BFC426600AD7E95 /* sticker_11.png in Resources */,
@@ -11870,6 +11897,7 @@
 				3AEE94AD1BF588CE007F6BD5 /* NSIndexPath+Offset.m in Sources */,
 				3AEE95501BF588CF007F6BD5 /* UIViewController+StoreKit.m in Sources */,
 				B77E199F1BC26B0B00DB3199 /* RHomeVC.m in Sources */,
+				94EC8F661C3BB8E600E4838C /* RedMethodVC.m in Sources */,
 				3AEE94AA1BF588CE007F6BD5 /* NSFileHandle+readLine.m in Sources */,
 				3AEE94B51BF588CE007F6BD5 /* NSObject+AppInfo.m in Sources */,
 				3AEE94C01BF588CE007F6BD5 /* NSMutableString+Ruby.m in Sources */,
@@ -12059,6 +12087,7 @@
 				3AEE94EA1BF588CE007F6BD5 /* UIBezierPath+BasicShapes.m in Sources */,
 				B7777B661BC39C1500452D6E /* MTStatusBarOverlay.m in Sources */,
 				B76F09B31BD3EF3D0095F655 /* UIBarButtonItem+TintColor.m in Sources */,
+				94EC8F5A1C3B620300E4838C /* MineRedVC.m in Sources */,
 				B7D3D9A21BD0BAD8000A0962 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				3AF8456B1BE9A6B800FEF930 /* ZipArchive.mm in Sources */,
 				3A69A1AF1C0407800002F776 /* MWGridViewController.m in Sources */,
@@ -12440,6 +12469,7 @@
 				3ADAC0BD1BD8DF7A00EB507F /* RBlueCharacterListVC.m in Sources */,
 				3ADAC0BA1BD8DF2300EB507F /* RBlueServiceListVC.m in Sources */,
 				3AEDB16B1BFC3DFB00AD7E95 /* InfColorSquarePicker.m in Sources */,
+				94EC8F691C3BC10C00E4838C /* MineMoneyVC.m in Sources */,
 				3AEE94FB1BF588CE007F6BD5 /* UIDevice+Hardware.m in Sources */,
 				3ADAC0C21BD8F11000EB507F /* HPGrowingTextView.m in Sources */,
 				B76C9B2B1C01B0A300AB8C5F /* UIView+REFrostedViewController.m in Sources */,
