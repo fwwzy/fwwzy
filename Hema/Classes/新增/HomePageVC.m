@@ -263,6 +263,7 @@
             //开奖进度label
             UILabel *lprizeLabel = [[UILabel alloc] init];
             [lprizeLabel setFrame:CGRectMake(10, 180, UI_View_Width / 3, 20)];
+            [lprizeLabel setFont:[UIFont systemFontOfSize:12]];
             [lprizeLabel setTextColor:[UIColor grayColor]];
             
             NSString *prizeText = @"开奖进度83%";

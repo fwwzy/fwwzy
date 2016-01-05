@@ -993,6 +993,13 @@
 		94EC8F631C3BA57B00E4838C /* mine_gotred.png in Resources */ = {isa = PBXBuildFile; fileRef = 94EC8F621C3BA57B00E4838C /* mine_gotred.png */; };
 		94EC8F661C3BB8E600E4838C /* RedMethodVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 94EC8F651C3BB8E600E4838C /* RedMethodVC.m */; };
 		94EC8F691C3BC10C00E4838C /* MineMoneyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 94EC8F681C3BC10C00E4838C /* MineMoneyVC.m */; };
+		94EC8F761C3BD11800E4838C /* AddressBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 94EC8F6B1C3BD11800E4838C /* AddressBook.m */; };
+		94EC8F771C3BD11800E4838C /* AddressChoicePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94EC8F6D1C3BD11800E4838C /* AddressChoicePickerView.m */; };
+		94EC8F781C3BD11800E4838C /* AddressChoicePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94EC8F6E1C3BD11800E4838C /* AddressChoicePickerView.xib */; };
+		94EC8F791C3BD11800E4838C /* AreaObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 94EC8F701C3BD11800E4838C /* AreaObject.m */; };
+		94EC8F7A1C3BD11800E4838C /* AreaPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94EC8F711C3BD11800E4838C /* AreaPlist.plist */; };
+		94EC8F7B1C3BD11800E4838C /* MineAdressVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 94EC8F731C3BD11800E4838C /* MineAdressVC.m */; };
+		94EC8F7C1C3BD11800E4838C /* MIneWritePlaceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 94EC8F751C3BD11800E4838C /* MIneWritePlaceVC.m */; };
 		B728C13E1BDBAD150004B4A9 /* ChatLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = B728C13B1BDBAD150004B4A9 /* ChatLineView.m */; };
 		B728C13F1BDBAD150004B4A9 /* PointBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = B728C13D1BDBAD150004B4A9 /* PointBtn.m */; };
 		B728C1431BDBB0310004B4A9 /* RChartListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B728C1421BDBB0310004B4A9 /* RChartListVC.m */; };
@@ -3312,6 +3319,18 @@
 		94EC8F651C3BB8E600E4838C /* RedMethodVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedMethodVC.m; sourceTree = "<group>"; };
 		94EC8F671C3BC10C00E4838C /* MineMoneyVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineMoneyVC.h; sourceTree = "<group>"; };
 		94EC8F681C3BC10C00E4838C /* MineMoneyVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineMoneyVC.m; sourceTree = "<group>"; };
+		94EC8F6A1C3BD11800E4838C /* AddressBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressBook.h; sourceTree = "<group>"; };
+		94EC8F6B1C3BD11800E4838C /* AddressBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressBook.m; sourceTree = "<group>"; };
+		94EC8F6C1C3BD11800E4838C /* AddressChoicePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressChoicePickerView.h; sourceTree = "<group>"; };
+		94EC8F6D1C3BD11800E4838C /* AddressChoicePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressChoicePickerView.m; sourceTree = "<group>"; };
+		94EC8F6E1C3BD11800E4838C /* AddressChoicePickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddressChoicePickerView.xib; sourceTree = "<group>"; };
+		94EC8F6F1C3BD11800E4838C /* AreaObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AreaObject.h; sourceTree = "<group>"; };
+		94EC8F701C3BD11800E4838C /* AreaObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AreaObject.m; sourceTree = "<group>"; };
+		94EC8F711C3BD11800E4838C /* AreaPlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AreaPlist.plist; sourceTree = "<group>"; };
+		94EC8F721C3BD11800E4838C /* MineAdressVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineAdressVC.h; sourceTree = "<group>"; };
+		94EC8F731C3BD11800E4838C /* MineAdressVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineAdressVC.m; sourceTree = "<group>"; };
+		94EC8F741C3BD11800E4838C /* MIneWritePlaceVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIneWritePlaceVC.h; sourceTree = "<group>"; };
+		94EC8F751C3BD11800E4838C /* MIneWritePlaceVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIneWritePlaceVC.m; sourceTree = "<group>"; };
 		B728C13A1BDBAD150004B4A9 /* ChatLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatLineView.h; sourceTree = "<group>"; };
 		B728C13B1BDBAD150004B4A9 /* ChatLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatLineView.m; sourceTree = "<group>"; };
 		B728C13C1BDBAD150004B4A9 /* PointBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointBtn.h; sourceTree = "<group>"; };
@@ -7427,6 +7446,18 @@
 		9487832B1C2A4F7300E52B11 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				94EC8F6A1C3BD11800E4838C /* AddressBook.h */,
+				94EC8F6B1C3BD11800E4838C /* AddressBook.m */,
+				94EC8F6C1C3BD11800E4838C /* AddressChoicePickerView.h */,
+				94EC8F6D1C3BD11800E4838C /* AddressChoicePickerView.m */,
+				94EC8F6E1C3BD11800E4838C /* AddressChoicePickerView.xib */,
+				94EC8F6F1C3BD11800E4838C /* AreaObject.h */,
+				94EC8F701C3BD11800E4838C /* AreaObject.m */,
+				94EC8F711C3BD11800E4838C /* AreaPlist.plist */,
+				94EC8F721C3BD11800E4838C /* MineAdressVC.h */,
+				94EC8F731C3BD11800E4838C /* MineAdressVC.m */,
+				94EC8F741C3BD11800E4838C /* MIneWritePlaceVC.h */,
+				94EC8F751C3BD11800E4838C /* MIneWritePlaceVC.m */,
 				94910D5C1C3A830E009947B2 /* MineMessVC.h */,
 				94910D5D1C3A830E009947B2 /* MineMessVC.m */,
 				94910D5E1C3A830E009947B2 /* MineNameVC.h */,
@@ -11464,6 +11495,7 @@
 				3A69A1A21C0407800002F776 /* UIBarButtonItemArrowLeft@2x.png in Resources */,
 				3A69A1941C0407800002F776 /* ImageSelectedOn@3x.png in Resources */,
 				B77E1A671BC2A50C00DB3199 /* R底部栏未选中2.png in Resources */,
+				94EC8F781C3BD11800E4838C /* AddressChoicePickerView.xib in Resources */,
 				3AEDB2511BFC426600AD7E95 /* face_5.png in Resources */,
 				3AEDB24C1BFC426600AD7E95 /* face_21.png in Resources */,
 				B7D5DD0C1BD5EF5F005A1FE6 /* R视频全屏按钮.png in Resources */,
@@ -11594,6 +11626,7 @@
 				9443651A1C3524D500B5F822 /* hp_shopcart.png in Resources */,
 				B7777B411BC399EE00452D6E /* WeiboSDK.bundle in Resources */,
 				3AEDB29B1BFC426600AD7E95 /* makecards_puzzle3_storyboard5_icon.png in Resources */,
+				94EC8F7A1C3BD11800E4838C /* AreaPlist.plist in Resources */,
 				B77E7C101BD253A00058DD07 /* icon_next@2x.png in Resources */,
 				3AF02A601BE720EB00AF0597 /* r_ribbonRed@2x.png in Resources */,
 				B77E18E61BC25A7D00DB3199 /* Images.xcassets in Resources */,
@@ -11884,9 +11917,11 @@
 				B7CA07DB1BC6167A00089F76 /* REditCardVC.m in Sources */,
 				3A17B08F1BFDBDAB005C0D6C /* DMPasscodeInternalNavigationController.m in Sources */,
 				3AEE952E1BF588CF007F6BD5 /* UITableView+FDTemplateLayoutCell.m in Sources */,
+				94EC8F761C3BD11800E4838C /* AddressBook.m in Sources */,
 				3AEE94DA1BF588CE007F6BD5 /* NSUserDefaults+SafeAccess.m in Sources */,
 				B76EC2321BEF2057001DDFA8 /* TYAlertVC.m in Sources */,
 				3AF02A851BE720EB00AF0597 /* UIScrollView+Extension.m in Sources */,
+				94EC8F7B1C3BD11800E4838C /* MineAdressVC.m in Sources */,
 				B76EC22C1BEF0DD0001DDFA8 /* TYBaseAnimation.m in Sources */,
 				B799C37D1BEF322A005080E4 /* UncaughtExceptionHandler.m in Sources */,
 				3AF02AD31BE7282A00AF0597 /* YMTableViewCell.m in Sources */,
@@ -12243,6 +12278,7 @@
 				3A69A1AE1C0407800002F776 /* MWGridCell.m in Sources */,
 				3AEE94F41BF588CE007F6BD5 /* UIColor+Gradient.m in Sources */,
 				3AEE94EF1BF588CE007F6BD5 /* UIButton+Block.m in Sources */,
+				94EC8F7C1C3BD11800E4838C /* MIneWritePlaceVC.m in Sources */,
 				B7777DAB1BC3A93800452D6E /* XMPPMessage+XEP_0333.m in Sources */,
 				3AF16F6C1BD9BEC0000D3652 /* UIImage+RoundedCorner.m in Sources */,
 				B7777D531BC3A93800452D6E /* XMPPReconnect.m in Sources */,
@@ -12424,6 +12460,7 @@
 				3AF02A531BE720EB00AF0597 /* E_ReaderDataSource.m in Sources */,
 				B7777D791BC3A93800452D6E /* XMPPvCardTempAdrTypes.m in Sources */,
 				B7CC8F421BCDE926006B5869 /* REmptyVC.m in Sources */,
+				94EC8F771C3BD11800E4838C /* AddressChoicePickerView.m in Sources */,
 				3AF02A6E1BE720EB00AF0597 /* E_CursorView.m in Sources */,
 				3AF8455C1BE9A6B800FEF930 /* QHConfiguredObj.m in Sources */,
 				B77E1B661BC2AD8500DB3199 /* SDWebImageManager+MJ.m in Sources */,
@@ -12478,6 +12515,7 @@
 				3AEE94D01BF588CE007F6BD5 /* NSString+UrlEncode.m in Sources */,
 				3AF51B851C05B7A70091BBD8 /* STTweetLabel.m in Sources */,
 				3AF845A81BE9B61500FEF930 /* split.c in Sources */,
+				94EC8F791C3BD11800E4838C /* AreaObject.m in Sources */,
 				3ADAC0B41BD8CCEF00EB507F /* RBlueDeviceListVC.m in Sources */,
 				B76C9B0C1C01A5F200AB8C5F /* QBPlasticPopupMenu.m in Sources */,
 				3AF02A501BE720EB00AF0597 /* E_EveryChapter.m in Sources */,

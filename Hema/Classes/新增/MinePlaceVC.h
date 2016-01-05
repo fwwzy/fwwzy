@@ -9,5 +9,5 @@
 #import "AllVC.h"
 
 @interface MinePlaceVC : AllVC
-
+@property(nonatomic,copy)void(^blockDic) (NSMutableDictionary *date);
 @end

@@ -9,6 +9,7 @@
 #import "MineVC.h"
 #import "MineMessVC.h"
 #import "MinePlaceVC.h"
+#import "MineAdressVC.h"
 
 @interface MineVC ()<UITableViewDataSource,UITableViewDelegate>{
     UITableView *_tableView;
@@ -224,12 +225,18 @@
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 2) {
+        if (indexPath.row == 1) {
+            MineAdressVC *mac = [[MineAdressVC alloc]init];
+            mac.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:mac animated:YES];
+        }
         if (indexPath.row == 3) {
             MinePlaceVC *mpc = [[MinePlaceVC alloc]init];
             mpc.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:mpc animated:YES];
         }
     }
+    
 }
 #pragma mark - 点击事件
 -(void)iconViewClick{

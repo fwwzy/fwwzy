@@ -149,7 +149,7 @@
             
         }
         if (indexPath.row == 1) {
-            NSArray *moneyArr = [NSArray arrayWithObjects:@"20",@"50",@"100",@"200",@"500",@"500", nil];
+            NSArray *moneyArr = [NSArray arrayWithObjects:@"20",@"50",@"100",@"200",@"500", nil];
             for (int i = 0; i < 6; i++) {
                 
                 if (i != 5) {
