@@ -13,6 +13,7 @@
 #import "AboutVC.h"
 #import "SDImageCache.h"
 #import "SafeVC.h"
+
 @interface SettingVC () <UITableViewDataSource,UITableViewDelegate>{
     UITableView *_tableView;
     NSMutableArray *_dataSource;
@@ -21,6 +22,13 @@
 @end
 
 @implementation SettingVC
+
+- (void)viewWillDisappear:(BOOL)animated {
+    self.navigationController.navigationBarHidden = YES;
+}
+- (void)viewWillAppear:(BOOL)animated {
+    self.navigationController.navigationBarHidden = NO;
+}
 
 - (void)loadSet {
     

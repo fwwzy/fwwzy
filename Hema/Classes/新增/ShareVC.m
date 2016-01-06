@@ -18,6 +18,17 @@
 
 @implementation ShareVC
 
+- (void)viewWillDisappear:(BOOL)animated {
+    if (self.shareType == mineShare) {
+        self.navigationController.navigationBarHidden = YES;
+    }
+}
+- (void)viewWillAppear:(BOOL)animated {
+    if (self.shareType == mineShare) {
+        self.navigationController.navigationBarHidden = NO;
+    }
+}
+
 - (void)loadData {
     _count = 5;
 }

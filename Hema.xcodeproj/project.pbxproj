@@ -912,6 +912,15 @@
 		94496FEB1C3CC4C800B3DDD2 /* mine_remove.png in Resources */ = {isa = PBXBuildFile; fileRef = 94496FEA1C3CC4C800B3DDD2 /* mine_remove.png */; };
 		94496FEE1C3CE48800B3DDD2 /* NotShareVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 94496FED1C3CE48800B3DDD2 /* NotShareVC.m */; };
 		94496FF01C3D027800B3DDD2 /* share_pyq.png in Resources */ = {isa = PBXBuildFile; fileRef = 94496FEF1C3D027800B3DDD2 /* share_pyq.png */; };
+		94496FFC1C3D1ABD00B3DDD2 /* NSString+SY.m in Sources */ = {isa = PBXBuildFile; fileRef = 94496FF31C3D1ABD00B3DDD2 /* NSString+SY.m */; };
+		94496FFD1C3D1ABD00B3DDD2 /* SYContacter.m in Sources */ = {isa = PBXBuildFile; fileRef = 94496FF51C3D1ABD00B3DDD2 /* SYContacter.m */; };
+		94496FFE1C3D1ABD00B3DDD2 /* SYContactsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 94496FF71C3D1ABD00B3DDD2 /* SYContactsHelper.m */; };
+		94496FFF1C3D1ABD00B3DDD2 /* SYContactsPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94496FF91C3D1ABD00B3DDD2 /* SYContactsPickerController.m */; };
+		944970001C3D1ABD00B3DDD2 /* TwoWeiVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 94496FFB1C3D1ABD00B3DDD2 /* TwoWeiVC.m */; };
+		944970051C3D1B4300B3DDD2 /* selected_h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 944970011C3D1B4300B3DDD2 /* selected_h@2x.png */; };
+		944970061C3D1B4300B3DDD2 /* selected_h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 944970021C3D1B4300B3DDD2 /* selected_h@3x.png */; };
+		944970071C3D1B4300B3DDD2 /* selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 944970031C3D1B4300B3DDD2 /* selected@2x.png */; };
+		944970081C3D1B4300B3DDD2 /* selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 944970041C3D1B4300B3DDD2 /* selected@3x.png */; };
 		94721A9B1C322272007A901D /* ClassifyListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 94721A9A1C322272007A901D /* ClassifyListVC.m */; };
 		94721A9E1C3235BF007A901D /* FAQVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 94721A9D1C3235BF007A901D /* FAQVC.m */; };
 		94721AA01C325123007A901D /* hp_service.png in Resources */ = {isa = PBXBuildFile; fileRef = 94721A9F1C325123007A901D /* hp_service.png */; };
@@ -3218,6 +3227,20 @@
 		94496FEC1C3CE48800B3DDD2 /* NotShareVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotShareVC.h; sourceTree = "<group>"; };
 		94496FED1C3CE48800B3DDD2 /* NotShareVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotShareVC.m; sourceTree = "<group>"; };
 		94496FEF1C3D027800B3DDD2 /* share_pyq.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share_pyq.png; sourceTree = "<group>"; };
+		94496FF21C3D1ABD00B3DDD2 /* NSString+SY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SY.h"; sourceTree = "<group>"; };
+		94496FF31C3D1ABD00B3DDD2 /* NSString+SY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SY.m"; sourceTree = "<group>"; };
+		94496FF41C3D1ABD00B3DDD2 /* SYContacter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYContacter.h; sourceTree = "<group>"; };
+		94496FF51C3D1ABD00B3DDD2 /* SYContacter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYContacter.m; sourceTree = "<group>"; };
+		94496FF61C3D1ABD00B3DDD2 /* SYContactsHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYContactsHelper.h; sourceTree = "<group>"; };
+		94496FF71C3D1ABD00B3DDD2 /* SYContactsHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYContactsHelper.m; sourceTree = "<group>"; };
+		94496FF81C3D1ABD00B3DDD2 /* SYContactsPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYContactsPickerController.h; sourceTree = "<group>"; };
+		94496FF91C3D1ABD00B3DDD2 /* SYContactsPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYContactsPickerController.m; sourceTree = "<group>"; };
+		94496FFA1C3D1ABD00B3DDD2 /* TwoWeiVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoWeiVC.h; sourceTree = "<group>"; };
+		94496FFB1C3D1ABD00B3DDD2 /* TwoWeiVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoWeiVC.m; sourceTree = "<group>"; };
+		944970011C3D1B4300B3DDD2 /* selected_h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "selected_h@2x.png"; sourceTree = "<group>"; };
+		944970021C3D1B4300B3DDD2 /* selected_h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "selected_h@3x.png"; sourceTree = "<group>"; };
+		944970031C3D1B4300B3DDD2 /* selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "selected@2x.png"; sourceTree = "<group>"; };
+		944970041C3D1B4300B3DDD2 /* selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "selected@3x.png"; sourceTree = "<group>"; };
 		94721A991C322272007A901D /* ClassifyListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassifyListVC.h; sourceTree = "<group>"; };
 		94721A9A1C322272007A901D /* ClassifyListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassifyListVC.m; sourceTree = "<group>"; };
 		94721A9C1C3235BF007A901D /* FAQVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAQVC.h; sourceTree = "<group>"; };
@@ -4687,6 +4710,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B77E192C1BC25DF900DB3199 /* MessageUI.framework in Frameworks */,
 				3A8595691BF072CC00D3FE8A /* libiconv.2.4.0.tbd in Frameworks */,
 				3A8595661BF072C300D3FE8A /* libstdc++.6.0.9.tbd in Frameworks */,
 				3A8595671BF072C300D3FE8A /* libstdc++.tbd in Frameworks */,
@@ -4719,7 +4743,6 @@
 				B7777B491BC399EE00452D6E /* ShareSDKShareActionSheet.framework in Frameworks */,
 				B77E192E1BC25E0000DB3199 /* Security.framework in Frameworks */,
 				B7777B481BC399EE00452D6E /* ShareSDKiPhoneSimpleShareViewUI.framework in Frameworks */,
-				B77E192C1BC25DF900DB3199 /* MessageUI.framework in Frameworks */,
 				B77E192A1BC25DF100DB3199 /* CFNetwork.framework in Frameworks */,
 				B77E19281BC25DE900DB3199 /* AudioToolbox.framework in Frameworks */,
 				B77E19251BC25DE100DB3199 /* AddressBook.framework in Frameworks */,
@@ -7409,6 +7432,21 @@
 			path = AVPlayer;
 			sourceTree = "<group>";
 		};
+		94496FF11C3D1ABD00B3DDD2 /* SYContacterPicker */ = {
+			isa = PBXGroup;
+			children = (
+				94496FF21C3D1ABD00B3DDD2 /* NSString+SY.h */,
+				94496FF31C3D1ABD00B3DDD2 /* NSString+SY.m */,
+				94496FF41C3D1ABD00B3DDD2 /* SYContacter.h */,
+				94496FF51C3D1ABD00B3DDD2 /* SYContacter.m */,
+				94496FF61C3D1ABD00B3DDD2 /* SYContactsHelper.h */,
+				94496FF71C3D1ABD00B3DDD2 /* SYContactsHelper.m */,
+				94496FF81C3D1ABD00B3DDD2 /* SYContactsPickerController.h */,
+				94496FF91C3D1ABD00B3DDD2 /* SYContactsPickerController.m */,
+			);
+			path = SYContacterPicker;
+			sourceTree = "<group>";
+		};
 		948783261C2A4F0100E52B11 /* 新增 */ = {
 			isa = PBXGroup;
 			children = (
@@ -7458,6 +7496,9 @@
 		9487832B1C2A4F7300E52B11 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				94496FF11C3D1ABD00B3DDD2 /* SYContacterPicker */,
+				94496FFA1C3D1ABD00B3DDD2 /* TwoWeiVC.h */,
+				94496FFB1C3D1ABD00B3DDD2 /* TwoWeiVC.m */,
 				94EC8F6A1C3BD11800E4838C /* AddressBook.h */,
 				94EC8F6B1C3BD11800E4838C /* AddressBook.m */,
 				94EC8F6C1C3BD11800E4838C /* AddressChoicePickerView.h */,
@@ -7569,6 +7610,10 @@
 		948783401C2A9A9400E52B11 /* 新增 */ = {
 			isa = PBXGroup;
 			children = (
+				944970011C3D1B4300B3DDD2 /* selected_h@2x.png */,
+				944970021C3D1B4300B3DDD2 /* selected_h@3x.png */,
+				944970031C3D1B4300B3DDD2 /* selected@2x.png */,
+				944970041C3D1B4300B3DDD2 /* selected@3x.png */,
 				94496FEF1C3D027800B3DDD2 /* share_pyq.png */,
 				94496FEA1C3CC4C800B3DDD2 /* mine_remove.png */,
 				94496FE81C3CB6D800B3DDD2 /* mine_photo.png */,
@@ -11107,6 +11152,7 @@
 				3A17B06C1BFD9891005C0D6C /* epubtheme.xml in Resources */,
 				3AECA7D81C0703D7006036E2 /* 我的_黑.png in Resources */,
 				B77E1A861BC2A50C00DB3199 /* R地图定位点图标@2x.png in Resources */,
+				944970051C3D1B4300B3DDD2 /* selected_h@2x.png in Resources */,
 				B777CCA21BC432B3009A11A8 /* RQQ.png in Resources */,
 				3A69A1DC1C04284B0002F776 /* NotificationBackgroundSuccess.png in Resources */,
 				B77E1AE21BC2A50C00DB3199 /* VoiceSearchFeedback020.png in Resources */,
@@ -11376,6 +11422,7 @@
 				B77E1AC71BC2A50C00DB3199 /* VoiceSearchFeedback006@2x.png in Resources */,
 				947759CF1C3107AE00EA9073 /* hp_close.png in Resources */,
 				B77E1AEA1BC2A50C00DB3199 /* chat_receiver_audio_playing_full@2x.png in Resources */,
+				944970071C3D1B4300B3DDD2 /* selected@2x.png in Resources */,
 				B77C3AB01BC4F8E200B7E028 /* R向右箭头.png in Resources */,
 				B77E1AC61BC2A50C00DB3199 /* VoiceSearchFeedback006.png in Resources */,
 				B77E1ADB1BC2A50C00DB3199 /* VoiceSearchFeedback016@2x.png in Resources */,
@@ -11476,6 +11523,7 @@
 				3AF845AC1BE9B61500FEF930 /* zbar-help.html in Resources */,
 				3AEDB2C11BFC722F00AD7E95 /* ass_common_icon@2x.png in Resources */,
 				3AEDB29A1BFC426600AD7E95 /* makecards_puzzle3_storyboard4_icon@2x.png in Resources */,
+				944970081C3D1B4300B3DDD2 /* selected@3x.png in Resources */,
 				3AF02A5C1BE720EB00AF0597 /* friend@2x.png in Resources */,
 				3AF02AC61BE7282A00AF0597 /* 3.png in Resources */,
 				B7D3D8E61BD09457000A0962 /* WechatShortVideo_37x-Checkmark@2x.png in Resources */,
@@ -11592,6 +11640,7 @@
 				3AEDB2461BFC426600AD7E95 /* face_16.png in Resources */,
 				B77E1AE31BC2A50C00DB3199 /* VoiceSearchFeedback020@2x.png in Resources */,
 				B77E7C431BD28B2A0058DD07 /* europe.svg in Resources */,
+				944970061C3D1B4300B3DDD2 /* selected_h@3x.png in Resources */,
 				3AEDB2341BFC426600AD7E95 /* border_16.png in Resources */,
 				B77E1A7F1BC2A50C00DB3199 /* R汽车图标@2x.png in Resources */,
 				3AEDB23A1BFC426600AD7E95 /* border_6.png in Resources */,
@@ -11840,6 +11889,7 @@
 				B76EC2251BEF0DD0001DDFA8 /* TYAlertController+BlurEffects.m in Sources */,
 				B7D3D9FC1BD4F382000A0962 /* CameraFocalReticule.m in Sources */,
 				3A69A1BB1C0412100002F776 /* DALabeledCircularProgressView.m in Sources */,
+				94496FFF1C3D1ABD00B3DDD2 /* SYContactsPickerController.m in Sources */,
 				B7777B041BC3966700452D6E /* MMDrawerController.m in Sources */,
 				3AEE95121BF588CE007F6BD5 /* UIImageView+FaceAwareFill.m in Sources */,
 				3AEE950A1BF588CE007F6BD5 /* UIImage+Orientation.m in Sources */,
@@ -12223,6 +12273,7 @@
 				B77C3AE41BC53B3600B7E028 /* RMyAccountVC.m in Sources */,
 				B7D3D9081BD09457000A0962 /* SCWeakSelectorTarget.m in Sources */,
 				3AEE92931BF5764A007F6BD5 /* LSPaoMaView.m in Sources */,
+				94496FFC1C3D1ABD00B3DDD2 /* NSString+SY.m in Sources */,
 				3AEE94FA1BF588CE007F6BD5 /* UIControl+Block.m in Sources */,
 				3AEE94BE1BF588CE007F6BD5 /* NSRunLoop+PerformBlock.m in Sources */,
 				B7777D571BC3A93800452D6E /* XMPPRosterCoreDataStorage.m in Sources */,
@@ -12353,6 +12404,7 @@
 				944953411C33A4BB005E9BBF /* SearchResultVC.m in Sources */,
 				B77E19991BC26ABE00DB3199 /* AllVC.m in Sources */,
 				3AEE951C1BF588CE007F6BD5 /* UINavigationController+BATransitions.m in Sources */,
+				94496FFE1C3D1ABD00B3DDD2 /* SYContactsHelper.m in Sources */,
 				B7F165591BF86F0700EE5EF2 /* BFSystemSound.m in Sources */,
 				B77E1B531BC2AD8500DB3199 /* SGFocusImageFrame.m in Sources */,
 				B78455201BCA9E6400D64002 /* RChatSetVC.m in Sources */,
@@ -12486,6 +12538,7 @@
 				B7CC8F421BCDE926006B5869 /* REmptyVC.m in Sources */,
 				94EC8F771C3BD11800E4838C /* AddressChoicePickerView.m in Sources */,
 				3AF02A6E1BE720EB00AF0597 /* E_CursorView.m in Sources */,
+				944970001C3D1ABD00B3DDD2 /* TwoWeiVC.m in Sources */,
 				3AF8455C1BE9A6B800FEF930 /* QHConfiguredObj.m in Sources */,
 				B77E1B661BC2AD8500DB3199 /* SDWebImageManager+MJ.m in Sources */,
 				3A69A1471C03178B0002F776 /* AMPopTip+Animation.m in Sources */,
@@ -12526,6 +12579,7 @@
 				B728C1791BDC9BCA0004B4A9 /* TEATimeRange.m in Sources */,
 				B728C1781BDC9BCA0004B4A9 /* TEAContributionGraph.m in Sources */,
 				B7F165501BF86EA700EE5EF2 /* NSString+BFKit.m in Sources */,
+				94496FFD1C3D1ABD00B3DDD2 /* SYContacter.m in Sources */,
 				3ADAC0AC1BD8BEB000EB507F /* IQBarButtonItem.m in Sources */,
 				3ADAC0BD1BD8DF7A00EB507F /* RBlueCharacterListVC.m in Sources */,
 				3ADAC0BA1BD8DF2300EB507F /* RBlueServiceListVC.m in Sources */,

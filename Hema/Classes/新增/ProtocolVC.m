@@ -14,6 +14,13 @@
 
 @implementation ProtocolVC
 
+- (void)viewWillDisappear:(BOOL)animated {
+    self.navigationController.navigationBarHidden = YES;
+}
+- (void)viewWillAppear:(BOOL)animated {
+    self.navigationController.navigationBarHidden = NO;
+}
+
 - (void)loadSet {
     [self.navigationItem setNewTitle:@"用户协议"];
     [self.navigationItem setLeftItemWithTarget:self action:@selector(leftbtnPressed:) image:@"lg_back"];

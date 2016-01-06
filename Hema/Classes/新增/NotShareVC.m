@@ -19,6 +19,13 @@
 
 @implementation NotShareVC
 
+- (void)viewWillDisappear:(BOOL)animated {
+    self.navigationController.navigationBarHidden = YES;
+}
+- (void)viewWillAppear:(BOOL)animated {
+    self.navigationController.navigationBarHidden = NO;
+}
+
 - (void)loadSet {
     
     [self.navigationItem setNewTitle:@"未晒单"];

@@ -10,8 +10,17 @@
 #import "MineMessVC.h"
 #import "MinePlaceVC.h"
 #import "MineAdressVC.h"
+#import "SYContactsPickerController.h"
+#import "TwoWeiVC.h"
+#import "RechargeVC.h"
+#import "MineMoneyVC.h"
+#import "MineRedVC.h"
+#import "SettingVC.h"
+#import "NotShareVC.h"
+#import "ShareVC.h"
+#import "MineShareVC.h"
 
-@interface MineVC ()<UITableViewDataSource,UITableViewDelegate>{
+@interface MineVC ()<UITableViewDataSource,UITableViewDelegate,SYContactsPickerControllerDelegate>{
     UITableView *_tableView;
 }
 
@@ -36,8 +45,10 @@
     loginLbl.text = @"个人中心";
     [navView addSubview:loginLbl];
     //设置
-    UIButton *setBtn = [[UIButton alloc]initWithFrame:CGRectMake(UI_View_Width - 29, 29, 20, 20)];
+    UIButton *setBtn = [[UIButton alloc]initWithFrame:CGRectMake(UI_View_Width - 33, 27, 25, 25)];
     [setBtn setBackgroundImage:[UIImage imageNamed:@"mine_setting"] forState:UIControlStateNormal];
+    [setBtn addTarget:self action:@selector(titleBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    setBtn.tag = 60003;
     [navView addSubview: setBtn];
     //头像
     UIImageView *iconView = [[UIImageView alloc]initWithFrame:CGRectMake(UI_View_Width/2-33, 60, 66, 66)];
@@ -118,14 +129,20 @@
         if (indexPath.row == 1) {
             UIButton *titleBtn = [[UIButton alloc]initWithFrame:CGRectMake(50, 20, 27, 28)];
             [titleBtn setBackgroundImage:[UIImage imageNamed:@"mine_money"] forState:UIControlStateNormal];
+            [titleBtn addTarget:self action:@selector(titleBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+            titleBtn.tag = 60000;
             [cell addSubview:titleBtn];
             
             UIButton *titleBtn1 = [[UIButton alloc]initWithFrame:CGRectMake(150,20 , 23, 27)];
             [titleBtn1 setBackgroundImage:[UIImage imageNamed:@"mine_redbag1"] forState:UIControlStateNormal];
+            [titleBtn1 addTarget:self action:@selector(titleBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+            titleBtn1.tag = 60001;
             [cell addSubview:titleBtn1];
             
             UIButton *titleBtn2 = [[UIButton alloc]initWithFrame:CGRectMake(249, 20, 29, 29)];
             [titleBtn2 setBackgroundImage:[UIImage imageNamed:@"mine_recharge"] forState:UIControlStateNormal];
+            [titleBtn2 addTarget:self action:@selector(titleBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+            titleBtn2.tag = 60002;
             [cell addSubview:titleBtn2];
             
             UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(20, 54, 87, 15)];
@@ -162,18 +179,26 @@
         if (indexPath.row == 1) {
             UIButton *titleBtn = [[UIButton alloc]initWithFrame: CGRectMake(24, 15, 50, 49)];
             [titleBtn setBackgroundImage:[UIImage imageNamed:@"mine_record"] forState:UIControlStateNormal];
+            [titleBtn addTarget:self action:@selector(mineBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+            titleBtn.tag = 100;
             [cell addSubview:titleBtn];
             
             UIButton *titleBtn1 = [[UIButton alloc]initWithFrame: CGRectMake(98, 19, 48, 45)];
             [titleBtn1 setBackgroundImage:[UIImage imageNamed:@"mine_winrecord"] forState:UIControlStateNormal];
+            [titleBtn1 addTarget:self action:@selector(mineBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+            titleBtn1.tag = 101;
             [cell addSubview:titleBtn1];
             
             UIButton *titleBtn2 = [[UIButton alloc]initWithFrame: CGRectMake(172, 16, 37, 48)];
             [titleBtn2 setBackgroundImage:[UIImage imageNamed:@"mine_bask"] forState:UIControlStateNormal];
+            [titleBtn2 addTarget:self action:@selector(mineBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+            titleBtn2.tag = 102;
             [cell addSubview:titleBtn2];
             
             UIButton *titleBtn3 = [[UIButton alloc]initWithFrame: CGRectMake(246, 16, 37, 48)];
             [titleBtn3 setBackgroundImage:[UIImage imageNamed:@"mine_unbask"] forState:UIControlStateNormal];
+            [titleBtn3 addTarget:self action:@selector(mineBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+            titleBtn3.tag = 103;
             [cell addSubview:titleBtn3];
         }
     }
@@ -226,9 +251,18 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 2) {
         if (indexPath.row == 1) {
-            MineAdressVC *mac = [[MineAdressVC alloc]init];
-            mac.hidesBottomBarWhenPushed = YES;
-            [self.navigationController pushViewController:mac animated:YES];
+//            FindAddressVC *mac = [[FindAddressVC alloc]init];
+//            mac.hidesBottomBarWhenPushed = YES;
+//            [self.navigationController pushViewController:mac animated:YES];
+            SYContactsPickerController *vcContacts = [[SYContactsPickerController alloc] init];
+            vcContacts.delegate = self;
+            vcContacts.hidesBottomBarWhenPushed = YES;
+            [self presentViewController:vcContacts animated:YES completion:nil];
+        }
+        if (indexPath.row == 2) {
+            TwoWeiVC *tvc = [[TwoWeiVC alloc]init];
+            tvc.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:tvc animated:YES];
         }
         if (indexPath.row == 3) {
             MinePlaceVC *mpc = [[MinePlaceVC alloc]init];
@@ -243,6 +277,69 @@
     MineMessVC *mvc = [[MineMessVC alloc]init];
     mvc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:mvc animated:YES];
+}
+-(void)titleBtnClick:(UIButton *)sender{
+    if (sender.tag == 60000) {
+        MineMoneyVC *mmc = [[MineMoneyVC alloc]init];
+        mmc.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:mmc animated:YES];
+    }
+    if (sender.tag == 60001) {
+        MineRedVC *mrc = [[MineRedVC alloc]init];
+        mrc.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:mrc animated:YES];
+    }
+    if (sender.tag == 60002) {
+        RechargeVC *rhc = [[RechargeVC alloc]init];
+        rhc.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:rhc animated:YES];
+    }
+    if (sender.tag == 60003) {
+        SettingVC *stc = [[SettingVC alloc]init];
+        stc.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:stc animated:YES];
+    }
+    
+}
+
+- (void)mineBtnClick:(UIButton *)sender {
+    switch (sender.tag) {
+        case 100:{
+            
+        }
+            break;
+        case 101:{
+            NotShareVC *notshareVC = [[NotShareVC alloc] init];
+            [self.navigationController pushViewController:notshareVC animated:YES];
+        }
+            break;
+        case 102:{
+            ShareVC *shareVC = [[ShareVC alloc] init];
+            shareVC.shareType = mineShare;
+            [self.navigationController pushViewController:shareVC animated:YES];
+        }
+            break;
+        case 103:{
+            NotShareVC *notshareVC = [[NotShareVC alloc] init];
+            [self.navigationController pushViewController:notshareVC animated:YES];
+        }
+            break;
+    }
+}
+- (void)contactsPickerController:(SYContactsPickerController *)picker didFinishPickingContacts:(NSArray *)contacts {
+    NSLog(@"contacts==%@",contacts);
+}
+
+- (void)contactsPickerController:(SYContactsPickerController *)picker didSelectContacter:(SYContacter *)contacter {
+    NSLog(@"contacter==%@",contacter);
+}
+
+- (void)contactsPickerController:(SYContactsPickerController *)picker didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"indexPath==%@",indexPath);
+}
+
+- (void)contactsPickerControllerDidCancel:(SYContactsPickerController *)picker {
+    NSLog(@"contactsPickerControllerDidCancel");
 }
 
 @end
