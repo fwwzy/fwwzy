@@ -7,7 +7,7 @@
 //
 
 #import "RechargeVC.h"
-#import "MineRedVC.h"
+
 
 @interface RechargeVC ()<UITextFieldDelegate> {
     NSMutableArray *_selectArr;
@@ -231,7 +231,7 @@
                 
                 //单选框
                 HemaButton *selectBtn = [[HemaButton alloc] init];
-                selectBtn.frame = CGRectMake(UI_View_Width - 40, 15, 28, 28);
+                selectBtn.frame = CGRectMake(UI_View_Width - 40, 19, 28, 28);
                 selectBtn.tag = i + 10;
                 [selectBtn setImage:[UIImage imageNamed:@"hp_payyes"] forState:UIControlStateNormal];
                 [selectBtn setImage:[UIImage imageNamed:@"hp_selected"] forState:UIControlStateSelected];
@@ -285,8 +285,7 @@
 
 //提交按钮点击事件
 - (void)submitBtnClick:(UIButton *)sender {
-    MineRedVC *mineRedVC = [[MineRedVC alloc] init];
-    [self.navigationController pushViewController:mineRedVC animated:YES];
+   
 }
 
 //支付方式选择

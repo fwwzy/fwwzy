@@ -907,6 +907,11 @@
 		9449535A1C33DE6B005E9BBF /* np_countResult.png in Resources */ = {isa = PBXBuildFile; fileRef = 944953551C33DE6B005E9BBF /* np_countResult.png */; };
 		9449535B1C33DE6B005E9BBF /* np_numberA.png in Resources */ = {isa = PBXBuildFile; fileRef = 944953561C33DE6B005E9BBF /* np_numberA.png */; };
 		9449535C1C33DE6B005E9BBF /* np_numberB.png in Resources */ = {isa = PBXBuildFile; fileRef = 944953571C33DE6B005E9BBF /* np_numberB.png */; };
+		94496FE71C3CA1E500B3DDD2 /* MineShareVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 94496FE61C3CA1E500B3DDD2 /* MineShareVC.m */; };
+		94496FE91C3CB6D800B3DDD2 /* mine_photo.png in Resources */ = {isa = PBXBuildFile; fileRef = 94496FE81C3CB6D800B3DDD2 /* mine_photo.png */; };
+		94496FEB1C3CC4C800B3DDD2 /* mine_remove.png in Resources */ = {isa = PBXBuildFile; fileRef = 94496FEA1C3CC4C800B3DDD2 /* mine_remove.png */; };
+		94496FEE1C3CE48800B3DDD2 /* NotShareVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 94496FED1C3CE48800B3DDD2 /* NotShareVC.m */; };
+		94496FF01C3D027800B3DDD2 /* share_pyq.png in Resources */ = {isa = PBXBuildFile; fileRef = 94496FEF1C3D027800B3DDD2 /* share_pyq.png */; };
 		94721A9B1C322272007A901D /* ClassifyListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 94721A9A1C322272007A901D /* ClassifyListVC.m */; };
 		94721A9E1C3235BF007A901D /* FAQVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 94721A9D1C3235BF007A901D /* FAQVC.m */; };
 		94721AA01C325123007A901D /* hp_service.png in Resources */ = {isa = PBXBuildFile; fileRef = 94721A9F1C325123007A901D /* hp_service.png */; };
@@ -3206,6 +3211,13 @@
 		944953551C33DE6B005E9BBF /* np_countResult.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = np_countResult.png; sourceTree = "<group>"; };
 		944953561C33DE6B005E9BBF /* np_numberA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = np_numberA.png; sourceTree = "<group>"; };
 		944953571C33DE6B005E9BBF /* np_numberB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = np_numberB.png; sourceTree = "<group>"; };
+		94496FE51C3CA1E500B3DDD2 /* MineShareVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineShareVC.h; sourceTree = "<group>"; };
+		94496FE61C3CA1E500B3DDD2 /* MineShareVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineShareVC.m; sourceTree = "<group>"; };
+		94496FE81C3CB6D800B3DDD2 /* mine_photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mine_photo.png; sourceTree = "<group>"; };
+		94496FEA1C3CC4C800B3DDD2 /* mine_remove.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mine_remove.png; sourceTree = "<group>"; };
+		94496FEC1C3CE48800B3DDD2 /* NotShareVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotShareVC.h; sourceTree = "<group>"; };
+		94496FED1C3CE48800B3DDD2 /* NotShareVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotShareVC.m; sourceTree = "<group>"; };
+		94496FEF1C3D027800B3DDD2 /* share_pyq.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share_pyq.png; sourceTree = "<group>"; };
 		94721A991C322272007A901D /* ClassifyListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassifyListVC.h; sourceTree = "<group>"; };
 		94721A9A1C322272007A901D /* ClassifyListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassifyListVC.m; sourceTree = "<group>"; };
 		94721A9C1C3235BF007A901D /* FAQVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAQVC.h; sourceTree = "<group>"; };
@@ -7490,6 +7502,10 @@
 				94EC8F651C3BB8E600E4838C /* RedMethodVC.m */,
 				94EC8F671C3BC10C00E4838C /* MineMoneyVC.h */,
 				94EC8F681C3BC10C00E4838C /* MineMoneyVC.m */,
+				94496FE51C3CA1E500B3DDD2 /* MineShareVC.h */,
+				94496FE61C3CA1E500B3DDD2 /* MineShareVC.m */,
+				94496FEC1C3CE48800B3DDD2 /* NotShareVC.h */,
+				94496FED1C3CE48800B3DDD2 /* NotShareVC.m */,
 			);
 			name = Mine;
 			sourceTree = "<group>";
@@ -7553,6 +7569,9 @@
 		948783401C2A9A9400E52B11 /* 新增 */ = {
 			isa = PBXGroup;
 			children = (
+				94496FEF1C3D027800B3DDD2 /* share_pyq.png */,
+				94496FEA1C3CC4C800B3DDD2 /* mine_remove.png */,
+				94496FE81C3CB6D800B3DDD2 /* mine_photo.png */,
 				94EC8F621C3BA57B00E4838C /* mine_gotred.png */,
 				94EC8F601C3B8DCF00E4838C /* mine_getred.png */,
 				94EC8F5B1C3B677400E4838C /* mine_usered.png */,
@@ -11186,6 +11205,7 @@
 				B77E1AF11BC2A50C00DB3199 /* chat_sender_bg@2x.png in Resources */,
 				B77E7C451BD28B2A0058DD07 /* germany.svg in Resources */,
 				B77E1A941BC2A50C00DB3199 /* R返回箭头.png in Resources */,
+				94496FE91C3CB6D800B3DDD2 /* mine_photo.png in Resources */,
 				3A69A18E1C0407800002F776 /* ImageError@3x.png in Resources */,
 				94910D701C3A8456009947B2 /* mine_right.png in Resources */,
 				3AEE94A11BF588CE007F6BD5 /* NSDateTimeAgo.bundle in Resources */,
@@ -11428,6 +11448,7 @@
 				B77E7C401BD28B2A0058DD07 /* austria-low.svg in Resources */,
 				3A69A1901C0407800002F776 /* ImageSelectedOff@2x.png in Resources */,
 				3AF51B8E1C05DFCE0091BBD8 /* R地图绿色小图标.png in Resources */,
+				94496FF01C3D027800B3DDD2 /* share_pyq.png in Resources */,
 				B7777B3C1BC399EE00452D6E /* Resource.bundle in Resources */,
 				B77E1AD51BC2A50C00DB3199 /* VoiceSearchFeedback013@2x.png in Resources */,
 				3AFA14791BFEFFAD0054E16E /* Safari Back@2x.png in Resources */,
@@ -11651,6 +11672,7 @@
 				3AEDB24B1BFC426600AD7E95 /* face_20.png in Resources */,
 				3AEDB2411BFC426600AD7E95 /* face_11.png in Resources */,
 				3A69A1991C0407800002F776 /* ImageSelectedSmallOn@2x.png in Resources */,
+				94496FEB1C3CC4C800B3DDD2 /* mine_remove.png in Resources */,
 				3AEDB95C1BF9B55300E70488 /* zoomin@2x.png in Resources */,
 				3AEDB2331BFC426600AD7E95 /* border_15.png in Resources */,
 				941684A11C2D3F7500A88A46 /* tb_newpublish.png in Resources */,
@@ -11833,6 +11855,7 @@
 				B76F09B61BD3EF3D0095F655 /* UILabel+NightVersion.m in Sources */,
 				B7D3D92A1BD0A50C000A0962 /* UIResponder+STPopup.m in Sources */,
 				B7777D991BC3A93800452D6E /* XMPPMessage+XEP_0184.m in Sources */,
+				94496FE71C3CA1E500B3DDD2 /* MineShareVC.m in Sources */,
 				3A69A1B11C0407800002F776 /* MWPhotoBrowser.m in Sources */,
 				B7777DA71BC3A93800452D6E /* XMPPMessage+XEP_0280.m in Sources */,
 				3AF02ACF1BE7282A00AF0597 /* WFTextView.m in Sources */,
@@ -11947,6 +11970,7 @@
 				3AF02A7D1BE720EB00AF0597 /* E_SearchViewController.m in Sources */,
 				941684811C2CD23E00A88A46 /* RegistVC.m in Sources */,
 				94910D661C3A830E009947B2 /* MinePlaceVC.m in Sources */,
+				94496FEE1C3CE48800B3DDD2 /* NotShareVC.m in Sources */,
 				94910D671C3A830E009947B2 /* MineWelVC.m in Sources */,
 				3AF02A711BE720EB00AF0597 /* E_ListView.m in Sources */,
 				B728C1771BDC9BCA0004B4A9 /* TEAClockChart.m in Sources */,

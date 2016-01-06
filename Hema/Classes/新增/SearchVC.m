@@ -45,7 +45,6 @@
     _textField.textColor = BB_White_Color;
     _textField.delegate = self;
     _textField.returnKeyType = UIReturnKeySearch;
-    _textField.keyboardType = UIKeyboardTypeNumberPad;
     _textField.placeholder = @"请输入关键词";
     [_textField setValue:BB_White_Color forKeyPath:@"_placeholderLabel.textColor"];
     [_textField setValue:[UIFont systemFontOfSize:14] forKeyPath:@"_placeholderLabel.font"];
@@ -222,8 +221,8 @@ loop:
     NSLog(@"%@",_dataSource[indexPath.row]);
 //    SearchResultVC *searchResultVC = [[SearchResultVC alloc] init];
 //    [self.navigationController pushViewController:searchResultVC animated:YES];
-//    SettingVC *settingVC = [[SettingVC alloc] init];
-//    [self.navigationController pushViewController:settingVC animated:YES];
+    SettingVC *settingVC = [[SettingVC alloc] init];
+    [self.navigationController pushViewController:settingVC animated:YES];
     
     RechargeVC *rechargeVC = [[RechargeVC alloc] init];
     [self.navigationController pushViewController:rechargeVC animated:YES];

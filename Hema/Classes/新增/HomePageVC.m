@@ -367,8 +367,6 @@
 - (void)msgClick:(HemaButton *)sender {
     NoticeVC *noticeVC = [[NoticeVC alloc] init];
     [self.navigationController pushViewController:noticeVC animated:YES];
-//    PrizeMsgVC *msgVC = [[PrizeMsgVC alloc] init];
-//    [self.navigationController pushViewController:msgVC animated:YES];
 }
 
 //导航搜索item点击事件
@@ -392,6 +390,7 @@
             break;
         case 2:{
             ShareVC *shareVC = [[ShareVC alloc] init];
+            shareVC.shareType = otherShare;
             [self.navigationController pushViewController:shareVC animated:YES];
         }
             break;

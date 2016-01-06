@@ -324,7 +324,7 @@
     [redView addSubview:numLbl];
     [redView addSubview:getRedView];
     [_viewTwo addSubview:redView];
-    NSLog(@"twooooooooo%f",redView.size.height);
+
 }
 
 

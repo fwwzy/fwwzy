@@ -8,6 +8,7 @@
 
 #import "NoticeVC.h"
 #import "LjjUISegmentedControl.h"
+#import "PrizeMsgVC.h"
 
 @interface NoticeVC ()<LjjUISegmentedControlDelegate> {
     BOOL _isLeft;
@@ -166,7 +167,7 @@
     }
 }
 
-//cell删除点击时间
+//cell删除点击事件
 - (void)deleteBtnClick:(UIButton *)sender {
     UITableViewCell *cell = (UITableViewCell *)[self.view viewWithTag:100 + sender.tag];
     [cell removeFromSuperview];
@@ -176,6 +177,10 @@
    
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    PrizeMsgVC *msgVC = [[PrizeMsgVC alloc] init];
+    [self.navigationController pushViewController:msgVC animated:YES];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

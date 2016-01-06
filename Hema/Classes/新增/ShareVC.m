@@ -9,14 +9,17 @@
 #import "ShareVC.h"
 #import "ShareDetailVC.h"
 
-@interface ShareVC ()
+@interface ShareVC () {
+    NSInteger _count;
+    UIImageView *_backView;
+}
 
 @end
 
 @implementation ShareVC
 
 - (void)loadData {
-    
+    _count = 5;
 }
 
 - (void)loadSet {
@@ -27,11 +30,14 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (self.shareType == mineShare) {
+        return 335;
+    }
     return 280;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
+    return _count;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -102,6 +108,38 @@
             [view addSubview:shareImg];
         }
         
+        //我的分享 shareType = mineShare;
+        //删除
+        if (self.shareType == mineShare) {
+       
+        UIButton *deleteBtn = [[UIButton alloc] init];
+        deleteBtn.frame = CGRectMake(UI_View_Width - 150, 280, 60, 30);
+        [deleteBtn setTitle:@"删除" forState:UIControlStateNormal];
+        [HemaFunction addbordertoView:deleteBtn radius:0 width:0.8 color:BB_Gray_Color];
+        [deleteBtn setTitleColor:BB_Gray_Color forState:UIControlStateNormal];
+        [deleteBtn addTarget:self action:@selector(deleteBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+        [deleteBtn.titleLabel setFont:[UIFont systemFontOfSize:14]];
+        deleteBtn.tag = indexPath.row;
+        [cell.contentView addSubview:deleteBtn];
+        
+        //去晒单
+        UIButton *shareBtn = [[UIButton alloc] init];
+        shareBtn.frame = CGRectMake(UI_View_Width - 75, 280, 60, 30);
+        [shareBtn setTitle:@"分享" forState:UIControlStateNormal];
+        [shareBtn setTitleColor:BB_White_Color forState:UIControlStateNormal];
+        [shareBtn setBackgroundColor:RGB_UI_COLOR(243, 182, 6)];
+        [shareBtn.titleLabel setFont:[UIFont systemFontOfSize:14]];
+        [shareBtn addTarget:self action:@selector(shareBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+        [cell.contentView addSubview:shareBtn];
+            
+        //footer
+        UILabel *footerView = [[UILabel alloc] init];
+        footerView.frame = CGRectMake(0, 325, UI_View_Width, 10);
+        footerView.backgroundColor = RGB_UI_COLOR(255, 246, 244);
+        [cell.contentView addSubview:footerView];
+            
+        }
+        
         [cell.contentView addSubview:iconView];
         [cell.contentView addSubview:userName];
         [cell.contentView addSubview:timeLbl];
@@ -111,6 +149,7 @@
         [cell.contentView addSubview:view];
        
     }
+    cell.tag = 100 + indexPath.row;
     return cell;
 }
 
@@ -121,6 +160,65 @@
     [self.navigationController pushViewController:shareDetailVC animated:YES];
 }
 
+//删除点击事件
+- (void)deleteBtnClick:(UIButton *)sender {
+    UITableViewCell *cell = (UITableViewCell *)[self.view viewWithTag:100 + sender.tag];
+    _count--;
+    [cell removeFromSuperview];
+    [self.mytable reloadData];
+    
+}
+
+- (void)shareBtnClick:(UIButton *)sender {
+    UIView *shareView = [[UIView alloc] init];
+    shareView.frame = CGRectMake(0, self.view.height - 90, UI_View_Width, 156);
+    shareView.userInteractionEnabled = YES;
+    shareView.backgroundColor = BB_White_Color;
+    
+    if (_backView) {
+        _backView.hidden = NO;
+    } else {
+    _backView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, UI_View_Width, self.view.height + 80)];
+    UIWindow * window = [UIApplication sharedApplication].keyWindow;
+    _backView.image = [UIImage imageNamed:@"np_blackView"];
+    _backView.userInteractionEnabled = YES;
+    [window addSubview:_backView];
+    
+    NSArray *titleArr = @[@"QQ",@"微信好友",@"朋友圈",@"新浪"];
+    NSArray *imgArr = @[@"lg_qq",@"lg_wx",@"share_pyq",@"lg_sina"];
+    for (int i = 0; i < 4; i++) {
+        UIButton *shareBtn = [[UIButton alloc] init];
+        shareBtn.frame = CGRectMake(self.view.width / 10 + UI_View_Width / 4.5 * i, 20, 40, 40);
+        [shareBtn setImage:[UIImage imageNamed:imgArr[i] ] forState:UIControlStateNormal];
+        
+        UILabel *thirdName = [[UILabel alloc] init];
+        thirdName.frame = CGRectMake(self.view.width / 10 + UI_View_Width / 4.5 * i, 55, 45, 40);
+        thirdName.center = CGPointMake(shareBtn.center.x, shareBtn.center.y + 35);
+        thirdName.text = [titleArr objectAtIndex:i];
+        thirdName.font = [UIFont systemFontOfSize:11];
+        thirdName.textAlignment = NSTextAlignmentCenter;
+        [shareView addSubview:thirdName];
+        [shareView addSubview:shareBtn];
+    }
+    
+    //取消按钮
+    UIButton *cancelBtn = [[UIButton alloc] init];
+    cancelBtn.frame = CGRectMake(0, 110, UI_View_Width, 46);
+    cancelBtn.backgroundColor = RGB_UI_COLOR(245, 245, 245);
+    [cancelBtn setTitle:@"取消" forState:UIControlStateNormal];
+    [cancelBtn.titleLabel setFont:[UIFont systemFontOfSize:12]];
+    [cancelBtn setTitleColor:BB_Red_Color forState:UIControlStateNormal];
+    [cancelBtn addTarget:self action:@selector(cancelBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    [shareView addSubview:cancelBtn];
+    
+    [_backView addSubview:shareView];
+    }
+    
+}
+
+- (void)cancelBtnClick:(UIButton *)sender {
+    _backView.hidden = YES;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

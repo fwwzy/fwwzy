@@ -185,7 +185,7 @@
                 
                 //单选框
                 HemaButton *selectBtn = [[HemaButton alloc] init];
-                selectBtn.frame = CGRectMake(UI_View_Width - 40, 15, 28, 28);
+                selectBtn.frame = CGRectMake(UI_View_Width - 40, 19, 28, 28);
                 selectBtn.tag = i + 10;
                 [selectBtn setImage:[UIImage imageNamed:@"hp_payyes"] forState:UIControlStateNormal];
                 [selectBtn setImage:[UIImage imageNamed:@"hp_selected"] forState:UIControlStateSelected];

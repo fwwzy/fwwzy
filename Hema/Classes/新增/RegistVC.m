@@ -150,7 +150,7 @@
         [alertOne show];
         //清除按钮
         HemaButton *removeBtn = [[HemaButton alloc] init];
-        removeBtn.frame = CGRectMake(_phoneTF.origin.x + _phoneTF.size.width - 70, 15, 20, 20);
+        removeBtn.frame = CGRectMake(_phoneTF.origin.x + _phoneTF.size.width - 70, 10, 20, 20);
         [removeBtn setImage:[UIImage imageNamed:@"rg_remove"] forState:UIControlStateNormal];
         [removeBtn addTarget:self action:@selector(removeBtnClick:) forControlEvents:UIControlEventTouchUpInside];
         [_phoneTF addSubview:removeBtn];

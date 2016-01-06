@@ -8,6 +8,13 @@
 
 #import "PullRefreshPlainVC.h"
 
+typedef enum {
+    mineShare,  //我的晒单
+    otherShare  //其他晒单
+}shareType;
+
 @interface ShareVC : PullRefreshPlainVC
+
+@property (nonatomic,assign) ShareType shareType;
 
 @end
