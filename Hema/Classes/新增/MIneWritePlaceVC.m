@@ -132,7 +132,7 @@
         titleLabel.font = [UIFont systemFontOfSize:17];
         
         _mySwitch = [[ UISwitch alloc]initWithFrame:CGRectMake(UI_View_Width - 70,10.0,0.0,0.0)];
-        _mySwitch.tintColor = RGB_UI_COLOR(237, 88, 99);
+        _mySwitch.tintColor = BB_Gray_Color;
         _mySwitch.onTintColor = RGB_UI_COLOR(237, 88, 99);
         _mySwitch.on = switchison;
         [cell addSubview:_mySwitch];
