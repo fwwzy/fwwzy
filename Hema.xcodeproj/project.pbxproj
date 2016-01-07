@@ -896,10 +896,6 @@
 		9449533C1C33729D005E9BBF /* SearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9449533B1C33729D005E9BBF /* SearchVC.m */; };
 		9449533E1C337860005E9BBF /* hp_textfield.png in Resources */ = {isa = PBXBuildFile; fileRef = 9449533D1C337860005E9BBF /* hp_textfield.png */; };
 		944953411C33A4BB005E9BBF /* SearchResultVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 944953401C33A4BB005E9BBF /* SearchResultVC.m */; };
-		944953491C33BF47005E9BBF /* hp_ggselect.png in Resources */ = {isa = PBXBuildFile; fileRef = 944953451C33BF47005E9BBF /* hp_ggselect.png */; };
-		9449534A1C33BF47005E9BBF /* hp_ggunselect.png in Resources */ = {isa = PBXBuildFile; fileRef = 944953461C33BF47005E9BBF /* hp_ggunselect.png */; };
-		9449534B1C33BF47005E9BBF /* hp_xxselect.png in Resources */ = {isa = PBXBuildFile; fileRef = 944953471C33BF47005E9BBF /* hp_xxselect.png */; };
-		9449534C1C33BF47005E9BBF /* hp_xxunselect.png in Resources */ = {isa = PBXBuildFile; fileRef = 944953481C33BF47005E9BBF /* hp_xxunselect.png */; };
 		9449534F1C33C444005E9BBF /* NoticeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9449534E1C33C444005E9BBF /* NoticeVC.m */; };
 		944953521C33CEC3005E9BBF /* LjjUISegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 944953511C33CEC3005E9BBF /* LjjUISegmentedControl.m */; };
 		944953581C33DE6B005E9BBF /* np_countmedo.png in Resources */ = {isa = PBXBuildFile; fileRef = 944953531C33DE6B005E9BBF /* np_countmedo.png */; };
@@ -921,6 +917,7 @@
 		944970061C3D1B4300B3DDD2 /* selected_h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 944970021C3D1B4300B3DDD2 /* selected_h@3x.png */; };
 		944970071C3D1B4300B3DDD2 /* selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 944970031C3D1B4300B3DDD2 /* selected@2x.png */; };
 		944970081C3D1B4300B3DDD2 /* selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 944970041C3D1B4300B3DDD2 /* selected@3x.png */; };
+		944B62231C3E0A3100CBAD01 /* hp_msgpoint.png in Resources */ = {isa = PBXBuildFile; fileRef = 944B62221C3E0A3100CBAD01 /* hp_msgpoint.png */; };
 		94721A9B1C322272007A901D /* ClassifyListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 94721A9A1C322272007A901D /* ClassifyListVC.m */; };
 		94721A9E1C3235BF007A901D /* FAQVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 94721A9D1C3235BF007A901D /* FAQVC.m */; };
 		94721AA01C325123007A901D /* hp_service.png in Resources */ = {isa = PBXBuildFile; fileRef = 94721A9F1C325123007A901D /* hp_service.png */; };
@@ -3207,10 +3204,6 @@
 		9449533D1C337860005E9BBF /* hp_textfield.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hp_textfield.png; sourceTree = "<group>"; };
 		9449533F1C33A4BB005E9BBF /* SearchResultVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultVC.h; sourceTree = "<group>"; };
 		944953401C33A4BB005E9BBF /* SearchResultVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultVC.m; sourceTree = "<group>"; };
-		944953451C33BF47005E9BBF /* hp_ggselect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hp_ggselect.png; sourceTree = "<group>"; };
-		944953461C33BF47005E9BBF /* hp_ggunselect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hp_ggunselect.png; sourceTree = "<group>"; };
-		944953471C33BF47005E9BBF /* hp_xxselect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hp_xxselect.png; sourceTree = "<group>"; };
-		944953481C33BF47005E9BBF /* hp_xxunselect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hp_xxunselect.png; sourceTree = "<group>"; };
 		9449534D1C33C444005E9BBF /* NoticeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoticeVC.h; sourceTree = "<group>"; };
 		9449534E1C33C444005E9BBF /* NoticeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoticeVC.m; sourceTree = "<group>"; };
 		944953501C33CEC3005E9BBF /* LjjUISegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LjjUISegmentedControl.h; sourceTree = "<group>"; };
@@ -3241,6 +3234,7 @@
 		944970021C3D1B4300B3DDD2 /* selected_h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "selected_h@3x.png"; sourceTree = "<group>"; };
 		944970031C3D1B4300B3DDD2 /* selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "selected@2x.png"; sourceTree = "<group>"; };
 		944970041C3D1B4300B3DDD2 /* selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "selected@3x.png"; sourceTree = "<group>"; };
+		944B62221C3E0A3100CBAD01 /* hp_msgpoint.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hp_msgpoint.png; sourceTree = "<group>"; };
 		94721A991C322272007A901D /* ClassifyListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassifyListVC.h; sourceTree = "<group>"; };
 		94721A9A1C322272007A901D /* ClassifyListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassifyListVC.m; sourceTree = "<group>"; };
 		94721A9C1C3235BF007A901D /* FAQVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAQVC.h; sourceTree = "<group>"; };
@@ -7610,6 +7604,7 @@
 		948783401C2A9A9400E52B11 /* 新增 */ = {
 			isa = PBXGroup;
 			children = (
+				944B62221C3E0A3100CBAD01 /* hp_msgpoint.png */,
 				944970011C3D1B4300B3DDD2 /* selected_h@2x.png */,
 				944970021C3D1B4300B3DDD2 /* selected_h@3x.png */,
 				944970031C3D1B4300B3DDD2 /* selected@2x.png */,
@@ -7650,10 +7645,6 @@
 				944953551C33DE6B005E9BBF /* np_countResult.png */,
 				944953561C33DE6B005E9BBF /* np_numberA.png */,
 				944953571C33DE6B005E9BBF /* np_numberB.png */,
-				944953451C33BF47005E9BBF /* hp_ggselect.png */,
-				944953461C33BF47005E9BBF /* hp_ggunselect.png */,
-				944953471C33BF47005E9BBF /* hp_xxselect.png */,
-				944953481C33BF47005E9BBF /* hp_xxunselect.png */,
 				9449533D1C337860005E9BBF /* hp_textfield.png */,
 				944953361C336F6E005E9BBF /* hp_payfail.png */,
 				944953371C336F6E005E9BBF /* hp_paysuccess.png */,
@@ -11099,6 +11090,7 @@
 				947759CD1C3107AE00EA9073 /* hp_buynow.png in Resources */,
 				941684781C2BF7B200A88A46 /* np_xuxian.png in Resources */,
 				3AEDB1531BFC3DFB00AD7E95 /* number_five_style_6.plist in Resources */,
+				944B62231C3E0A3100CBAD01 /* hp_msgpoint.png in Resources */,
 				3AEDB2891BFC426600AD7E95 /* makecards_puzzle4_storyboard2_icon.png in Resources */,
 				3AEDB24F1BFC426600AD7E95 /* face_3.png in Resources */,
 				B77E1ACC1BC2A50C00DB3199 /* VoiceSearchFeedback009.png in Resources */,
@@ -11112,7 +11104,6 @@
 				B77E1ABE1BC2A50C00DB3199 /* VoiceSearchFeedback002.png in Resources */,
 				941684621C2B832C00A88A46 /* hp_prize.png in Resources */,
 				B7D3D8E71BD09457000A0962 /* WechatShortVideo_close.png in Resources */,
-				9449534C1C33BF47005E9BBF /* hp_xxunselect.png in Resources */,
 				3A52F0351BEB088D00D081FE /* share_facebook@2x.png in Resources */,
 				B7D3D8EA1BD09457000A0962 /* WechatShortVideo_scan_focus.png in Resources */,
 				B77C3ABA1BC4FBF800B7E028 /* R设置之1.png in Resources */,
@@ -11131,7 +11122,6 @@
 				94775A021C31422400EA9073 /* np_detailicon.png in Resources */,
 				B77E1AE91BC2A50C00DB3199 /* chat_receiver_audio_playing003@2x.png in Resources */,
 				947759D71C3107AE00EA9073 /* hp_qiangred.png in Resources */,
-				9449534A1C33BF47005E9BBF /* hp_ggunselect.png in Resources */,
 				B77E1AA91BC2A50C00DB3199 /* 87*87.png in Resources */,
 				B77C3AE71BC53BA800B7E028 /* R充值按钮.png in Resources */,
 				94721AAE1C3292D0007A901D /* np_count.png in Resources */,
@@ -11298,7 +11288,6 @@
 				B77E1AAA1BC2A50C00DB3199 /* 引导页-4-01.png in Resources */,
 				3A69A1E51C04284B0002F776 /* NotificationButtonBackground@2x.png in Resources */,
 				3AF845641BE9A6B800FEF930 /* com.skin.1108.zip in Resources */,
-				9449534B1C33BF47005E9BBF /* hp_xxselect.png in Resources */,
 				3A2F0DCE1BFC8456000EE3B9 /* R白色方形效果.png in Resources */,
 				9487834D1C2A9AD600E52B11 /* lg_qq.png in Resources */,
 				B77E1ADD1BC2A50C00DB3199 /* VoiceSearchFeedback017@2x.png in Resources */,
@@ -11784,7 +11773,6 @@
 				B7777BB61BC39FC800452D6E /* AMap.bundle in Resources */,
 				B77E1A9C1BC2A50C00DB3199 /* R地图.png in Resources */,
 				B77E1A711BC2A50C00DB3199 /* R公交2.png in Resources */,
-				944953491C33BF47005E9BBF /* hp_ggselect.png in Resources */,
 				B77E1AAE1BC2A50C00DB3199 /* 引导页-5-01.png in Resources */,
 				3AF02A5F1BE720EB00AF0597 /* r_drag-dot@2x.png in Resources */,
 				944365371C35343000B5F822 /* mine_redbag.png in Resources */,

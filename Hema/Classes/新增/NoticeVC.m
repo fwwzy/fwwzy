@@ -48,6 +48,12 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    //测试通知
+    if (_rowNum != 5) {
+        NSNotification *notice = [NSNotification notificationWithName:@"getNotice" object:nil];
+        [[NSNotificationCenter defaultCenter] postNotification:notice];
+    }
     return _rowNum;
 }
 
@@ -62,6 +68,7 @@
             UIImageView *iconView = [[UIImageView alloc] init];
             iconView.frame = CGRectMake(15, 15, 50, 50);
             iconView.image = [UIImage imageNamed:@"newpulish"];
+            iconView.tag = 100;
         
             //titleLbl
             UILabel *titleLbl = [[UILabel alloc] init];
@@ -69,12 +76,14 @@
             titleLbl.textColor = BB_Gray_Color;
             titleLbl.text = @"夺宝奖品声明";
             titleLbl.font = [UIFont systemFontOfSize:15];
+            titleLbl.tag = 101;
         
             //contentLbl
             UILabel *contentLbl = [[UILabel alloc] init];
             contentLbl.frame = CGRectMake(70, 45, UI_View_Width - 65, 18);
             contentLbl.font = [UIFont systemFontOfSize:14];
             contentLbl.text = @"请在参与夺宝前，认真阅读一下说明";
+            contentLbl.tag = 102;
         
             //时间
             UILabel *timeLbl = [[UILabel alloc] init];
@@ -83,6 +92,7 @@
             timeLbl.font = [UIFont systemFontOfSize:15];
             timeLbl.textColor = BB_Gray_Color;
             timeLbl.text = @"2014-02-25";
+            contentLbl.tag = 103;
             
             //删除
             UIButton *deleteBtn = [[UIButton alloc] init];
@@ -113,6 +123,7 @@
             UIImageView *iconView = [[UIImageView alloc] init];
             iconView.frame = CGRectMake(15, 15, 50, 50);
             iconView.image = [UIImage imageNamed:@"newpulish"];
+            iconView.tag = 200;
             
             //contentLbl
             UILabel *contentLbl = [[UILabel alloc] init];
@@ -121,6 +132,7 @@
             contentLbl.lineBreakMode = NSLineBreakByTruncatingTail;
             contentLbl.numberOfLines = 0;
             contentLbl.text = @"恭喜您！在第1235期中，赢得煎饼果子一个，煎饼果子还是加鸡蛋加油条加火腿肠的，您赚大了";
+            contentLbl.tag = 201;
             
             //时间
             UILabel *timeLbl = [[UILabel alloc] init];
@@ -129,6 +141,7 @@
             timeLbl.font = [UIFont systemFontOfSize:15];
             timeLbl.textColor = BB_Gray_Color;
             timeLbl.text = @"2014-02-25";
+            timeLbl.tag = 202;
             
             //删除
             UIButton *deleteBtn = [[UIButton alloc] init];
@@ -152,6 +165,16 @@
             [scrollView addSubview:deleteBtn];
             [cell.contentView addSubview:scrollView];
         }
+    //赋值
+//    UIImageView *leftIcon = (UIImageView *)[cell viewWithTag:100];
+//    UILabel *leftTitle = (UILabel *)[cell viewWithTag:101];
+//    UILabel *leftTime = (UILabel *)[cell viewWithTag:103];
+//    UILabel *leftContent = (UILabel *)[cell viewWithTag:102];
+//    
+//    UIImageView *rightIcon = (UIImageView *)[cell viewWithTag:200];
+//    UILabel *rightTime = (UILabel *)[cell viewWithTag:202];
+//    UILabel *rightContent = (UILabel *)[cell viewWithTag:201];
+    
     cell.tag = 100 + indexPath.row;
     return cell;
 }

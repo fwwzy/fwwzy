@@ -245,7 +245,6 @@
                 [selectBtn addTarget:self action:@selector(payTypeClick:) forControlEvents:UIControlEventTouchUpInside];
                 _selectArr = [[NSMutableArray alloc] init];
                 
-                
                 //分割线
                 UILabel *sepLbl = [[UILabel alloc] init];
                 sepLbl.frame = CGRectMake(15, 69, UI_View_Width - 30, 1);
@@ -267,7 +266,11 @@
 
 //选择金额点击事件
 - (void)rechargeBtnClick:(UIButton *)sender {
-     
+    
+    //textfield收键盘
+    UITextField *textfield = (UITextField *)[self.mytable viewWithTag:6];
+    [textfield resignFirstResponder];
+    
     for (int i = 1; i < 6; i++) {
         UIButton *btn = (UIButton *)[self.mytable viewWithTag:i];
         if (sender == btn) {

@@ -17,6 +17,8 @@
 @interface SettingVC () <UITableViewDataSource,UITableViewDelegate>{
     UITableView *_tableView;
     NSMutableArray *_dataSource;
+    NSArray *_titleArr;
+    NSString *_sizeStr;
 }
 
 @end
@@ -65,7 +67,26 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
     
     NSArray *iconArr = [NSArray arrayWithObjects:@"hp_help", @"hp_kaijiang",@"sz_safe",@"hp_xieyi",@"hp_clean",@"sz_about",nil];
-    NSArray *titleArr = [NSArray arrayWithObjects:@"新手帮助",@"开奖规则",@"安全管理",@"用户协议",@"清除缓存",@"关于", nil];
+    
+    
+    unsigned long long size = [SDImageCache.sharedImageCache getSize];
+    if (size/1024 > 0)
+    {
+        if (size/(1024*1024) == 0)
+        {
+            _sizeStr = [NSString stringWithFormat:@"清除缓存%lluK",size/1024];
+        }else
+        {
+            _sizeStr = [NSString stringWithFormat:@"清除缓存%lluM",size/(1024*1024)];
+        }
+            _titleArr = [NSArray arrayWithObjects:@"新手帮助",@"开奖规则",@"安全管理",@"用户协议",_sizeStr,@"关于", nil];
+    }else
+    {
+            _titleArr = [NSArray arrayWithObjects:@"新手帮助",@"开奖规则",@"安全管理",@"用户协议",@"清除缓存",@"关于", nil];
+    }
+
+    
+    
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
         if (indexPath.row != 6) {
@@ -78,7 +99,7 @@
             //title
             UILabel *titleLbl = [[UILabel alloc] init];
             titleLbl.frame = CGRectMake(60, 19, 200, 20);
-            titleLbl.text = titleArr[indexPath.row];
+            titleLbl.text = _titleArr[indexPath.row];
             titleLbl.font = [UIFont systemFontOfSize:16];
             
             //next

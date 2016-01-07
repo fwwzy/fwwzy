@@ -175,6 +175,7 @@
 - (void)loginBtnClick:(HemaButton *)sender {
     TabBarController *tabBarVC = [[TabBarController alloc] init];
     [self presentViewController:tabBarVC animated:YES completion:nil];
+    
 }
 
 //注册点击

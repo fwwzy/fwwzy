@@ -67,12 +67,14 @@
         iconView.frame = CGRectMake(15, 15, 40, 40);
         [HemaFunction addbordertoView:iconView radius:20 width:0 color:nil];
         iconView.image = [UIImage imageNamed:@"newpulish"];
+        iconView.tag = 1;
         
         //用户名
         UILabel *userName = [[UILabel alloc] init];
         userName.frame = CGRectMake(70, 30, UI_View_Width - 150, 20);
-        userName.font = [UIFont systemFontOfSize:13];
+        userName.font = [UIFont systemFontOfSize:14];
         userName.text = @"亓化泽(假肢)";
+        userName.tag = 2;
         
         //时间
         UILabel *timeLbl = [[UILabel alloc] init];
@@ -81,6 +83,7 @@
         timeLbl.font = [UIFont systemFontOfSize:12];
         timeLbl.textColor = BB_Gray_Color;
         timeLbl.text = @"2014-02-25";
+        timeLbl.tag = 3;
         
         //分享view
         HemaImgView *view = [[HemaImgView alloc] init];
@@ -95,6 +98,7 @@
         goodsName.frame = CGRectMake(15, 15, UI_View_Width - 100, 25);
         goodsName.font = [UIFont systemFontOfSize:17];
         goodsName.text = @"LOL无敌账号";
+        goodsName.tag = 4;
         
         //商品详情
         UILabel *goodsDetail = [[UILabel alloc] init];
@@ -102,6 +106,7 @@
         goodsDetail.font = [UIFont systemFontOfSize:13];
         goodsDetail.textColor = BB_Gray_Color;
         goodsDetail.text = @"(第2531期)英雄联盟全英雄全皮肤账号";
+        goodsDetail.tag = 5;
         
         //晒单评价
         UILabel *appraiseLbl = [[UILabel alloc] init];
@@ -109,6 +114,7 @@
         appraiseLbl.font = [UIFont systemFontOfSize:15];
         appraiseLbl.text = @"太爽辣，我又可以装逼辣";
         appraiseLbl.lineBreakMode = NSLineBreakByTruncatingTail;
+        appraiseLbl.tag = 6;
         
         NSArray *imgArr = @[@"newpulish",@"newpulish",@"newpulish",@"newpulish"];
         //晒单图片
@@ -160,6 +166,15 @@
         [cell.contentView addSubview:view];
        
     }
+    
+    //赋值
+//    UIImageView *iconView = (UIImageView *)[cell viewWithTag:1];
+//    UILabel *titleLbl = (UILabel *)[cell viewWithTag:2];
+//    UILabel *timeLbl = (UILabel *)[cell viewWithTag:3];
+//    UILabel *goodsNameLbl = (UILabel *)[cell viewWithTag:4];
+//    UILabel *goodsDetailLbl = (UILabel *)[cell viewWithTag:5];
+//    UILabel *appraiseLbl = (UILabel *)[cell viewWithTag:6];
+    
     cell.tag = 100 + indexPath.row;
     return cell;
 }

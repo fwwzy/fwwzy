@@ -19,6 +19,7 @@
     NSInteger _loadNum; //第几次加载cell
     CGFloat _autoHeight; //footerView高度
     NSMutableArray *_dataSource;
+    NSInteger _lastIndex;
 }
 @end
 
@@ -94,7 +95,7 @@
         [redView addSubview:numLbl];
         [redView addSubview:getRedView];
         [_viewOne addSubview:redView];
-         NSLog(@"oneeeeeee%f",redView.size.height);
+        
     }
     self.view.backgroundColor = RGB_UI_COLOR(255, 246, 246);
 }
@@ -227,6 +228,7 @@
         [rightBtn setTitle:@"已使用/过期" forState:UIControlStateNormal];
         
         //选择滑动动画
+      
         if (_selectIndex == 2) {
             _sepLabel.frame = CGRectMake(leftBtn.origin.x - 10, 49, leftBtn.size.width + 20, 2);
             [rightBtn setTitleColor:RGB_UI_COLOR(217, 29, 43) forState:UIControlStateNormal];
@@ -236,7 +238,9 @@
         } else {
         [rightBtn setTitleColor:BB_Blake_Color forState:UIControlStateNormal];
         }
-        if (_selectIndex == 1) {
+     
+  
+        if (_selectIndex == 1 ) {
             if (_loadNum == 2) {
                 _sepLabel.frame = CGRectMake(leftBtn.origin.x - 10, 49, leftBtn.size.width + 20, 2);
             } else {
@@ -249,7 +253,7 @@
         } else {
             [leftBtn setTitleColor:BB_Blake_Color forState:UIControlStateNormal];
         }
-        
+    
         [rightBtn addTarget:self action:@selector(btnChange:) forControlEvents:UIControlEventTouchUpInside];
         [cell.contentView addSubview:leftBtn];
         [cell.contentView addSubview:rightBtn];
@@ -262,7 +266,7 @@
 
 //可使用已使用切换
 - (void)btnChange:(UIButton *)sender {
-
+    _lastIndex = _selectIndex;
     if (sender.tag == 1) {
         _viewTwo.hidden = YES;
         _viewOne.hidden = NO;
@@ -318,7 +322,7 @@
     NSRange range = NSMakeRange(1, moneyStr.length);
     [attributeStr addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:30] range:range];
     moneyLbl.attributedText = attributeStr;
-    
+
     //有效期
     UILabel *timeLbl = [[UILabel alloc] init];
     timeLbl.frame = CGRectMake(10, redView.size.height - 20, 200, 10);

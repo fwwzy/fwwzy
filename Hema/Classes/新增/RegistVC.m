@@ -148,12 +148,14 @@
     if (_phoneTF.text.length != 11) {
         UIAlertView *alertOne = [[UIAlertView alloc] initWithTitle:@"提示！" message:@"您输入的手机号不正确" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
         [alertOne show];
+        if (_phoneTF.text > 0) {
         //清除按钮
         HemaButton *removeBtn = [[HemaButton alloc] init];
         removeBtn.frame = CGRectMake(_phoneTF.origin.x + _phoneTF.size.width - 70, 10, 20, 20);
         [removeBtn setImage:[UIImage imageNamed:@"rg_remove"] forState:UIControlStateNormal];
         [removeBtn addTarget:self action:@selector(removeBtnClick:) forControlEvents:UIControlEventTouchUpInside];
         [_phoneTF addSubview:removeBtn];
+            }
         
     } else {
     

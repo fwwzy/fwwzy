@@ -50,6 +50,10 @@
     //轮播定时器
     _timer = [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(topScrollViewPass) userInfo:nil repeats:YES];
     _prizeTimer = [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(prizeViewPass) userInfo:nil repeats:YES];
+    
+    //通知
+    NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+    [center addObserver:self selector:@selector(notice:) name:@"getNotice" object:nil];
 }
 
 - (void)loadData {
@@ -105,7 +109,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UITableViewCell *cell  = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+    UITableViewCell *cell  = [[UITableViewCell alloc] init];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     //轮播cell
     switch (indexPath.section) {
@@ -122,7 +126,8 @@
                 
                 UIPageControl *topControl = [[UIPageControl alloc] init];
                 
-                [topControl setFrame:CGRectMake(self.view.width / 2 - 45, 180 , 90, 30)];
+                [topControl setFrame:CGRectMake(0, 0 , 90, 30)];
+                topControl.center = CGPointMake(UI_View_Width / 2, 180);
                 topControl.numberOfPages = 4;
                 topControl.currentPage = 0;
                 topControl.tag = 2;
@@ -448,6 +453,12 @@
     }
 }
 
+//测试通知
+- (void)notice:(id)sender {
+    [self.navigationItem setRightItemWithTarget:self action:@selector(msgClick:) image:@"hp_msgpoint"];
+    NSLog(@"%@",sender);
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -483,7 +494,6 @@
             prizeView.contentOffset = CGPointMake(0, 0);
         }
     }];
-
 }
 
 #pragma mark - scrollView代理方法
@@ -510,16 +520,13 @@
         control.currentPage = scrollView.contentOffset.x / UI_View_Width;
         }
     }
-    
 }
 
 //开启定时器
-
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     if (1 == scrollView.tag) {
         _timer = [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(topScrollViewPass) userInfo:nil repeats:YES];
     }
-    
 }
 
 /*

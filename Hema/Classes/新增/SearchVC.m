@@ -218,14 +218,8 @@ loop:
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"%@",_dataSource[indexPath.row]);
-//    SearchResultVC *searchResultVC = [[SearchResultVC alloc] init];
-//    [self.navigationController pushViewController:searchResultVC animated:YES];
-    SettingVC *settingVC = [[SettingVC alloc] init];
-    [self.navigationController pushViewController:settingVC animated:YES];
-    
-    RechargeVC *rechargeVC = [[RechargeVC alloc] init];
-    [self.navigationController pushViewController:rechargeVC animated:YES];
+    SearchResultVC *searchResultVC = [[SearchResultVC alloc] init];
+    [self.navigationController pushViewController:searchResultVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

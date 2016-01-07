@@ -128,13 +128,11 @@
                 //switch
                 UISwitch *redSwitch = [[UISwitch alloc] init];
                 redSwitch.frame = CGRectMake(UI_View_Width - 60, 10, 35, 20);
-                redSwitch.thumbTintColor = BB_White_Color;
                 redSwitch.onTintColor = RGB_UI_COLOR(237, 88, 99);
-                redSwitch.tintColor = RGB_UI_COLOR(237, 88, 99);
-                
+                redSwitch.tintColor = BB_Gray_Color;
                 [cell.contentView addSubview:redLbl];
                 [cell.contentView addSubview:redSwitch];
-                
+      
             }
         }
             break;
@@ -154,6 +152,7 @@
                 [cell.contentView addSubview:redLbl];
                 [cell.contentView addSubview:sepLbl];
             }
+            
             NSArray *imgArr = @[@"hp_zhifubao",@"hp_yinlian",@"hp_wx"];
             NSArray *textArr = @[@"支付宝客户端支付\n推荐安装支付宝客户端的用户使用",@"银联手机支付\n推荐安装银联客户端的用户使用",@"微信支付\n推荐安装微信客户端的用户使用"];
             NSArray *rangeArr = @[@[@8,@16],@[@6,@15],@[@4,@15]];
@@ -279,7 +278,6 @@
     [rePayBtn.titleLabel setFont:[UIFont systemFontOfSize:14]];
     [rePayBtn setTitleColor:BB_White_Color forState:UIControlStateNormal];
     [failView addSubview:rePayBtn];
-    
     
     [_backView addSubview:closeBtn];
 }
