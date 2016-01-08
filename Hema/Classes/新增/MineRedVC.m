@@ -230,11 +230,15 @@
         //选择滑动动画
       
         if (_selectIndex == 2) {
-            _sepLabel.frame = CGRectMake(leftBtn.origin.x - 10, 49, leftBtn.size.width + 20, 2);
+            _sepLabel.frame = CGRectMake(leftBtn.origin.x - 10, 48, leftBtn.size.width + 20, 2);
             [rightBtn setTitleColor:RGB_UI_COLOR(217, 29, 43) forState:UIControlStateNormal];
-            [UIView animateWithDuration:0.5 animations:^{
-                _sepLabel.frame = CGRectMake(rightBtn.origin.x - 10, 49, rightBtn.size.width + 20, 2);
-            }];
+            if (_lastIndex == 1) {
+                [UIView animateWithDuration:0.5 animations:^{
+                _sepLabel.frame = CGRectMake(rightBtn.origin.x - 10, 48, rightBtn.size.width + 20, 2);
+                }];
+            } else {
+                _sepLabel.frame = CGRectMake(rightBtn.origin.x - 10, 48, rightBtn.size.width + 20, 2);
+            }
         } else {
         [rightBtn setTitleColor:BB_Blake_Color forState:UIControlStateNormal];
         }
@@ -242,14 +246,18 @@
   
         if (_selectIndex == 1 ) {
             if (_loadNum == 2) {
-                _sepLabel.frame = CGRectMake(leftBtn.origin.x - 10, 49, leftBtn.size.width + 20, 2);
+                _sepLabel.frame = CGRectMake(leftBtn.origin.x - 10, 48, leftBtn.size.width + 20, 2);
             } else {
-            _sepLabel.frame = CGRectMake(rightBtn.origin.x - 10, 49, rightBtn.size.width + 20, 2);
+            _sepLabel.frame = CGRectMake(rightBtn.origin.x - 10, 48, rightBtn.size.width + 20, 2);
             }
             [leftBtn setTitleColor:RGB_UI_COLOR(217, 29, 43) forState:UIControlStateNormal];
-            [UIView animateWithDuration:0.5 animations:^{
-                _sepLabel.frame = CGRectMake(leftBtn.origin.x - 10, 49, leftBtn.size.width + 20, 2);
-            }];
+            if (_lastIndex == 2) {
+                [UIView animateWithDuration:0.5 animations:^{
+                    _sepLabel.frame = CGRectMake(leftBtn.origin.x - 10, 48, leftBtn.size.width + 20, 2);
+                }];
+            } else {
+                _sepLabel.frame = CGRectMake(leftBtn.origin.x - 10, 48, leftBtn.size.width + 20, 2);
+            }
         } else {
             [leftBtn setTitleColor:BB_Blake_Color forState:UIControlStateNormal];
         }

@@ -72,6 +72,7 @@
 - (void)loadData {
     
     _dataSource = [[NSMutableArray alloc] init];
+    //本地读取搜索记录
     for (int i = 0; i < 100; i++) {
          if (![HemaFunction xfunc_check_strEmpty:[[NSUserDefaults standardUserDefaults] objectForKey:[NSString stringWithFormat:@"%d",i]]] ) {
         [_dataSource addObject:[[NSUserDefaults standardUserDefaults] objectForKey:[NSString stringWithFormat:@"%d",i]]];
@@ -135,6 +136,7 @@
     
     static NSString *cellId = @"searchCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+    
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
     } else{
@@ -163,7 +165,6 @@
         if (indexPath.section == 1) {
             //清空搜索记录
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
-            cell.userInteractionEnabled = NO;
             UIButton *removeBtn = [[UIButton alloc] init];
             removeBtn.frame = CGRectMake(UI_View_Width / 2 - UI_View_Width / 4, 20, UI_View_Width / 2, 40) ; 
              [removeBtn setTitle:@"清空搜索记录" forState:UIControlStateNormal];
@@ -193,6 +194,7 @@
     if ([HemaFunction xfunc_check_strEmpty:_textField.text]) {
         
     } else {
+        //保存本地搜索记录
     for (int i = 0; i < 100; i ++) {
         if ([HemaFunction xfunc_check_strEmpty:[[NSUserDefaults standardUserDefaults] objectForKey:[NSString stringWithFormat:@"%d",i]]] ) {
             [[NSUserDefaults standardUserDefaults] setObject:_textField.text forKey:[NSString stringWithFormat:@"%d",i]];
@@ -207,7 +209,7 @@ loop:
     return YES;
 }
 
-
+//清空搜索记录
 - (void)removeBtnClick:(UIButton *)sender {
     for (int i = 0; i < 100; i ++) {
         [[NSUserDefaults standardUserDefaults] removeObjectForKey:[NSString stringWithFormat:@"%d",i]];
@@ -218,8 +220,12 @@ loop:
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    SearchResultVC *searchResultVC = [[SearchResultVC alloc] init];
-    [self.navigationController pushViewController:searchResultVC animated:YES];
+    //清空搜索记录 section == 1
+    if (indexPath.section != 1) {
+        SearchResultVC *searchResultVC = [[SearchResultVC alloc] init];
+        [self.navigationController pushViewController:searchResultVC animated:YES];
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning {

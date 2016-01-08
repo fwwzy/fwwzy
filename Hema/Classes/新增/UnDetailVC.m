@@ -327,6 +327,7 @@
     if (indexPath.section == 1) {
         if (indexPath.row == 0) {
             ShareVC *hvc = [[ShareVC alloc]init];
+            hvc.shareType = otherShare;
             [self.navigationController pushViewController:hvc animated:YES];
         }
         if (indexPath.row == 1) {

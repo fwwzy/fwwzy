@@ -245,16 +245,10 @@
                 [selectBtn addTarget:self action:@selector(payTypeClick:) forControlEvents:UIControlEventTouchUpInside];
                 _selectArr = [[NSMutableArray alloc] init];
                 
-                //分割线
-                UILabel *sepLbl = [[UILabel alloc] init];
-                sepLbl.frame = CGRectMake(15, 69, UI_View_Width - 30, 1);
-                sepLbl.backgroundColor = BB_Gray_Color;
-                sepLbl.alpha = 0.3;
-                
                 [cell.contentView addSubview:zfbView];
                 [cell.contentView addSubview:zfbLbl];
                 [cell.contentView addSubview:selectBtn];
-                [cell.contentView addSubview:sepLbl];
+
             }
         }
     }

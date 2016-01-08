@@ -13,10 +13,11 @@
 #import "NSString+SY.h"
 #import "SYContactsHelper.h"
 #import <MessageUI/MessageUI.h>
+#import "SYCell.h"
 
 @interface SYContactsPickerController () <UITableViewDataSource, UITableViewDelegate,UINavigationControllerDelegate,MFMessageComposeViewControllerDelegate> {
 @private
-    NSMutableArray *_arrContacts;
+    
     NSMutableArray *_phoneArr;
     NSInteger *_page;
 }
@@ -30,7 +31,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = [UIColor colorWithRed:252.0/255.0 green:245.0/255.0 blue:245.0/255.0 alpha:0.8];
     [self createTopBar];
     _phoneArr = [[NSMutableArray alloc]init];
     
@@ -68,19 +69,39 @@
     [_btnLeft addTarget:self action:@selector(onClickBtnBack:) forControlEvents: UIControlEventTouchUpInside];
     
     // 右按钮
-    UIButton *_btnRight = [[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.size.width - btnWidth, 20, btnWidth, _btnTitle.frame.size.height)];
-    _btnRight.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight;
-    _btnRight.titleLabel.font = [UIFont systemFontOfSize:18.0];
-    _btnRight.titleEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 15);
+    UIButton *_btnRight = [[UIButton alloc] initWithFrame:CGRectMake(UI_View_Width-110, 10, 100, 30)];
+//    _btnRight.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight;
+    _btnRight.titleLabel.font = [UIFont systemFontOfSize:16.0];
+//    _btnRight.titleEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 15);
+    _btnRight.layer.borderWidth = 1;
+    _btnRight.layer.borderColor = [BB_Red_Color CGColor];
+    _btnRight.backgroundColor = BB_White_Color;
     _btnRight.exclusiveTouch = YES;
-    [_btnRight setTitle:@"发送" forState:UIControlStateNormal];
-    [_btnRight setTitleColor:BB_White_Color forState:UIControlStateNormal];
+    [_btnRight setTitle:@"确定" forState:UIControlStateNormal];
+    [_btnRight setTitleColor:BB_Red_Color forState:UIControlStateNormal];
     [_btnRight addTarget:self action:@selector(onClickBtnSave:) forControlEvents: UIControlEventTouchUpInside];
     
     [vTopBar addSubview:_btnTitle];
     [vTopBar addSubview:_btnLeft];
-    [vTopBar addSubview:_btnRight];
     [self.view addSubview:vTopBar];
+    //下方视图
+    UIView *lastView = [[UIView alloc]initWithFrame:CGRectMake(0, self.view.height - 50, UI_View_Width, 50)];
+    lastView.backgroundColor = BB_White_Color;
+    [self.view addSubview:lastView];
+    [lastView addSubview:_btnRight];
+    
+    UIButton *selectBtn = [[UIButton alloc]initWithFrame:CGRectMake(16, 14, 22, 22)];
+    [selectBtn setBackgroundImage:[UIImage imageNamed:@"selected"] forState:UIControlStateNormal];
+    [selectBtn setBackgroundImage:[UIImage imageNamed:@"selected_h"] forState:UIControlStateSelected];
+    [selectBtn addTarget:self action:@selector(selectBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    [selectBtn setSelected:NO];
+//    [lastView addSubview:selectBtn];
+    
+    UILabel *allLabel = [[UILabel alloc]initWithFrame:CGRectMake(57, 15, 50, 20)];
+    allLabel.text = @"全选";
+    allLabel.font = [UIFont systemFontOfSize:15];
+//    [lastView addSubview:allLabel];
+    
 }
 
 - (void)onClickBtnBack:(UIButton *)btn {
@@ -127,9 +148,9 @@
     if (!_arrContacts) {
         _arrContacts = [[NSMutableArray alloc] init];
     }
-    
+    [_arrContacts removeAllObjects];
     if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height - 64) style:UITableViewStylePlain];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height - 124) style:UITableViewStylePlain];
         _tableView.delegate = self;
         _tableView.dataSource = self;
         [self.view addSubview:_tableView];
@@ -212,9 +233,10 @@
     BOOL checked = !contacter.selected;
     contacter.selected = checked;
     
-    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
-    UIButton *button = (UIButton *)cell.accessoryView;
-    [button setSelected:checked];
+    SYCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+    
+    
+    [cell.button setSelected:checked];
 }
 
 #pragma mark -
@@ -247,40 +269,39 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *kCellID = @"kCellID";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellID];
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellID];
+    SYCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellID];
+    
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kCellID];
+        cell = [[SYCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kCellID];
         cell.accessoryType = UITableViewCellAccessoryNone;
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         
-        HemaButton *button = [HemaButton buttonWithType:UIButtonTypeCustom];
-        [button setFrame:CGRectMake(30, 0, 22, 22)];
-        [button setBackgroundImage:[UIImage imageNamed:@"selected"] forState:UIControlStateNormal];
-        [button setBackgroundImage:[UIImage imageNamed:@"selected_h"] forState:UIControlStateSelected];
-        [button addTarget:self action:@selector(checkButtonTapped:event:) forControlEvents:UIControlEventTouchUpInside];
-        button.btnRow = indexPath.row;
-        button.btnSection = indexPath.section;
-        [button setSelected:NO];
-        cell.accessoryView = button;
+//        UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+        [cell.button setFrame:CGRectMake(16, 16, 22, 22)];
+        [cell.button setBackgroundImage:[UIImage imageNamed:@"selected"] forState:UIControlStateNormal];
+        [cell.button setBackgroundImage:[UIImage imageNamed:@"selected_h"] forState:UIControlStateSelected];
+        [cell.button addTarget:self action:@selector(checkButtonTapped:event:) forControlEvents:UIControlEventTouchUpInside];
+        [cell.button setSelected:NO];
         
-        _page++;
-        NSLog(@"========%zd",_page);
+//        [cell addSubview:button];
+        
+        cell.nameLabel.frame = CGRectMake(70, 15, 100, 20);
+        
     }
-    
     SYContacter *addressBook = (SYContacter *)[[_arrContacts objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
     if ([[addressBook.name sy_trim] length] > 0) {
-        cell.textLabel.text = addressBook.name;
+        
+        cell.nameLabel.text = addressBook.name;
     }
     else {
-        cell.textLabel.font = [UIFont italicSystemFontOfSize:cell.textLabel.font.pointSize];
-        cell.textLabel.text = @"无名氏";
+        
+        cell.nameLabel.text = @"无名氏";
     }
     
-    UIButton *button = (UIButton *)cell.accessoryView;
-    [button setSelected:addressBook.selected];
+//    UIButton *button = (UIButton *)cell.button;
     
-    
-    
+    [cell.button setSelected:addressBook.selected];
     return cell;
 }
 
@@ -320,7 +341,11 @@
             
             //设置发送给谁
             for (SYContacter * contacter in selectedContacts) {
-                [_phoneArr addObject:contacter.phone];
+                if (contacter.phone != nil) {
+                    [_phoneArr addObject:contacter.phone];
+                }
+                
+                
             }
             messageController.recipients = _phoneArr;
             
@@ -328,6 +353,7 @@
             [self presentViewController:messageController animated:YES completion:^{
                 
             }];
+           
         }else
         {
             UIAlertView *alterView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"该设备没有发送短信的功能~" delegate:nil cancelButtonTitle:@"取消" otherButtonTitles:nil];
@@ -351,17 +377,16 @@
     switch (result) {
         case MessageComposeResultCancelled:
             tipContent = @"发送短信已经取消";
-            [self dismissViewControllerAnimated:YES completion:nil];
+            [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
             break;
-            
         case MessageComposeResultFailed:
             tipContent = @"发送短信失败";
-            [self dismissViewControllerAnimated:YES completion:nil];
+            [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
             break;
             
         case MessageComposeResultSent:
             tipContent = @"发送成功";
-            [self dismissViewControllerAnimated:YES completion:nil];
+            [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
             break;
             
         default:
@@ -372,6 +397,26 @@
     [alterView show];
 }
 
+-(void)selectBtnClick:(UIButton *)sender{
+    if (sender.selected == NO) {
+        for (NSArray *arr in _arrContacts) {
+            for (SYContacter *contacter in arr) {
+                if (contacter.selected ==NO) {
+                    contacter.selected = YES;
+                }
+            }
+        }
+    }else{
+        for (NSArray *arr in _arrContacts) {
+            for (SYContacter *contacter in arr) {
+                contacter.selected = NO;
+            }
+        }
+    }
+    sender.selected = !sender.selected;
+    [_tableView reloadData];
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

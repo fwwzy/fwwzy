@@ -127,7 +127,7 @@
                 UIPageControl *topControl = [[UIPageControl alloc] init];
                 
                 [topControl setFrame:CGRectMake(0, 0 , 90, 30)];
-                topControl.center = CGPointMake(UI_View_Width / 2, 180);
+                topControl.center = CGPointMake(cell.size.width / 2, 180);
                 topControl.numberOfPages = 4;
                 topControl.currentPage = 0;
                 topControl.tag = 2;
@@ -471,10 +471,10 @@
     
     UIPageControl *control = (id)[self.view viewWithTag:2];
     UIScrollView *scrollView = (id)[self.view viewWithTag:1];
+    
     [UIView animateWithDuration:1 animations:^{
         CGPoint contentSet = CGPointMake(scrollView.contentOffset.x + UI_View_Width, 0);
         scrollView.contentOffset = contentSet;
-        
         control.currentPage = scrollView.contentOffset.x / UI_View_Width;
         if (contentSet.x == scrollView.contentSize.width) {
             scrollView.contentOffset = CGPointMake(0, 0);

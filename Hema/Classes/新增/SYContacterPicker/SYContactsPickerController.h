@@ -25,7 +25,9 @@
 
 @end
 
-@interface SYContactsPickerController : UIViewController
+@interface SYContactsPickerController : UIViewController{
+    NSMutableArray *_arrContacts;
+}
 
 @property (nonatomic, weak) id<SYContactsPickerControllerDelegate>delegate;
 
