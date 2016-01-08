@@ -917,6 +917,14 @@
 		944B62261C3E711F00CBAD01 /* selected_h.png in Resources */ = {isa = PBXBuildFile; fileRef = 944B62241C3E711F00CBAD01 /* selected_h.png */; };
 		944B62271C3E711F00CBAD01 /* selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 944B62251C3E711F00CBAD01 /* selected.png */; };
 		946988DF1C3F432900A3CCDA /* SYCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 946988DE1C3F432900A3CCDA /* SYCell.m */; };
+		946988FE1C3FC34300A3CCDA /* MIneGetTre.m in Sources */ = {isa = PBXBuildFile; fileRef = 946988E11C3FC34300A3CCDA /* MIneGetTre.m */; };
+		946988FF1C3FC34300A3CCDA /* MineGetTreAll.m in Sources */ = {isa = PBXBuildFile; fileRef = 946988E31C3FC34300A3CCDA /* MineGetTreAll.m */; };
+		946989001C3FC34300A3CCDA /* MineGetTreed.m in Sources */ = {isa = PBXBuildFile; fileRef = 946988E51C3FC34300A3CCDA /* MineGetTreed.m */; };
+		946989011C3FC34300A3CCDA /* MineGetTreing.m in Sources */ = {isa = PBXBuildFile; fileRef = 946988E71C3FC34300A3CCDA /* MineGetTreing.m */; };
+		946989021C3FC34300A3CCDA /* SCNavTabBar.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 946988EA1C3FC34300A3CCDA /* SCNavTabBar.bundle */; };
+		946989031C3FC34300A3CCDA /* SCNavTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 946988ED1C3FC34300A3CCDA /* SCNavTabBarController.m */; };
+		946989041C3FC34300A3CCDA /* SCNavTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 946988F01C3FC34300A3CCDA /* SCNavTabBar.m */; };
+		946989051C3FC34300A3CCDA /* SCPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 946988F21C3FC34300A3CCDA /* SCPopView.m */; };
 		94721A9B1C322272007A901D /* ClassifyListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 94721A9A1C322272007A901D /* ClassifyListVC.m */; };
 		94721A9E1C3235BF007A901D /* FAQVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 94721A9D1C3235BF007A901D /* FAQVC.m */; };
 		94721AA01C325123007A901D /* hp_service.png in Resources */ = {isa = PBXBuildFile; fileRef = 94721A9F1C325123007A901D /* hp_service.png */; };
@@ -3234,6 +3242,22 @@
 		944B62251C3E711F00CBAD01 /* selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selected.png; sourceTree = "<group>"; };
 		946988DD1C3F432900A3CCDA /* SYCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYCell.h; sourceTree = "<group>"; };
 		946988DE1C3F432900A3CCDA /* SYCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYCell.m; sourceTree = "<group>"; };
+		946988E01C3FC34300A3CCDA /* MIneGetTre.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIneGetTre.h; sourceTree = "<group>"; };
+		946988E11C3FC34300A3CCDA /* MIneGetTre.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIneGetTre.m; sourceTree = "<group>"; };
+		946988E21C3FC34300A3CCDA /* MineGetTreAll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineGetTreAll.h; sourceTree = "<group>"; };
+		946988E31C3FC34300A3CCDA /* MineGetTreAll.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineGetTreAll.m; sourceTree = "<group>"; };
+		946988E41C3FC34300A3CCDA /* MineGetTreed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineGetTreed.h; sourceTree = "<group>"; };
+		946988E51C3FC34300A3CCDA /* MineGetTreed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineGetTreed.m; sourceTree = "<group>"; };
+		946988E61C3FC34300A3CCDA /* MineGetTreing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineGetTreing.h; sourceTree = "<group>"; };
+		946988E71C3FC34300A3CCDA /* MineGetTreing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineGetTreing.m; sourceTree = "<group>"; };
+		946988E91C3FC34300A3CCDA /* CommonMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonMacro.h; sourceTree = "<group>"; };
+		946988EA1C3FC34300A3CCDA /* SCNavTabBar.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SCNavTabBar.bundle; sourceTree = "<group>"; };
+		946988EC1C3FC34300A3CCDA /* SCNavTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCNavTabBarController.h; sourceTree = "<group>"; };
+		946988ED1C3FC34300A3CCDA /* SCNavTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCNavTabBarController.m; sourceTree = "<group>"; };
+		946988EF1C3FC34300A3CCDA /* SCNavTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCNavTabBar.h; sourceTree = "<group>"; };
+		946988F01C3FC34300A3CCDA /* SCNavTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCNavTabBar.m; sourceTree = "<group>"; };
+		946988F11C3FC34300A3CCDA /* SCPopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCPopView.h; sourceTree = "<group>"; };
+		946988F21C3FC34300A3CCDA /* SCPopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCPopView.m; sourceTree = "<group>"; };
 		94721A991C322272007A901D /* ClassifyListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassifyListVC.h; sourceTree = "<group>"; };
 		94721A9A1C322272007A901D /* ClassifyListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassifyListVC.m; sourceTree = "<group>"; };
 		94721A9C1C3235BF007A901D /* FAQVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAQVC.h; sourceTree = "<group>"; };
@@ -7442,6 +7466,37 @@
 			path = SYContacterPicker;
 			sourceTree = "<group>";
 		};
+		946988E81C3FC34300A3CCDA /* SCNavTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				946988E91C3FC34300A3CCDA /* CommonMacro.h */,
+				946988EA1C3FC34300A3CCDA /* SCNavTabBar.bundle */,
+				946988EB1C3FC34300A3CCDA /* ViewControllers */,
+				946988EE1C3FC34300A3CCDA /* Views */,
+			);
+			path = SCNavTabBar;
+			sourceTree = "<group>";
+		};
+		946988EB1C3FC34300A3CCDA /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				946988EC1C3FC34300A3CCDA /* SCNavTabBarController.h */,
+				946988ED1C3FC34300A3CCDA /* SCNavTabBarController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		946988EE1C3FC34300A3CCDA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				946988EF1C3FC34300A3CCDA /* SCNavTabBar.h */,
+				946988F01C3FC34300A3CCDA /* SCNavTabBar.m */,
+				946988F11C3FC34300A3CCDA /* SCPopView.h */,
+				946988F21C3FC34300A3CCDA /* SCPopView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		948783261C2A4F0100E52B11 /* 新增 */ = {
 			isa = PBXGroup;
 			children = (
@@ -7491,6 +7546,15 @@
 		9487832B1C2A4F7300E52B11 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				946988E01C3FC34300A3CCDA /* MIneGetTre.h */,
+				946988E11C3FC34300A3CCDA /* MIneGetTre.m */,
+				946988E21C3FC34300A3CCDA /* MineGetTreAll.h */,
+				946988E31C3FC34300A3CCDA /* MineGetTreAll.m */,
+				946988E41C3FC34300A3CCDA /* MineGetTreed.h */,
+				946988E51C3FC34300A3CCDA /* MineGetTreed.m */,
+				946988E61C3FC34300A3CCDA /* MineGetTreing.h */,
+				946988E71C3FC34300A3CCDA /* MineGetTreing.m */,
+				946988E81C3FC34300A3CCDA /* SCNavTabBar */,
 				94496FF11C3D1ABD00B3DDD2 /* SYContacterPicker */,
 				94496FFA1C3D1ABD00B3DDD2 /* TwoWeiVC.h */,
 				94496FFB1C3D1ABD00B3DDD2 /* TwoWeiVC.m */,
@@ -11134,6 +11198,7 @@
 				3AEDB2791BFC426600AD7E95 /* sticker_8.png in Resources */,
 				3AF845A01BE9B61500FEF930 /* .gitignore in Resources */,
 				3A17B06B1BFD9891005C0D6C /* epub.bundle in Resources */,
+				946989021C3FC34300A3CCDA /* SCNavTabBar.bundle in Resources */,
 				B77E1B091BC2A50C00DB3199 /* R讨论组头像.png in Resources */,
 				3AF02A581BE720EB00AF0597 /* Chapter4.txt in Resources */,
 				3AEDB2691BFC426600AD7E95 /* sticker_16.png in Resources */,
@@ -11863,6 +11928,7 @@
 				3AEE954E1BF588CF007F6BD5 /* UIViewController+RecursiveDescription.m in Sources */,
 				B7F165581BF86F0700EE5EF2 /* BFPassword.m in Sources */,
 				3AEE94D61BF588CE007F6BD5 /* NSURL+QueryDictionary.m in Sources */,
+				946988FF1C3FC34300A3CCDA /* MineGetTreAll.m in Sources */,
 				3AEE95081BF588CE007F6BD5 /* UIImage+GIF.m in Sources */,
 				3ADAC0C31BD8F11000EB507F /* HPTextViewInternal.m in Sources */,
 				B77E1B5C1BC2AD8500DB3199 /* MJPhotoLoadingView.m in Sources */,
@@ -11888,6 +11954,7 @@
 				3A3677C51BE1EBFF00DF844F /* KrVideoPlayerControlView.m in Sources */,
 				B78455291BCAA9D600D64002 /* RGroupAddVC.m in Sources */,
 				B76F09B61BD3EF3D0095F655 /* UILabel+NightVersion.m in Sources */,
+				946989031C3FC34300A3CCDA /* SCNavTabBarController.m in Sources */,
 				B7D3D92A1BD0A50C000A0962 /* UIResponder+STPopup.m in Sources */,
 				B7777D991BC3A93800452D6E /* XMPPMessage+XEP_0184.m in Sources */,
 				94496FE71C3CA1E500B3DDD2 /* MineShareVC.m in Sources */,
@@ -11919,6 +11986,7 @@
 				B77E7C561BD333540058DD07 /* LGActionSheetCell.m in Sources */,
 				B77C3AD71BC520D500B7E028 /* RGeoMapShowVC.m in Sources */,
 				3A69A14A1C03178B0002F776 /* AMPopTip.m in Sources */,
+				946988FE1C3FC34300A3CCDA /* MIneGetTre.m in Sources */,
 				94910D3D1C3A4D77009947B2 /* ResetPwdVC.m in Sources */,
 				B77E1B171BC2A90F00DB3199 /* HemaCashManager.m in Sources */,
 				3AEE94D11BF588CE007F6BD5 /* NSString+UUID.m in Sources */,
@@ -12008,6 +12076,7 @@
 				94496FEE1C3CE48800B3DDD2 /* NotShareVC.m in Sources */,
 				94910D671C3A830E009947B2 /* MineWelVC.m in Sources */,
 				3AF02A711BE720EB00AF0597 /* E_ListView.m in Sources */,
+				946989001C3FC34300A3CCDA /* MineGetTreed.m in Sources */,
 				B728C1771BDC9BCA0004B4A9 /* TEAClockChart.m in Sources */,
 				3AEE950D1BF588CE007F6BD5 /* UIImage+Resize.m in Sources */,
 				3AEE95071BF588CE007F6BD5 /* UIImage+FX.m in Sources */,
@@ -12104,6 +12173,7 @@
 				B77E1B6B1BC2AD8500DB3199 /* UIImage+MultiFormat.m in Sources */,
 				B7777B9B1BC39FBA00452D6E /* PSCollectionViewCell.m in Sources */,
 				B7D3D9061BD09457000A0962 /* SCVideoConfiguration.m in Sources */,
+				946989011C3FC34300A3CCDA /* MineGetTreing.m in Sources */,
 				B77E7C551BD333540058DD07 /* LGActionSheet.m in Sources */,
 				B7777D481BC3A93800452D6E /* XMPPIQ.m in Sources */,
 				3A69A1E91C04284B0002F776 /* TSMessageView.m in Sources */,
@@ -12544,6 +12614,7 @@
 				3AEE949B1BF588CE007F6BD5 /* NSDate+Extension.m in Sources */,
 				3AEE94E51BF588CE007F6BD5 /* UIApplication+ApplicationSize.m in Sources */,
 				B7777DC11BC3A93800452D6E /* DDXMLElement.m in Sources */,
+				946989041C3FC34300A3CCDA /* SCNavTabBar.m in Sources */,
 				B7777DA61BC3A93800452D6E /* XMPPMessage+XEP_0224.m in Sources */,
 				3ADAC0A91BD8BEB000EB507F /* IQKeyboardReturnKeyHandler.m in Sources */,
 				3A17B07F1BFDAC54005C0D6C /* JxbPlayer.m in Sources */,
@@ -12764,6 +12835,7 @@
 				B7D3D9D81BD491DF000A0962 /* RExtendFunctionVC.m in Sources */,
 				3AEDB2B81BFC71FC00AD7E95 /* QHBannerMenuView.m in Sources */,
 				B77E7C0F1BD253A00058DD07 /* FDCalendarItem.m in Sources */,
+				946989051C3FC34300A3CCDA /* SCPopView.m in Sources */,
 				3A0A08541BF1847A00653173 /* TOCropViewControllerTransitioning.m in Sources */,
 				3A52F06C1BEC4CAB00D081FE /* PFGoldenSectionSpiral.m in Sources */,
 				3AEE951E1BF588CE007F6BD5 /* UINavigationController+JZExtension.m in Sources */,

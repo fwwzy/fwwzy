@@ -19,6 +19,7 @@
 #import "NotShareVC.h"
 #import "ShareVC.h"
 #import "MineShareVC.h"
+#import "MIneGetTre.h"
 
 @interface MineVC ()<UITableViewDataSource,UITableViewDelegate,SYContactsPickerControllerDelegate>{
     UITableView *_tableView;
@@ -305,7 +306,9 @@
 - (void)mineBtnClick:(UIButton *)sender {
     switch (sender.tag) {
         case 100:{
-            
+            MIneGetTre *mgt = [[MIneGetTre alloc]init];
+            mgt.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:mgt animated:YES];
         }
             break;
         case 101:{
